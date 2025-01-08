@@ -1,0 +1,14 @@
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\ModeloRegistro.exe.config
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\ModeloRegistro.exe
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\ModeloRegistro.pdb
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro.csprojResolveAssemblyReference.cache
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\MainWindow.g.cs
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\App.g.cs
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro_MarkupCompile.cache
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro_MarkupCompile.lref
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\MainWindow.baml
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro.g.resources
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro.Properties.Resources.resources
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro.csproj.GenerateResource.Cache
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro.exe
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro.pdb
