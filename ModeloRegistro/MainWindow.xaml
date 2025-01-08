@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ModeloRegistro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="MainWindow" Height="350" Width="525"
         
+         >
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="517" Background="#FFF5E7E7">
+            <Button x:Name="button" Content="Button" Height="64" Margin="214,121,187,134" HorizontalAlignment="Center" VerticalAlignment="Center" Width="116"/>
+
+        </Grid>
+
+
     </Grid>
 </Window>

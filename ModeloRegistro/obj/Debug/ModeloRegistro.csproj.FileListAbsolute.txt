@@ -12,3 +12,12 @@ D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro.
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro.csproj.GenerateResource.Cache
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro.exe
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro.pdb
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\MaterialDesignColors.dll
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\MaterialDesignColors.pdb
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\App.baml
