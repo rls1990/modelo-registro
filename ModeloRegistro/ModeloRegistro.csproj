@@ -75,6 +75,122 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="views\dashboard\modelos\anexo10\Anexo10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo11\Anexo11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo12\Anexo12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo13\Anexo13.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo14\Anexo14.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo15\Anexo15.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo16\Anexo16.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo17\Anexo17.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo18\Anexo18.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo19\Anexo19.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo20\Anexo20.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo21\Anexo21.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo23\Anexo23.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo24\Anexo24.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo25\Anexo25.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo26\Anexo26.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo27\Anexo27.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo28\Anexo28.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo29\Anexo29.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo2\Anexo2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo30\Anexo30.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo31\Anexo31.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo3\Anexo3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo4\Anexo4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo5\Anexo5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo6\Anexo6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo7\Anexo7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo8\Anexo8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\modelos\anexo9\Anexo9.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\loading\Loading.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +211,93 @@
     <Compile Include="services\PageService.cs" />
     <Compile Include="views\dashboard\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo10\Anexo10.xaml.cs">
+      <DependentUpon>Anexo10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo11\Anexo11.xaml.cs">
+      <DependentUpon>Anexo11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo12\Anexo12.xaml.cs">
+      <DependentUpon>Anexo12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo13\Anexo13.xaml.cs">
+      <DependentUpon>Anexo13.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo14\Anexo14.xaml.cs">
+      <DependentUpon>Anexo14.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo15\Anexo15.xaml.cs">
+      <DependentUpon>Anexo15.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo16\Anexo16.xaml.cs">
+      <DependentUpon>Anexo16.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo17\Anexo17.xaml.cs">
+      <DependentUpon>Anexo17.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo18\Anexo18.xaml.cs">
+      <DependentUpon>Anexo18.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo19\Anexo19.xaml.cs">
+      <DependentUpon>Anexo19.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo20\Anexo20.xaml.cs">
+      <DependentUpon>Anexo20.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo21\Anexo21.xaml.cs">
+      <DependentUpon>Anexo21.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo23\Anexo23.xaml.cs">
+      <DependentUpon>Anexo23.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo24\Anexo24.xaml.cs">
+      <DependentUpon>Anexo24.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo25\Anexo25.xaml.cs">
+      <DependentUpon>Anexo25.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo26\Anexo26.xaml.cs">
+      <DependentUpon>Anexo26.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo27\Anexo27.xaml.cs">
+      <DependentUpon>Anexo27.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo28\Anexo28.xaml.cs">
+      <DependentUpon>Anexo28.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo29\Anexo29.xaml.cs">
+      <DependentUpon>Anexo29.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo2\Anexo2.xaml.cs">
+      <DependentUpon>Anexo2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo30\Anexo30.xaml.cs">
+      <DependentUpon>Anexo30.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo31\Anexo31.xaml.cs">
+      <DependentUpon>Anexo31.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo3\Anexo3.xaml.cs">
+      <DependentUpon>Anexo3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo4\Anexo4.xaml.cs">
+      <DependentUpon>Anexo4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo5\Anexo5.xaml.cs">
+      <DependentUpon>Anexo5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo6\Anexo6.xaml.cs">
+      <DependentUpon>Anexo6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo7\Anexo7.xaml.cs">
+      <DependentUpon>Anexo7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo8\Anexo8.xaml.cs">
+      <DependentUpon>Anexo8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\modelos\anexo9\Anexo9.xaml.cs">
+      <DependentUpon>Anexo9.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\loading\Loading.xaml.cs">
       <DependentUpon>Loading.xaml</DependentUpon>

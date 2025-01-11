@@ -6,7 +6,13 @@
       xmlns:local="clr-namespace:ModeloRegistro.views.dashboard.modelos.anexo29"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="Anexo29">
+      Title="Anexo29"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}"
+      Width="700"
+      Height="600">
 
     <Grid>
         
