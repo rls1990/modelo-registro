@@ -20,5 +20,27 @@ namespace ModeloRegistro.services
             // Mostrar la página real en el Frame
             frame.Content=newPage;
         }
+
+        public static async void toPage( Page page )
+        {
+            var navService = Global.frame_dashboard.NavigationService;
+            while(navService.CanGoBack)
+            {
+                navService.RemoveBackEntry();
+            }
+
+            await LoadPage(page,Global.frame_dashboard,500);
+        }
+
+        public static async void toPage( Page page , Frame frame )
+        {
+            var navService = Global.frame_dashboard.NavigationService;
+            while(navService.CanGoBack)
+            {
+                navService.RemoveBackEntry();
+            }
+
+            await LoadPage(page,frame,500);
+        }
     }
 }

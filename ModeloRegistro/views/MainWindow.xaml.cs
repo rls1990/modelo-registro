@@ -19,7 +19,7 @@ namespace ModeloRegistro.views
 
         public async void LoadInit()
         {
-            await PageService.LoadPage(new Login(),frame,1500);
+            await PageService.LoadPage(new dashboard.Dashboard(),frame,1500);
         }
     }
 }

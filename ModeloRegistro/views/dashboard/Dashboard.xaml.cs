@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModeloRegistro.services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace ModeloRegistro.views.dashboard
         public Dashboard()
         {
             InitializeComponent();
+            Global.frame_dashboard=frame_dashboard;
+        }
+
+        private void Button_Click( object sender,RoutedEventArgs e )
+        {
+            PageService.toPage(new login.Login(),Global.frame);
         }
     }
 }

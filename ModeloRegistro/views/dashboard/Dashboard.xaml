@@ -12,9 +12,501 @@
       TextElement.Foreground="{DynamicResource MaterialDesignBody}"
       Background="{DynamicResource MaterialDesignPaper}"
       FontFamily="{DynamicResource MaterialDesignFont}"
-      Height="710"
-      Width="1100">
+      Height="701"
+      Width="1094">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160*" />
+            <ColumnDefinition Width="400*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="73*" />
+        </Grid.RowDefinitions>
+
+        <materialDesign:Card UniformCornerRadius="0"
+                             Background="#FF404E67"
+                             Panel.ZIndex="1"
+                             materialDesign:ElevationAssist.Elevation="Dp3">
+            <Grid>
+                <materialDesign:PackIcon Width="40"
+                                         Height="40"
+                                         Kind="ShieldAccountOutline"
+                                         Foreground="#FFECEDF0"
+                                         HorizontalAlignment="Left"
+                                         VerticalAlignment="Center"
+                                         Margin="12,0,0,0">
+                    <materialDesign:PackIcon.Effect>
+                        <DropShadowEffect ShadowDepth="0"
+                                          BlurRadius="3"
+                                          Opacity="1" />
+                    </materialDesign:PackIcon.Effect>
+                </materialDesign:PackIcon>
+
+                <Separator Style="{StaticResource MaterialDesignLightSeparator}"
+                           Width="18"
+                           RenderTransformOrigin="0.5,0.5"
+                           Margin="54,24,241,24"
+                           Height="Auto"
+                           Background="#FFFD7A6B"
+                           BorderThickness="0"
+                           Padding="0"
+                           ScrollViewer.CanContentScroll="True">
+                    <Separator.Effect>
+                        <DropShadowEffect ShadowDepth="0"
+                                          BlurRadius="3" />
+                    </Separator.Effect>
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="3" />
+                            <SkewTransform />
+                            <RotateTransform Angle="90" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+
+                <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                           Text="Admin Dashboard"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Foreground="#FFDEE1E5"
+                           Margin="74,20,0,17"
+                           Width="166">
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0"
+                                          BlurRadius="2" />
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card UniformCornerRadius="0"
+                             materialDesign:ElevationAssist.Elevation="Dp3"
+                             Grid.Column="1"
+                             Panel.ZIndex="1">
+            <Grid>
+                <Button Style="{StaticResource MaterialDesignFlatLightButton}"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Height="63"
+                        Width="155"
+                        Margin="0,0,10,0"
+                        Click="Button_Click">
+                    <Grid Width="122">
+                        <materialDesign:PackIcon Kind="AccountArrowLeftOutline"
+                                                 HorizontalAlignment="Left"
+                                                 VerticalAlignment="Center"
+                                                 Margin="0,0,26,0"
+                                                 Width="30"
+                                                 Height="30"
+                                                 Foreground="#FF404E67" />
+                        <TextBlock Foreground="#FF404E67"
+                                   Margin="0"
+                                   Width="86"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Right"><Run Text="Cerrar Sesión" /></TextBlock>
+                    </Grid>
+                </Button>
+            </Grid>
+        </materialDesign:Card>
+
+        <Grid Grid.Row="1"
+              Background="#FF404E67">
+            <ScrollViewer Margin="0"
+                          Padding="0"
+                          VerticalScrollBarVisibility="Auto"
+                          MinHeight="8"
+                          Height="600"
+                          VerticalAlignment="Top"
+                          HorizontalContentAlignment="Center">
+                <Grid>
+                    <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                               Text="Navegación"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Top"
+                               Foreground="#FF8A9499"
+                               Margin="18,26,138,0"
+                               FontSize="17"
+                               Width="106" />
+
+                    <Grid Margin="0,70,0,0"
+                          VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <TreeView MinHeight="38"
+                                  
+                                  Foreground="#E5FFFFFF"
+                                  Padding="1"
+                                  FlowDirection="LeftToRight"
+                                  VerticalContentAlignment="Center"
+                                  HorizontalContentAlignment="Left"
+                                  Margin="0"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                  MaxHeight="450"
+                                  Focusable="False">
+                            <TreeView.Resources>
+                                <Style TargetType="TreeViewItem"
+                                       BasedOn="{StaticResource MaterialDesignTreeViewItem}">
+                                    <Setter Property="materialDesign:TreeViewAssist.ExpanderSize"
+                                            Value="24" />
+                                </Style>
+                            </TreeView.Resources>
+
+                            <TreeViewItem Header="Modelos"
+                                          Padding="8"
+                                          Margin="20,4,20,0"
+                                          VerticalAlignment="Top"
+                                          Focusable="False">
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 2" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 3" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 4" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 5" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 6" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 7" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 8" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 9" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 10" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 11" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 12" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 13" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 14" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 15" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 16" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 17" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 18" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 19" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 20" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 21" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 22" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 23" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 24" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 25" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 26" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 27" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 28" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 29" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 30" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                                <TreeViewItem VerticalContentAlignment="Center"
+                                              Padding="-7,8,8,8">
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="8,0,0,0"
+                                                       Text="Anexo 31" />
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+
+                            </TreeViewItem>
+                        </TreeView>
+
+                        <Button Style="{StaticResource MaterialDesignFlatLightButton}"
+                                Height="38"
+                                Grid.Row="1">
+                            <Grid Width="253">
+                                <materialDesign:PackIcon Kind="Users"
+                                                         Width="20"
+                                                         Height="20"
+                                                         Foreground="#FFECEDF0"
+                                                         VerticalAlignment="Center" />
+                                <TextBlock Foreground="#FFCECCC8"
+                                           VerticalAlignment="Center"
+                                           Margin="35,2,13,2">Users</TextBlock>
+                            </Grid>
+                        </Button>
+
+                        <Button Style="{StaticResource MaterialDesignFlatLightButton}"
+                                Height="38"
+                                Grid.Row="2">
+                            <Grid Width="253">
+                                <materialDesign:PackIcon Kind="Logout"
+                                                         Width="20"
+                                                         Height="20"
+                                                         Foreground="#FFECEDF0"
+                                                         VerticalAlignment="Center" />
+                                <TextBlock Foreground="#FFCECCC8"
+                                           VerticalAlignment="Center"
+                                           Margin="35,2,13,2">Logout</TextBlock>
+                            </Grid>
+                        </Button>
+                    </Grid>
+
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+
+
+        <Frame x:Name="frame_dashboard"
+               Grid.Column="1"
+               Grid.Row="1"
+               NavigationUIVisibility="Hidden"
+               Background="#FFF6F7FB" />
+
     </Grid>
 </Page>
