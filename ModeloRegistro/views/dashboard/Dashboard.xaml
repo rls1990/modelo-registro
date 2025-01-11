@@ -136,10 +136,10 @@
                             <RowDefinition />
                             <RowDefinition />
                             <RowDefinition />
+                            <RowDefinition />
                         </Grid.RowDefinitions>
 
                         <TreeView MinHeight="38"
-                                  
                                   Foreground="#E5FFFFFF"
                                   Padding="1"
                                   FlowDirection="LeftToRight"
@@ -164,7 +164,7 @@
                                           VerticalAlignment="Top"
                                           Focusable="False">
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8" MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -174,7 +174,7 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8" MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_1">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -184,7 +184,7 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8" MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_2">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -194,7 +194,7 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8" MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_3">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -204,7 +204,7 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8" MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_4">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -214,7 +214,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_5">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -224,17 +225,7 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
-                                    <TreeViewItem.Header>
-                                        <StackPanel Orientation="Horizontal">
-                                            <TextBlock Margin="8,0,0,0"
-                                                       Text="Anexo 8" />
-                                        </StackPanel>
-                                    </TreeViewItem.Header>
-                                </TreeViewItem>
-
-                                <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8" MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_6">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -244,7 +235,7 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8" MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_7">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -254,7 +245,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_8">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -264,7 +256,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_9">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -274,7 +267,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_10">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -284,7 +278,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_11">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -294,7 +289,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_12">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -304,7 +300,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_13">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -314,7 +311,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_14">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -324,7 +322,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_15">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -334,7 +333,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_16">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -344,7 +344,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_17">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -354,7 +355,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_18">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -364,7 +366,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_19">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -374,7 +377,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_20">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -384,7 +388,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_21">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -394,7 +399,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_22">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -404,7 +410,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_23">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -414,7 +421,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_24">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -424,7 +432,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_25">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -434,7 +443,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_26">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -444,7 +454,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_27">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -454,7 +465,8 @@
                                 </TreeViewItem>
 
                                 <TreeViewItem VerticalContentAlignment="Center"
-                                              Padding="-7,8,8,8">
+                                              Padding="-7,8,8,8"
+                                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp_28">
                                     <TreeViewItem.Header>
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Margin="8,0,0,0"
@@ -466,11 +478,11 @@
                             </TreeViewItem>
                         </TreeView>
 
-                        <Button Style="{StaticResource MaterialDesignFlatLightButton}"
+                        <!--<Button Style="{StaticResource MaterialDesignFlatLightButton}"
                                 Height="38"
-                                Grid.Row="1">
-                            <Grid Width="253">
-                                <materialDesign:PackIcon Kind="Users"
+                                Grid.Row="1" Click="Button_Click_1">
+                            <Grid Width="253" Focusable="True">
+                                <materialDesign:PackIcon Kind="AccountGroup"
                                                          Width="20"
                                                          Height="20"
                                                          Foreground="#FFECEDF0"
@@ -479,11 +491,28 @@
                                            VerticalAlignment="Center"
                                            Margin="35,2,13,2">Users</TextBlock>
                             </Grid>
+                        </Button>-->
+
+                        <Button Style="{StaticResource MaterialDesignFlatLightButton}"
+                                Height="38"
+                                Grid.Row="2"
+                                Click="Button_Click_3">
+                            <Grid Width="253"
+                                  Focusable="True">
+                                <materialDesign:PackIcon Kind="Users"
+                                                         Width="20"
+                                                         Height="20"
+                                                         Foreground="#FFECEDF0"
+                                                         VerticalAlignment="Center" />
+                                <TextBlock Foreground="#FFCECCC8"
+                                           VerticalAlignment="Center"
+                                           Margin="35,2,13,2">Users Dashboard</TextBlock>
+                            </Grid>
                         </Button>
 
                         <Button Style="{StaticResource MaterialDesignFlatLightButton}"
                                 Height="38"
-                                Grid.Row="2">
+                                Grid.Row="3" Focusable="True" Click="Button_Click_2">
                             <Grid Width="253">
                                 <materialDesign:PackIcon Kind="Logout"
                                                          Width="20"
@@ -492,7 +521,7 @@
                                                          VerticalAlignment="Center" />
                                 <TextBlock Foreground="#FFCECCC8"
                                            VerticalAlignment="Center"
-                                           Margin="35,2,13,2">Logout</TextBlock>
+                                           Margin="35,2,13,2">Cerrar sesión</TextBlock>
                             </Grid>
                         </Button>
                     </Grid>
@@ -506,7 +535,7 @@
                Grid.Column="1"
                Grid.Row="1"
                NavigationUIVisibility="Hidden"
-               Background="#FFF6F7FB" />
+                />
 
     </Grid>
 </Page>

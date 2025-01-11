@@ -1,8 +1,5 @@
 ﻿
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\App.xaml;;
-FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\loading\Loading.xaml;;
-FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\login\Login.xaml;;
-FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\MainWindow.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\Dashboard.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo10\Anexo10.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo11\Anexo11.xaml;;
@@ -16,6 +13,7 @@ FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo19\Anexo19.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo20\Anexo20.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo21\Anexo21.xaml;;
+FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo22\Anexo22.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo23\Anexo23.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo24\Anexo24.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo25\Anexo25.xaml;;
@@ -31,6 +29,10 @@ FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo5\Anexo5.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo6\Anexo6.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo7\Anexo7.xaml;;
-FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo8\Anexo8.xaml;;
 FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\modelos\anexo9\Anexo9.xaml;;
+FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\users\Users.xaml;;
+FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\loading\Loading.xaml;;
+FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\login\Login.xaml;;
+FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\MainWindow.xaml;;
+FD:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\views\dashboard\usersdashboard\UsersDashboard.xaml;;
 

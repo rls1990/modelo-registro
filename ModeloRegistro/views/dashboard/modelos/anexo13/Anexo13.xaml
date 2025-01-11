@@ -1,11 +1,12 @@
 ﻿<Page x:Class="ModeloRegistro.views.dashboard.modelos.anexo13.Anexo13"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:ModeloRegistro.views.dashboard.modelos.anexo13"
-      mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      mc:Ignorable="d"
+      d:DesignHeight="300"
+      d:DesignWidth="300"
       Title="Anexo13"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -13,8 +14,20 @@
       FontFamily="{DynamicResource MaterialDesignFont}"
       Width="700"
       Height="600">
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120*" />
+            <RowDefinition Height="80*" />
+            <RowDefinition Height="486*" />
+        </Grid.RowDefinitions>
 
-    <Grid>
-        
+        <TextBlock Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+                   Text="anexo_13._modelo_9-30_modificado._solicitud_de_transcripcion_de_nacimiento"
+                   VerticalAlignment="Center"
+                   Margin="0"
+                   Foreground="#FF404E67"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap" />
     </Grid>
 </Page>

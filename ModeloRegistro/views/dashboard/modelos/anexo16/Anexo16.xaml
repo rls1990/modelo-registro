@@ -14,7 +14,19 @@
       Width="700"
       Height="600">
 
-    <Grid>
-        
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120*" />
+            <RowDefinition Height="80*" />
+            <RowDefinition Height="486*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+                   Text="anexo_16._modelo_de_solicitud_de_visas"
+                   VerticalAlignment="Center"
+                   Margin="0"
+                   Foreground="#FF404E67"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap" />
     </Grid>
 </Page>

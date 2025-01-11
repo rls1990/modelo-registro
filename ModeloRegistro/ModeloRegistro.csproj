@@ -123,6 +123,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="views\dashboard\modelos\anexo22\Anexo22.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\dashboard\modelos\anexo23\Anexo23.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -183,11 +187,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\dashboard\modelos\anexo8\Anexo8.xaml">
+    <Page Include="views\dashboard\modelos\anexo9\Anexo9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\dashboard\modelos\anexo9\Anexo9.xaml">
+    <Page Include="views\dashboard\usersdashboard\UsersDashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\dashboard\users\Users.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -248,6 +256,9 @@
     <Compile Include="views\dashboard\modelos\anexo21\Anexo21.xaml.cs">
       <DependentUpon>Anexo21.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\dashboard\modelos\anexo22\Anexo22.xaml.cs">
+      <DependentUpon>Anexo22.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\dashboard\modelos\anexo23\Anexo23.xaml.cs">
       <DependentUpon>Anexo23.xaml</DependentUpon>
     </Compile>
@@ -293,11 +304,14 @@
     <Compile Include="views\dashboard\modelos\anexo7\Anexo7.xaml.cs">
       <DependentUpon>Anexo7.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\dashboard\modelos\anexo8\Anexo8.xaml.cs">
-      <DependentUpon>Anexo8.xaml</DependentUpon>
-    </Compile>
     <Compile Include="views\dashboard\modelos\anexo9\Anexo9.xaml.cs">
       <DependentUpon>Anexo9.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\usersdashboard\UsersDashboard.xaml.cs">
+      <DependentUpon>UsersDashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\dashboard\users\Users.xaml.cs">
+      <DependentUpon>Users.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\loading\Loading.xaml.cs">
       <DependentUpon>Loading.xaml</DependentUpon>

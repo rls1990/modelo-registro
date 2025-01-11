@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModeloRegistro.views.dashboard.modelos.anexo8
+namespace ModeloRegistro.views.dashboard.usersdashboard
 {
     /// <summary>
-    /// Interaction logic for Anexo8.xaml
+    /// Interaction logic for UsersDashboard.xaml
     /// </summary>
-    public partial class Anexo8:Page
+    public partial class UsersDashboard:Page
     {
-        public Anexo8()
+        public UsersDashboard()
         {
             InitializeComponent();
         }

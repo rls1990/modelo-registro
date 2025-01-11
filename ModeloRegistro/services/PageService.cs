@@ -34,10 +34,9 @@ namespace ModeloRegistro.services
 
         public static async void toPage( Page page , Frame frame )
         {
-            var navService = Global.frame_dashboard.NavigationService;
-            while(navService.CanGoBack)
+            while(frame.CanGoBack)
             {
-                navService.RemoveBackEntry();
+                frame.RemoveBackEntry();
             }
 
             await LoadPage(page,frame,500);

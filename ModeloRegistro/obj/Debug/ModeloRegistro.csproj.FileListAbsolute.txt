@@ -54,7 +54,6 @@ D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo5\Anexo5.g.cs
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo6\Anexo6.g.cs
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo7\Anexo7.g.cs
-D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo8\Anexo8.g.cs
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo9\Anexo9.g.cs
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo10\Anexo10.baml
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo11\Anexo11.baml
@@ -83,5 +82,10 @@ D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo5\Anexo5.baml
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo6\Anexo6.baml
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo7\Anexo7.baml
-D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo8\Anexo8.baml
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo9\Anexo9.baml
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo22\Anexo22.g.cs
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\users\Users.g.cs
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo22\Anexo22.baml
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\users\Users.baml
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\usersdashboard\UsersDashboard.g.cs
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\usersdashboard\UsersDashboard.baml
