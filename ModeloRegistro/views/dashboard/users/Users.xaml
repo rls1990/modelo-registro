@@ -28,5 +28,32 @@
                    Foreground="#FF404E67"
                    HorizontalAlignment="Center"
                    TextWrapping="Wrap" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <TextBox x:Name="buscar"
+                         VerticalAlignment="Center"
+                         materialDesign:HintAssist.Hint="Buscar"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         Padding="45,16,12,16"
+                         Height="49"
+                         FontSize="14"
+                         materialDesign:HintAssist.FloatingScale="0.80"
+                         HorizontalAlignment="Left"
+                         Width="223">
+                </TextBox>
+                <materialDesign:PackIcon Width="30"
+                                         Height="30"
+                                         Kind="Magnify"
+                                         Foreground="#FF404E67"
+                                         VerticalAlignment="Center"
+                                         Margin="7,0,0,0" />
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
