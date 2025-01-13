@@ -59,7 +59,8 @@
                 <Button HorizontalAlignment="Right"
                         Margin="0,18,380,18"
                         Background="#FF404E67"
-                        BorderBrush="#FF404E67">
+                        BorderBrush="#FF404E67"
+                        Click="Button_Click">
                     <WrapPanel>
                         <materialDesign:PackIcon Kind="ShapeCirclePlus"
                                                  Width="20"
@@ -72,7 +73,8 @@
                 <Button HorizontalAlignment="Right"
                         Margin="0,18,257,18"
                         Background="#FF404E67"
-                        BorderBrush="#FF404E67">
+                        BorderBrush="#FF404E67"
+                        Click="Button_Click_1">
                     <WrapPanel>
                         <materialDesign:PackIcon Kind="CircleEditOutline"
                                                  Width="20"
@@ -86,7 +88,8 @@
                         Margin="0,18,134,18"
                         Width="118"
                         Background="#FF404E67"
-                        BorderBrush="#FF404E67">
+                        BorderBrush="#FF404E67"
+                        Click="Button_Click_2">
                     <WrapPanel>
                         <materialDesign:PackIcon Kind="CheckboxMarkedCircleMinusOutline"
                                                  Width="20"
@@ -100,7 +103,8 @@
                         Margin="0,18,11,18"
                         Width="118"
                         Background="#FF404E67"
-                        BorderBrush="#FF404E67">
+                        BorderBrush="#FF404E67"
+                        Click="Button_Click_3">
                     <WrapPanel>
                         <materialDesign:PackIcon Kind="TableArrowRight"
                                                  Width="20"

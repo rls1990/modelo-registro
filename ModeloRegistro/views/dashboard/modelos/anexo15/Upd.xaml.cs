@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModeloRegistro.services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo15
         public Upd()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click( object sender,RoutedEventArgs e )
+        {
+            PageService.toPage(new Anexo15());
         }
     }
 }
