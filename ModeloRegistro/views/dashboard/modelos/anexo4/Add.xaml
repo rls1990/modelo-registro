@@ -1,11 +1,12 @@
 ﻿<Page x:Class="ModeloRegistro.views.dashboard.modelos.anexo4.Add"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:ModeloRegistro.views.dashboard.modelos.anexo4"
-      mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      mc:Ignorable="d"
+      d:DesignHeight="300"
+      d:DesignWidth="300"
       Title="Add"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -47,14 +48,279 @@
                 </WrapPanel>
             </Button>
         </Grid>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-            </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Vertical"></StackPanel>
-            <StackPanel Orientation="Vertical"
-                        Grid.Column="1"></StackPanel>
-        </Grid>
+        <ScrollViewer Grid.Row="2">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">MISION CONSULAR</TextBlock>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="ciudad"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Ciudad" />
+                    <TextBox x:Name="pais"
+                             Margin="12"
+                             Grid.Column="1"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Pais" />
+                </Grid>
+
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">SOLICITUD DE ANTECEDENTES PENALES</TextBlock>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="f_name"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="1er Nombre" />
+                    <TextBox x:Name="s_name"
+                             Margin="12"
+                             Grid.Column="1"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="2do Nombre" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="f_apellido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="1er Apellido" />
+                    <TextBox x:Name="s_apellido"
+                             Margin="12"
+                             Grid.Column="1"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="2do Apellido" />
+                </Grid>
+
+                <TextBox x:Name="lugar_nacimiento"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Lugar de Nacimiento" />
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Vertical">
+                        <TextBox x:Name="ciudadania"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="Ciudadanía" />
+                        <TextBox x:Name="nacionalidad"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="Nacionalidad" />
+                        <TextBox x:Name="estado_civil"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="Estado Civil" />
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Grid.Column="1">
+                        <DatePicker x:Name="fecha_nacimiento"
+                                    materialDesign:HintAssist.Hint="Fecha de Nacimiento"
+                                    Margin="12"
+                                    Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                                    materialDesign:HintAssist.FloatingScale="1"
+                                    materialDesign:TextFieldAssist.HasClearButton="True" />
+                        <ComboBox x:Name="sexo" 
+                                  materialDesign:HintAssist.Hint="Sexo"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  materialDesign:HintAssist.FloatingScale="1"
+                                  materialDesign:TextFieldAssist.HasClearButton="True"
+                                  Margin="12">
+                            <ComboBoxItem Content="Masculino" />
+                            <ComboBoxItem Content="Femenino" />
+                        </ComboBox>
+
+                        <TextBox x:Name="color_piel"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="Color de Piel" />
+                    </StackPanel>
+                </Grid>
+
+                <TextBox x:Name="profecion_oficio_ocupacion"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Profesión, Oficio u Ocupación" />
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="nombre_padre"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Nombre del Padre" />
+
+                    <TextBox x:Name="nombre_madre"
+                             Margin="12"
+                             Grid.Column="1"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Nombre del Madre" />
+                </Grid>
+
+                <TextBox x:Name="carnet_identidad"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Número Carné de Identidad" />
+
+                <TextBox x:Name="pasaporte"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="No. Pasaporte" />
+
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">Última Dirección de residencia en Cuba:</TextBlock>
+
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" Width="780">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="calle"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="Calle" />
+                        <TextBox x:Name="numero"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="Número" />
+
+                        <TextBox x:Name="entre"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="entre" />
+
+                        <TextBox x:Name="y"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="y" />
+
+                        <TextBox x:Name="barrio"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="Barrio" />
+
+                        <TextBox x:Name="municipio"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="Municipio" />
+
+                        <TextBox x:Name="provincia"
+                                 Margin="12"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"
+                                 materialDesign:HintAssist.FloatingScale="1"
+                                 materialDesign:HintAssist.Hint="Provincia" />
+                    </StackPanel>
+                </ScrollViewer>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="legalizacion_minred"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Legalización en MINREX" />
+
+                    <TextBox x:Name="legalizacion_embajada"
+                             Grid.Column="1"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Legalización en Embajada de" />
+                </Grid>
+
+                <DatePicker x:Name="fecha_solicitud"
+                            materialDesign:HintAssist.Hint="Fecha de la solicitud"
+                            Margin="12"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                            materialDesign:HintAssist.FloatingScale="1"
+                            materialDesign:TextFieldAssist.HasClearButton="True" />
+
+                <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                        materialDesign:ElevationAssist.Elevation="Dp4"
+                        Background="#FF404E67"
+                        Foreground="#FFFAFAFA"
+                        BorderBrush="#FF404E67"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="12"
+                        Width="246"
+                        Height="46">
+                    <WrapPanel>
+                        <materialDesign:PackIcon Kind="CheckboxMarkedCirclePlusOutline"
+                                                 Width="20"
+                                                 Height="20" />
+                        <TextBlock VerticalAlignment="Center"
+                                   Margin="7,0,0,0">Adicionar</TextBlock>
+                    </WrapPanel>
+                </Button>
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
