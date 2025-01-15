@@ -47,14 +47,146 @@
                 </WrapPanel>
             </Button>
         </Grid>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-            </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Vertical"></StackPanel>
-            <StackPanel Orientation="Vertical"
-                        Grid.Column="1"></StackPanel>
-        </Grid>
+        <ScrollViewer Grid.Row="2">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">MISION CONSULAR</TextBlock>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="ciudad"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Ciudad" />
+                    <TextBox x:Name="pais"
+                             Margin="12"
+                             Grid.Column="1"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Pais" />
+                </Grid>
+
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">SOLICITUD DE SENTENCIA DE DIVORCIO</TextBlock>
+
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center">Nombres y Apellidos de los Divorciados:</TextBlock>
+                <TextBox x:Name="nombre_apellido_hombre"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Nombre Esposo" />
+                <TextBox x:Name="nombre_apellido_mujer"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Nombre Mujer" />
+
+                <TextBox x:Name="tribunal_dicto_sentencia"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Tribunal que dictó Sentencia" />
+
+                <TextBox x:Name="nombre_secretario_actuante"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Nombre del Secretario actuante" />
+
+                <DatePicker x:Name="fecha_dicto_sentencia"
+                            materialDesign:HintAssist.Hint="Fecha en que dictó Sentencia"
+                            Margin="12"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                            materialDesign:HintAssist.FloatingScale="1"
+                            materialDesign:TextFieldAssist.HasClearButton="True" />
+
+                <DatePicker x:Name="fecha_firmeza_sentencia"
+                            materialDesign:HintAssist.Hint="Fecha de la firmeza de la Sentencia"
+                            Margin="12"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                            materialDesign:HintAssist.FloatingScale="1"
+                            materialDesign:TextFieldAssist.HasClearButton="True" />
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="no_sentencia"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="No. de la Sentencia" />
+                    <TextBox x:Name="no_radicacion"
+                             Margin="12"
+                             Grid.Column="1"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="No. de la Radicación" />
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="legalizacion_minred"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Legalización en MINREX" />
+                    <TextBox x:Name="legalizacion_embajada"
+                             Margin="12"
+                             Grid.Column="1"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Legalización en Embajada de" />
+                </Grid>
+
+
+                <DatePicker x:Name="fecha_solicitud"
+                            materialDesign:HintAssist.Hint="Fecha de la solicitud"
+                            Margin="12"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                            materialDesign:HintAssist.FloatingScale="1"
+                            materialDesign:TextFieldAssist.HasClearButton="True" />
+
+                <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                        materialDesign:ElevationAssist.Elevation="Dp4"
+                        Background="#FF404E67"
+                        Foreground="#FFFAFAFA"
+                        BorderBrush="#FF404E67"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="12"
+                        Width="246"
+                        Height="46">
+                    <WrapPanel>
+                        <materialDesign:PackIcon Kind="CircleEditOutline"
+                                                 Width="20"
+                                                 Height="20" />
+                        <TextBlock VerticalAlignment="Center"
+                                   Margin="7,0,0,0">Actualizar</TextBlock>
+                    </WrapPanel>
+                </Button>
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
