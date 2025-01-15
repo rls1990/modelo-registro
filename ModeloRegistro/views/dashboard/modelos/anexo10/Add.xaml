@@ -47,13 +47,191 @@
                 </WrapPanel>
             </Button>
         </Grid>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-            </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Vertical"></StackPanel>
-            <StackPanel Orientation="Vertical" Grid.Column="1"></StackPanel>
-        </Grid>
+        <ScrollViewer Grid.Row="2">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">MISION CONSULAR</TextBlock>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="ciudad"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Ciudad" />
+                    <TextBox x:Name="pais"
+                             Margin="12"
+                             Grid.Column="1"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Pais" />
+                </Grid>
+
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">SOLICITUD DE CERTIFICADO DE CIUDADANIA O SU NEGATIVO</TextBlock>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="solicito_certificado"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Solicito Certificación de" />
+                    <TextBox x:Name="de_mi"
+                             Margin="12"
+                             Grid.Column="1"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="de mi" />
+                </Grid>
+
+                <TextBox x:Name="nombre_apellidos"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Nombres y Apellidos" />
+                <DatePicker x:Name="fecha_nacimiento"
+                            materialDesign:HintAssist.Hint="Fecha de Nacimiento"
+                            Margin="12"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                            materialDesign:HintAssist.FloatingScale="1"
+                            materialDesign:TextFieldAssist.HasClearButton="True" />
+                <TextBox x:Name="lugar_nacimiento"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Lugar de Nacimiento" />
+                <TextBox x:Name="nombre_padres"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Nombre de los Padres" />
+                <TextBox x:Name="lugar_vivio_cuba"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Lugar donde vive o vivió en Cuba" />
+                <DatePicker x:Name="fecha_fallecimiento"
+                            materialDesign:HintAssist.Hint="Fecha de fallecimiento"
+                            Margin="12"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                            materialDesign:HintAssist.FloatingScale="1"
+                            materialDesign:TextFieldAssist.HasClearButton="True" />
+                <TextBox x:Name="otros_datos_interes"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Otros datos de interés" />
+                <TextBox x:Name="nombre_apellidos_solicitante"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Nombre y Apellidos del Solicitante" />
+                <TextBox x:Name="doc_identidad"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Doc. Identidad" />
+                <TextBox x:Name="pasaporte"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Pasaporte" />
+                <TextBox x:Name="direccion"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Dirección" />
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="telefono"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Teléfono" />
+                    <TextBox x:Name="email"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="e-mail" 
+                             Grid.Column="1"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox x:Name="legalizacion_minrex"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Legalización en MINREX" />
+                    <TextBox x:Name="legalizacion_embajada"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Legalización en Embajada de"
+                             Grid.Column="1" />
+                </Grid>
+
+                <DatePicker x:Name="fecha_de_solicitud"
+                            materialDesign:HintAssist.Hint="Fecha de la solicitud"
+                            Margin="12"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                            materialDesign:HintAssist.FloatingScale="1"
+                            materialDesign:TextFieldAssist.HasClearButton="True" />
+
+                <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                        materialDesign:ElevationAssist.Elevation="Dp4"
+                        Background="#FF404E67"
+                        Foreground="#FFFAFAFA"
+                        BorderBrush="#FF404E67"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="12"
+                        Width="246"
+                        Height="46">
+                    <WrapPanel>
+                        <materialDesign:PackIcon Kind="CheckboxMarkedCirclePlusOutline"
+                                                 Width="20"
+                                                 Height="20" />
+                        <TextBlock VerticalAlignment="Center"
+                                   Margin="7,0,0,0">Adicionar</TextBlock>
+                    </WrapPanel>
+                </Button>
+
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
