@@ -47,14 +47,326 @@
                 </WrapPanel>
             </Button>
         </Grid>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-            </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Vertical"></StackPanel>
-            <StackPanel Orientation="Vertical"
-                        Grid.Column="1"></StackPanel>
-        </Grid>
+        <ScrollViewer Grid.Row="2">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">SOLICITUD DE TRANSCRIPCIÓN DE DEFUNCIÓN</TextBlock>
+                <TextBlock Margin="12"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">DATOS DE LA PERSONA FALLECIDA</TextBlock>
+                <WrapPanel>
+                    <TextBox x:Name="nombre_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Nombre(s) del Fallecido"
+                             Width="165" />
+                    <WrapPanel Width="165"
+                               Margin="12"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center">Sexo:</TextBlock>
+                        <CheckBox x:Name="m"
+                                  Content="M" />
+                        <CheckBox x:Name="f"
+                                  Content="F" />
+                    </WrapPanel>
+                    <TextBox x:Name="primer_apellido_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Primer Apellido"
+                             Width="165" />
+                    <TextBox x:Name="segundo_apellido_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Segundo Apellido"
+                             Width="165" />
+                    <TextBlock Margin="12"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               Width="165">Fecha del Fallecimiento:</TextBlock>
+                    <materialDesign:TimePicker x:Name="hora_fallecido"
+                                               Width="165"
+                                               Margin="12"
+                                               materialDesign:HintAssist.Hint="Hora"
+                                               Style="{StaticResource MaterialDesignOutlinedTimePicker }"
+                                               materialDesign:TextFieldAssist.HasClearButton="True"
+                                               materialDesign:HintAssist.FloatingScale="1" />
+
+                    <DatePicker x:Name="fecha_fallecimineto"
+                                materialDesign:HintAssist.Hint="Fecha"
+                                Margin="12"
+                                Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                                materialDesign:TextFieldAssist.HasClearButton="True"
+                                materialDesign:HintAssist.FloatingScale="1"
+                                Width="165" />
+
+                    <TextBox x:Name="lugar_nacimineto_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Lugar de Nacimiento"
+                             Width="165" />
+
+                    <TextBox x:Name="municipio_provincia_pais_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="(Mncpio. Provincia, País )"
+                             Width="165" />
+
+                    <DatePicker x:Name="fecha_nacimiento"
+                                materialDesign:HintAssist.Hint="Fecha Nacimiento"
+                                Margin="12"
+                                Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                                materialDesign:TextFieldAssist.HasClearButton="True"
+                                materialDesign:HintAssist.FloatingScale="1"
+                                Width="165" />
+
+                    <TextBox x:Name="pasaporte_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Nro. Pasaporte o Identidad"
+                             Width="165" />
+
+                    <TextBox x:Name="edad_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Edad al fallecer"
+                             Width="165" />
+                    <TextBox x:Name="registro_civil_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Registro Civil de Nacimiento"
+                             Width="165" />
+                    <TextBox x:Name="tomo_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Tomo"
+                             Width="165" />
+                    <TextBox x:Name="folio_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Folio"
+                             Width="165" />
+                    <TextBox x:Name="estado_civil_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Estado Civil"
+                             Width="165" />
+                    <TextBox x:Name="ocupacion_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Ocupación"
+                             Width="165" />
+                    <TextBox x:Name="padre_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Nombre(s) y Apellidos del Padre"
+                             Width="165" />
+                    <TextBox x:Name="madre_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Nombre(s) y Apellidos de la Madre"
+                             Width="165" />
+                    <TextBox x:Name="domicilio_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Domicilio permanente del fallecido"
+                             Width="165" />
+                </WrapPanel>
+
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">DATOS DE LA DEFUNCIÓN</TextBlock>
+                <WrapPanel HorizontalAlignment="Left">
+                    <TextBlock Margin="12"
+                               HorizontalAlignment="Center"
+                               FontWeight="Bold">Fecha:</TextBlock>
+                    <DatePicker x:Name="fecha_defuncion"
+                                materialDesign:HintAssist.Hint="Fecha de Defunción"
+                                Margin="12"
+                                Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                                materialDesign:HintAssist.FloatingScale="1"
+                                materialDesign:TextFieldAssist.HasClearButton="True"
+                                Width="165" />
+
+                    <materialDesign:TimePicker x:Name="hora_defuncion"
+                                               Width="165"
+                                               Margin="12"
+                                               materialDesign:HintAssist.Hint="Hora de Defunción"
+                                               Style="{StaticResource MaterialDesignOutlinedTimePicker }"
+                                               materialDesign:HintAssist.FloatingScale="1"
+                                               materialDesign:TextFieldAssist.HasClearButton="True" />
+                </WrapPanel>
+
+                <TextBox x:Name="lugar_fallecimiento"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Lugar del Fallecimiento: (Hospital o Domicilio particular: en cualquier caso la Dirección completa)"
+                         TextWrapping="Wrap" />
+
+                <TextBox x:Name="causa_muerte_fallecimiento"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Causa de la Muerte"
+                         TextWrapping="Wrap" />
+
+                <TextBox x:Name="enfermedad_causa_fallecimiento"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Enfermedad o estado patológico que produjo la muerte directamente"
+                         TextWrapping="Wrap" />
+
+                <TextBox x:Name="nombre_medico_certifica_fallecimiento"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Nombre(s) y Apellidos del Médico que Certifica la Muerte"
+                         TextWrapping="Wrap" />
+
+                <TextBox x:Name="lugar_cepultura"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Lugar donde será sepultado"
+                         TextWrapping="Wrap" />
+
+                <TextBlock Margin="12"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">DATOS DEL CERTIFICADO. DEL REGISTRO CIVIL O SU EQUIVALENTE EXTRANJERO</TextBlock>
+                <WrapPanel>
+                    <TextBox x:Name="registro_civil"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Registro Civil de: (Poner el Nombre del Reg. Civil; Lugar, Municipio, Provincia, País)"
+                             Width="165" />
+                    <TextBox x:Name="tomo"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Tomo"
+                             Width="165" />
+                    <TextBox x:Name="folio"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Folio"
+                             Width="165" />
+                    <DatePicker x:Name="fecha_certificado"
+                                materialDesign:HintAssist.Hint="Fecha"
+                                Margin="12"
+                                Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                                materialDesign:HintAssist.FloatingScale="1"
+                                materialDesign:TextFieldAssist.HasClearButton="True"
+                                Width="165" />
+                </WrapPanel>
+
+                <TextBlock Margin="12"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">DATOS DE QUIEN SOLICITA LA TRANSCRIPCION</TextBlock>
+                <WrapPanel>
+                    <TextBox x:Name="nombre_apellido_solicita"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Nombre(s) y Apellidos"
+                             Width="165" />
+                    <TextBox x:Name="nro_pasaporte_carnet"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Nro. del Pasaporte o Identidad"
+                             Width="165" />
+                    <TextBox x:Name="parentesco_fallecido"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Parentesco con el Fallecido"
+                             Width="165" />
+                    <TextBox x:Name="direccion_solicita"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Dirección : (Poner Calle, Nro., Entre Calle, Apto., Barrio, Municipio Ciudad, Prov. País)" />
+
+                </WrapPanel>
+
+                <TextBox x:Name="nombre_apellido_funcionario_consular"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Nombre y Apellidos, y Cargo del funcionario consular"
+                          />
+                <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                        materialDesign:ElevationAssist.Elevation="Dp4"
+                        Background="#FF404E67"
+                        Foreground="#FFFAFAFA"
+                        BorderBrush="#FF404E67"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="12"
+                        Width="246"
+                        Height="46">
+                    <WrapPanel>
+                        <materialDesign:PackIcon Kind="CircleEditOutline"
+                                                 Width="20"
+                                                 Height="20" />
+                        <TextBlock VerticalAlignment="Center"
+                                   Margin="7,0,0,0">Actualizar</TextBlock>
+                    </WrapPanel>
+                </Button>
+
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
