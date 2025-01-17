@@ -47,14 +47,141 @@
                 </WrapPanel>
             </Button>
         </Grid>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-            </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Vertical"></StackPanel>
-            <StackPanel Orientation="Vertical"
-                        Grid.Column="1"></StackPanel>
-        </Grid>
+        <ScrollViewer Grid.Row="2">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">Modelo No. 1 Solicitud de la Adquisición de la Ciudadanía Cubana por Nacimiento. (Mayores de edad)</TextBlock>
+                <WrapPanel>
+                    <TextBox x:Name="nombre_apellidos"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Nombre y dos apellidos"
+                             Width="230" />
+                    <TextBox x:Name="ciudadano"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Ciudadano"
+                             Width="230" />
+                    <TextBox x:Name="lugar_nacimiento"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Lugar de nacimiento"
+                             Width="230" />
+                    <DatePicker x:Name="fecha_nacimiento"
+                                materialDesign:HintAssist.Hint="Fecha de Nacimiento"
+                                Margin="12"
+                                Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                                materialDesign:HintAssist.FloatingScale="1"
+                                materialDesign:TextFieldAssist.HasClearButton="True"
+                                Width="230" />
+                    <TextBox x:Name="pasaporte"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Nro. Pasaporte"
+                             Width="230" />
+                    <TextBox x:Name="padre"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Padre"
+                             Width="230" />
+                    <TextBox x:Name="ciudadania_padre"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Ciudadania Padre"
+                             Width="230" />
+                    <TextBox x:Name="madre"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Madre"
+                             Width="230" />
+                    <TextBox x:Name="ciudadania_madre"
+                             Margin="12"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:HintAssist.FloatingScale="1"
+                             materialDesign:HintAssist.Hint="Ciudadania Madre"
+                             Width="230" />
+                    <WrapPanel Margin="12"
+                               Width="482">
+                        <TextBlock Margin="0,0,12,0"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center">Manifiesto mi intención de:</TextBlock>
+                        <CheckBox x:Name="recidir_cuba"
+                                  Content="Residir en Cuba"
+                                  Margin="0,0,12,0" />
+                        <CheckBox x:Name="recidir_en_exterior"
+                                  Content="Residir en el exterior" />
+
+                    </WrapPanel>
+                </WrapPanel>
+
+                <TextBox x:Name="razones_personales"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Razones personales"
+                         TextWrapping="Wrap" />
+
+                <TextBox x:Name="nombre_funcionario"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Nombre funcionario" />
+
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">DATOS DE CONTACTO DEL SOLICITANTE:</TextBlock>
+                <TextBox x:Name="telefono"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Teléfono" />
+                <TextBox x:Name="email"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="E-MAIL" />
+                <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                        materialDesign:ElevationAssist.Elevation="Dp4"
+                        Background="#FF404E67"
+                        Foreground="#FFFAFAFA"
+                        BorderBrush="#FF404E67"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="12"
+                        Width="246"
+                        Height="46">
+                    <WrapPanel>
+                        <materialDesign:PackIcon Kind="CircleEditOutline"
+                                                 Width="20"
+                                                 Height="20" />
+                        <TextBlock VerticalAlignment="Center"
+                                   Margin="7,0,0,0">Actualizar</TextBlock>
+                    </WrapPanel>
+                </Button>
+
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
