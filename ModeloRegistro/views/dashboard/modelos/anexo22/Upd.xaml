@@ -47,14 +47,108 @@
                 </WrapPanel>
             </Button>
         </Grid>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-            </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Vertical"></StackPanel>
-            <StackPanel Orientation="Vertical"
-                        Grid.Column="1"></StackPanel>
-        </Grid>
+        <ScrollViewer Grid.Row="2">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Margin="0"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">SOLICITUD DE LEGALIZACIONES DE DOCUMENTOS</TextBlock>
+                <DatePicker x:Name="fecha_solicitud"
+                            materialDesign:HintAssist.Hint="Fecha de la solicitud"
+                            Margin="12"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                            materialDesign:HintAssist.FloatingScale="1"
+                            materialDesign:TextFieldAssist.HasClearButton="True" />
+                <TextBlock Margin="12"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold">DATOS DEL SOLICITANTE:</TextBlock>
+                <TextBox x:Name="nombre"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="NOMBRE Y APELLIDOS DEL QUE SOLICITA" />
+                <TextBox x:Name="ciudadania"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="CIUDADANÍA" />
+                <TextBox x:Name="estado_civil"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="ESTADO CIVIL" />
+                <DatePicker x:Name="fecha_nacimiento"
+                            materialDesign:HintAssist.Hint="FECHA DE NACIMIENTO"
+                            Margin="12"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                            materialDesign:HintAssist.FloatingScale="1"
+                            materialDesign:TextFieldAssist.HasClearButton="True" />
+                <TextBox x:Name="profecion"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="PROFESIÓN" />
+                <TextBox x:Name="carnet_pasaporte"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="NÚMERO DE IDENTIDAD PERMANENTE O PASAPORTE CUBANO" />
+                <TextBox x:Name="categoria_migratoria"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="Si es cubano CATEGORÍA MIGRATORIA (RESIDENTE EN EL TERRITORIO NACIONAL O EMIGRADO)" />
+                <TextBox x:Name="direccion_estados_unidos"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="DIRECCIÓN EN LOS ESTADOS UNIDOS" />
+                <TextBox x:Name="correo"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="DIRECCION DE CORREO ELECTRONICO" />
+                <TextBox x:Name="celular"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="NUMERO DE CELULAR" />
+                <TextBox x:Name="documento_legalizar"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:HintAssist.Hint="DOCUMENTO A LEGALIZAR" />
+
+                <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                        materialDesign:ElevationAssist.Elevation="Dp4"
+                        Background="#FF404E67"
+                        Foreground="#FFFAFAFA"
+                        BorderBrush="#FF404E67"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="12"
+                        Width="246"
+                        Height="46">
+                    <WrapPanel>
+                        <materialDesign:PackIcon Kind="CircleEditOutline"
+                                                 Width="20"
+                                                 Height="20" />
+                        <TextBlock VerticalAlignment="Center"
+                                   Margin="7,0,0,0">Actualizar</TextBlock>
+                    </WrapPanel>
+                </Button>
+
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
