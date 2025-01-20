@@ -209,3 +209,4 @@ D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\modelos\anexo9\Upd.baml
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\usersdashboard\Add.baml
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\usersdashboard\Upd.baml
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\System.Data.SQLite.dll
