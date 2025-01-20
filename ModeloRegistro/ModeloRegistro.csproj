@@ -53,6 +53,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\C#\libs\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -455,6 +458,63 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="model\Anexo10_e.cs" />
+    <Compile Include="model\Anexo10_m.cs" />
+    <Compile Include="model\Anexo11_e.cs" />
+    <Compile Include="model\Anexo11_m.cs" />
+    <Compile Include="model\Anexo12_e.cs" />
+    <Compile Include="model\Anexo12_m.cs" />
+    <Compile Include="model\Anexo13_e.cs" />
+    <Compile Include="model\Anexo13_m.cs" />
+    <Compile Include="model\Anexo14_e.cs" />
+    <Compile Include="model\Anexo14_m.cs" />
+    <Compile Include="model\Anexo15_e.cs" />
+    <Compile Include="model\Anexo15_m.cs" />
+    <Compile Include="model\Anexo16_e.cs" />
+    <Compile Include="model\Anexo16_m.cs" />
+    <Compile Include="model\Anexo17_e.cs" />
+    <Compile Include="model\Anexo17_m.cs" />
+    <Compile Include="model\Anexo18_e.cs" />
+    <Compile Include="model\Anexo18_m.cs" />
+    <Compile Include="model\Anexo19_e.cs" />
+    <Compile Include="model\Anexo19_m.cs" />
+    <Compile Include="model\Anexo20_e.cs" />
+    <Compile Include="model\Anexo20_m.cs" />
+    <Compile Include="model\Anexo21_e.cs" />
+    <Compile Include="model\Anexo21_m.cs" />
+    <Compile Include="model\Anexo22_e.cs" />
+    <Compile Include="model\Anexo22_m.cs" />
+    <Compile Include="model\Anexo23_e.cs" />
+    <Compile Include="model\Anexo23_m.cs" />
+    <Compile Include="model\Anexo24_e.cs" />
+    <Compile Include="model\Anexo24_m.cs" />
+    <Compile Include="model\Anexo25_e.cs" />
+    <Compile Include="model\Anexo25_m.cs" />
+    <Compile Include="model\Anexo26_e.cs" />
+    <Compile Include="model\Anexo26_m.cs" />
+    <Compile Include="model\Anexo27_e.cs" />
+    <Compile Include="model\Anexo27_m.cs" />
+    <Compile Include="model\Anexo28_e.cs" />
+    <Compile Include="model\Anexo28_m.cs" />
+    <Compile Include="model\Anexo2_e.cs" />
+    <Compile Include="model\Anexo2_m.cs" />
+    <Compile Include="model\Anexo30_e.cs" />
+    <Compile Include="model\Anexo30_m.cs" />
+    <Compile Include="model\Anexo31_e.cs" />
+    <Compile Include="model\Anexo31_m.cs" />
+    <Compile Include="model\Anexo3_e.cs" />
+    <Compile Include="model\Anexo3_m.cs" />
+    <Compile Include="model\Anexo4_e.cs" />
+    <Compile Include="model\Anexo4_m.cs" />
+    <Compile Include="model\Anexo5_e.cs" />
+    <Compile Include="model\Anexo5_m.cs" />
+    <Compile Include="model\Anexo6_e.cs" />
+    <Compile Include="model\Anexo6_m.cs" />
+    <Compile Include="model\Anexo7_e.cs" />
+    <Compile Include="model\Anexo7_m.cs" />
+    <Compile Include="model\Anexo9_e.cs" />
+    <Compile Include="model\Anexo9_m.cs" />
+    <Compile Include="model\SQLite.cs" />
     <Compile Include="services\Global.cs" />
     <Compile Include="services\PageService.cs" />
     <Compile Include="views\dashboard\Dashboard.xaml.cs">
@@ -773,7 +833,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="model\" />
     <Folder Include="validations\" />
   </ItemGroup>
   <ItemGroup>
