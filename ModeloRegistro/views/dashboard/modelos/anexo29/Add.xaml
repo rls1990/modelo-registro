@@ -51,7 +51,7 @@
             <StackPanel Orientation="Vertical">
                 <TextBlock Margin="0"
                            HorizontalAlignment="Center"
-                           FontWeight="Bold">SOLICITUD DE PODER ESPECIAL PARA ESCRITURA DE AUTORIZACION PARA SUBSANAR ASIENTO DE INSCRIPCION EN EL REGISTRO DEL ESTADO CIVIL</TextBlock>
+                           FontWeight="Bold" TextWrapping="Wrap">SOLICITUD DE PODER ESPECIAL PARA ESCRITURA DE AUTORIZACION PARA SUBSANAR ASIENTO DE INSCRIPCION EN EL REGISTRO DEL ESTADO CIVIL</TextBlock>
                 <DatePicker x:Name="fecha_solicitud"
                             materialDesign:HintAssist.Hint="Fecha de Solicitud"
                             Margin="12"
