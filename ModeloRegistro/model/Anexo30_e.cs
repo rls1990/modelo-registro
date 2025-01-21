@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo30_e
     {
+        public int id { get; set; }
         public string fecha_solicitud { get; set; }
         public string nombre { get; set; }
         public string sexo { get; set; }
@@ -29,6 +30,6 @@ namespace ModeloRegistro.model
         public string condicion_migratoria_apoderado { get; set; }
         public string direccion_vivienda { get; set; }
         public string clausaula { get; set; }
-        public int id { get; set; }
+       
     }
 }

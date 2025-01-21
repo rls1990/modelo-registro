@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo31_e
     {
+        public int id { get; set; }
         public string fecha_solicitud { get; set; }
         public string nombre_poderante { get; set; }
         public string lugar_nacimiento_municipio_poderante { get; set; }
@@ -34,6 +35,6 @@ namespace ModeloRegistro.model
         public string nombre_apellido_padres_apoderado { get; set; }
         public string condicion_migratoria_apoderado { get; set; }
         public string clausula { get; set; }
-        public int id { get; set; }
+        
     }
 }

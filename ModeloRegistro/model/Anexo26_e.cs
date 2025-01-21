@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo26_e
     {
+        public int id { get; set; }
         public string fecha_solicitud { get; set; }
         public string nombre_poderante { get; set; }
         public string sexo_poderante { get; set; }
@@ -46,6 +47,6 @@ namespace ModeloRegistro.model
         public string nombre_apellido_menor { get; set; }
         public string pension_alimenticia { get; set; }
         public string regimen_comunicacion { get; set; }
-        public int id { get; set; }
+        
     }
 }

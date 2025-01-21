@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo24_e
     {
+        public int id { get; set; }
         public string fecha_solicitud { get; set; }
         public string nombre { get; set; }
         public string lugar_nacimineto_municipio { get; set; }
@@ -33,6 +34,6 @@ namespace ModeloRegistro.model
         public string nro_motor { get; set; }
         public string nro_chasis { get; set; }
         public string matricula { get; set; }
-        public int id { get; set; }
+        
     }
 }

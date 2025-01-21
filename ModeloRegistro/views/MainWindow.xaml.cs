@@ -13,7 +13,7 @@ namespace ModeloRegistro.views
         {
             InitializeComponent();
             Global.frame=frame;
-
+            Global.sqlite=new model.SQLite("data.db");
             LoadInit();
         }
 

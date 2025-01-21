@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo14_e
     {
+        public int id { get; set; }
         public string quien_suscribe { get; set; }
         public string nombre_contrayente { get; set; }
         public string ciudadania_contrayente { get; set; }
@@ -41,6 +42,6 @@ namespace ModeloRegistro.model
         public string nombre_funcionario_expidió_certificado { get; set; }
         public string cargo_funcionario_expidió_certificado { get; set; }
         public string fecha_solicitud { get; set; }
-        public int id { get; set; }
+        
     }
 }

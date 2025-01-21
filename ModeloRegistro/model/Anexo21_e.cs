@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo21_e
     {
+        public int id { get; set; }
         public string fecha_solicitud { get; set; }
         public string nombre_padre { get; set; }
         public string ciudadania_padre { get; set; }
@@ -24,6 +25,6 @@ namespace ModeloRegistro.model
         public string folio { get; set; }
         public string tarjeta_menor { get; set; }
         public string direccion_menor_cuba { get; set; }
-        public int id { get; set; }
+        
     }
 }

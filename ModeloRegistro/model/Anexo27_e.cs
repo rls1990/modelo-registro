@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo27_e
     {
+        public int id { get; set; }
         public string fecha_solicitud { get; set; }
         public string nombre_poderante { get; set; }
         public string sexo_poderante { get; set; }
@@ -39,6 +40,6 @@ namespace ModeloRegistro.model
         public string carne_pasaporte_donatorio { get; set; }
         public string condicion_migratoria_donatorio { get; set; }
         public string direccion_vivienda { get; set; }
-        public int id { get; set; }
+        
     }
 }

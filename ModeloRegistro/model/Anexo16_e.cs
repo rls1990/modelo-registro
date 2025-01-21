@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo16_e
     {
+        public int id { get; set; }
         public string tirista { get; set; }
         public string transeuntes { get; set; }
         public string eventos { get; set; }
@@ -71,6 +72,6 @@ namespace ModeloRegistro.model
         public string lugar_fecha_salida_cuba { get; set; }
         public string lugar_fecha_llegada_cuba { get; set; }
         public string proposito_viaje_cuba { get; set; }
-        public int id { get; set; }
+        
     }
 }

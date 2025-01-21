@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo17_e
     {
+        public int id { get; set; }
         public string nombre_apellidos { get; set; }
         public string ciudadano { get; set; }
         public string lugar_nacimiento { get; set; }
@@ -17,6 +18,6 @@ namespace ModeloRegistro.model
         public string nombre_funcionario { get; set; }
         public string telefono { get; set; }
         public string email { get; set; }
-        public int id { get; set; }
+        
     }
 }

@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo20_e
     {
+        public int id { get; set; }
         public string nombre_apellidos { get; set; }
         public string ciudadano { get; set; }
         public string nombre_apellidos_menor_edad { get; set; }
@@ -21,6 +22,6 @@ namespace ModeloRegistro.model
         public string nombre_funcionario_consular { get; set; }
         public string telefono { get; set; }
         public string email { get; set; }
-        public int id { get; set; }
+        
     }
 }

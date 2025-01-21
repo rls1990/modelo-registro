@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo25_e
     {
+        public int id { get; set; }
         public string fecha_solicitud { get; set; }
         public string nombre_poderante { get; set; }
         public string sexo_poderante { get; set; }
@@ -40,6 +41,6 @@ namespace ModeloRegistro.model
         public string padres_contrallente { get; set; }
         public string nivel_escolaridad_contrallente { get; set; }
         public string condicion_migratoria_contrallente { get; set; }
-        public int id { get; set; }
+        
     }
 }

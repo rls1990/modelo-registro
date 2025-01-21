@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo13_e
     {
+        public int id { get; set; }
         public string fecha_solicitud { get; set; }
         public string nombre_comparece { get; set; }
         public string no_pasaporte_comparece { get; set; }
@@ -39,6 +40,6 @@ namespace ModeloRegistro.model
         public string nombre_inscrito_pais_nacimineto { get; set; }
         public string inscripcion_practicada_en_virtud_de { get; set; }
         public string observaciones { get; set; }
-        public int id { get; set; }
+        
     }
 }

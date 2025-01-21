@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo7_e
     {
+        public int id { get; set; }
         public string ciudad { get; set; }
         public string pais { get; set; }
         public string nombre_apellido { get; set; }
@@ -16,6 +17,6 @@ namespace ModeloRegistro.model
         public string legalizacion_minrex { get; set; }
         public string legalizacion_embajada { get; set; }
         public string fecha_de_solicitud { get; set; }
-        public int id { get; set; }
+        
     }
 }

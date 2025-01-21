@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo22_e
     {
+        public int id { get; set; }
         public string fecha_solicitud { get; set; }
         public string nombre { get; set; }
         public string ciudadania { get; set; }
@@ -14,6 +15,6 @@ namespace ModeloRegistro.model
         public string correo { get; set; }
         public string celular { get; set; }
         public string documento_legalizar { get; set; }
-        public int id { get; set; }
+        
     }
 }

@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo15_e
     {
+        public int id { get; set; }
         public string nombre_fallecido { get; set; }
         public string m { get; set; }
         public string f { get; set; }
@@ -38,6 +39,6 @@ namespace ModeloRegistro.model
         public string parentesco_fallecido { get; set; }
         public string direccion_solicita { get; set; }
         public string nombre_apellido_funcionario_consular { get; set; }
-        public int id { get; set; }
+
     }
 }

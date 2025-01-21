@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo28_e
     {
+        public int id { get; set; }
         public string fecha_solicitud { get; set; }
         public string nombre_poderante { get; set; }
         public string sexo_poderante { get; set; }
@@ -34,6 +35,6 @@ namespace ModeloRegistro.model
         public string total { get; set; }
         public string numeracion { get; set; }
         public string total_kg { get; set; }
-        public int id { get; set; }
+        
     }
 }

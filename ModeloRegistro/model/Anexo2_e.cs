@@ -2,6 +2,7 @@ namespace ModeloRegistro.model
 {
     public class Anexo2_e
     {
+        public int id { get; set; }
         public string pasaporte_1ra_vez { get; set; }
         public string prorrogas { get; set; }
         public string he_1 { get; set; }
@@ -85,6 +86,6 @@ namespace ModeloRegistro.model
         public string fecha_inscripcion_consular { get; set; }
         public string arancel_inscripcion_consular { get; set; }
         public string valoracion_consular { get; set; }
-        public int id { get; set; }
+        
     }
 }
