@@ -122,6 +122,7 @@
                 <ScrollViewer HorizontalScrollBarVisibility="Auto"
                               VerticalScrollBarVisibility="Auto">
                     <DataGrid x:Name="listadg"
+                              ItemsSource="{Binding lista}"
                               CanUserAddRows="False"
                               IsReadOnly="True"
                               CanUserReorderColumns="true"

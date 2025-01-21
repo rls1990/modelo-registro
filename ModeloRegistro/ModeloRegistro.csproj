@@ -496,6 +496,8 @@
     <Compile Include="model\Anexo27_m.cs" />
     <Compile Include="model\Anexo28_e.cs" />
     <Compile Include="model\Anexo28_m.cs" />
+    <Compile Include="model\Anexo29_e.cs" />
+    <Compile Include="model\Anexo29_m.cs" />
     <Compile Include="model\Anexo2_e.cs" />
     <Compile Include="model\Anexo2_m.cs" />
     <Compile Include="model\Anexo30_e.cs" />

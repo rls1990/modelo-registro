@@ -1,4 +1,5 @@
 ﻿using ModeloRegistro.services;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,9 +10,27 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo26
     /// </summary>
     public partial class Anexo26:Page
     {
+        private model.Anexo26_m manager = new model.Anexo26_m(Global.sqlite);
+        public List<model.Anexo26_e> lista { get; set; }
         public Anexo26()
         {
             InitializeComponent();
+            InitList();
+            DataContext=this;
+        }
+
+        public void InitList()
+        {
+            if(lista==null)
+                lista=new List<model.Anexo26_e>();
+            else
+                lista.Clear();
+
+            List<model.Anexo26_e> lm = manager.list();
+            lm.Reverse();
+            lista.AddRange(lm);
+
+            listadg.Items.Refresh();
         }
 
         private void Button_Click( object sender,RoutedEventArgs e )
