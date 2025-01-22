@@ -24,5 +24,40 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo19
         {
 
         }
+
+        public bool ValidarAnexo( model.Anexo19_e model )
+        {
+            // Verificar si el modelo es nulo
+            if(model==null)
+            {
+                return false; // El modelo es nulo
+            }
+
+            // Verificar si cada campo es nulo o vacío
+            if(string.IsNullOrEmpty(model.nombre_apellidos)||
+                string.IsNullOrEmpty(model.ciudadano)||
+                string.IsNullOrEmpty(model.lugar_nacimiento)||
+                string.IsNullOrEmpty(model.fecha_nacimiento)||
+                string.IsNullOrEmpty(model.pasaporte)||
+                string.IsNullOrEmpty(model.nombre_menor)||
+                string.IsNullOrEmpty(model.ciudadania_menor)||
+                string.IsNullOrEmpty(model.lugar_nacimineto_menor)||
+                string.IsNullOrEmpty(model.fecha_nacimiento_menor)||
+                string.IsNullOrEmpty(model.pasaporte_menor)||
+                string.IsNullOrEmpty(model.ultima_direccion_pedres)||
+                //string.IsNullOrEmpty(model.recidir_cuba)||
+                //string.IsNullOrEmpty(model.recidir_en_exterior)||
+                string.IsNullOrEmpty(model.razones_personales)||
+                string.IsNullOrEmpty(model.nombre_funcionario)||
+                string.IsNullOrEmpty(model.telefono)||
+                string.IsNullOrEmpty(model.email))
+            {
+                return false; // Algún campo es nulo o vacío
+            }
+
+            // Si todas las validaciones pasan
+            return true; // La entidad Anexo19_e es válida
+        }
+
     }
 }

@@ -24,5 +24,34 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo11
         {
 
         }
+
+        private bool ValidarAnexo( model.Anexo11_e anexo )
+        {
+            if(anexo==null)
+                return false; // Retorna false si el objeto es nulo
+
+            // Verificar cada campo de la entidad
+            return !string.IsNullOrWhiteSpace(anexo.ciudad)&&
+                   !string.IsNullOrWhiteSpace(anexo.pais)&&
+                   !string.IsNullOrWhiteSpace(anexo.solicito_certificado)&&
+                   !string.IsNullOrWhiteSpace(anexo.de_mi)&&
+                   !string.IsNullOrWhiteSpace(anexo.nombre_apellidos)&&
+                   !string.IsNullOrWhiteSpace(anexo.fecha_nacimiento)&&
+                   !string.IsNullOrWhiteSpace(anexo.lugar_nacimiento)&&
+                   !string.IsNullOrWhiteSpace(anexo.nombre_padres)&&
+                   !string.IsNullOrWhiteSpace(anexo.lugar_vivio_cuba)&&
+                   !string.IsNullOrWhiteSpace(anexo.fecha_fallecimiento)&&
+                   !string.IsNullOrWhiteSpace(anexo.otros_datos_interes)&&
+                   !string.IsNullOrWhiteSpace(anexo.nombre_apellidos_solicitante)&&
+                   !string.IsNullOrWhiteSpace(anexo.doc_identidad)&&
+                   !string.IsNullOrWhiteSpace(anexo.pasaporte)&&
+                   !string.IsNullOrWhiteSpace(anexo.direccion)&&
+                   !string.IsNullOrWhiteSpace(anexo.telefono)&&
+                   !string.IsNullOrWhiteSpace(anexo.email)&&
+                   !string.IsNullOrWhiteSpace(anexo.legalizacion_minrex)&&
+                   !string.IsNullOrWhiteSpace(anexo.legalizacion_embajada)&&
+                   !string.IsNullOrWhiteSpace(anexo.fecha_de_solicitud);
+        }
+
     }
 }

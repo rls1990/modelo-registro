@@ -24,5 +24,34 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo12
         {
 
         }
+
+        private bool ValidarAnexo( model.Anexo12_e anexo )
+        {
+            if(anexo==null)
+                return false; // Retorna false si el objeto es nulo
+
+            // Verificar cada campo de la entidad
+            return !string.IsNullOrWhiteSpace(anexo.ciudad)&&
+                   !string.IsNullOrWhiteSpace(anexo.pais)&&
+                   !string.IsNullOrWhiteSpace(anexo.nombre_apellidos)&&
+                   !string.IsNullOrWhiteSpace(anexo.ciudadano)&&
+                   !string.IsNullOrWhiteSpace(anexo.carnet_identidad)&&
+                   !string.IsNullOrWhiteSpace(anexo.fecha_nacimiento)&&
+                   !string.IsNullOrWhiteSpace(anexo.lugar_nacimineto)&&
+                   !string.IsNullOrWhiteSpace(anexo.registro_civil)&&
+                   !string.IsNullOrWhiteSpace(anexo.vecino_de)&&
+                   !string.IsNullOrWhiteSpace(anexo.nombre_apellido_apoderado)&&
+                   !string.IsNullOrWhiteSpace(anexo.si)&&
+                   !string.IsNullOrWhiteSpace(anexo.no)&&
+                   !string.IsNullOrWhiteSpace(anexo.numero)&&
+                   !string.IsNullOrWhiteSpace(anexo.fecha_poder_especial)&&
+                   !string.IsNullOrWhiteSpace(anexo.nombre_apellido_notario)&&
+                   !string.IsNullOrWhiteSpace(anexo.competencia)&&
+                   !string.IsNullOrWhiteSpace(anexo.sede)&&
+                   !string.IsNullOrWhiteSpace(anexo.legalizacion_minrex)&&
+                   !string.IsNullOrWhiteSpace(anexo.legalizacion_embajada)&&
+                   !string.IsNullOrWhiteSpace(anexo.fecha_de_solicitud);
+        }
+
     }
 }
