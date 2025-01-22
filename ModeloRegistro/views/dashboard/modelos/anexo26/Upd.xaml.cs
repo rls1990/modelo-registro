@@ -14,7 +14,87 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo26
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo26_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            fecha_solicitud.Text=entity.fecha_solicitud;
+            nombre_poderante.Text=entity.nombre_poderante;
+            sexo_poderante.Text=entity.sexo_poderante;
+
+            lugar_nacimiento_municipio_poderante.Text=entity.lugar_nacimiento_municipio_poderante;
+            lugar_nacimiento_provincia_poderante.Text=entity.lugar_nacimiento_provincia_poderante;
+
+            fecha_nacimineto_poderante.Text=entity.fecha_nacimineto_poderante;
+            estado_civil_poderante.Text=entity.estado_civil_poderante;
+
+            ciudadania_poderante.Text=entity.ciudadania_poderante;
+            ocupacion_poderante.Text=entity.ocupacion_poderante;
+
+            direccion_particular_poderante.Text=entity.direccion_particular_poderante;
+            carne_pasaporte_poderante.Text=entity.carne_pasaporte_poderante;
+
+            condicion_migratoria_poderante.Text=entity.condicion_migratoria_poderante;
+
+            correo_poderante.Text=entity.correo_poderante;
+            celular_poderante.Text=entity.celular_poderante;
+
+            nombre_apoderado.Text=entity.nombre_apoderado;
+            sexo_apoderado.Text=entity.sexo_apoderado;
+
+            lugar_nacimiento_municipio_apoderado.Text=entity.lugar_nacimiento_municipio_apoderado;
+            lugar_nacimiento_provincia_apoderado.Text=entity.lugar_nacimiento_provincia_apoderado;
+
+            fecha_nacimineto_apoderado.Text=entity.fecha_nacimineto_apoderado;
+            estado_civil_apoderado.Text=entity.estado_civil_apoderado;
+
+            ciudadania_apoderado.Text=entity.ciudadania_apoderado;
+            ocupacion_apoderado.Text=entity.ocupacion_apoderado;
+
+            direccion_particular_apoderado.Text=entity.direccion_particular_apoderado;
+            carne_pasaporte_apoderado.Text=entity.carne_pasaporte_apoderado;
+
+            condicion_migratoria_apoderado.Text=entity.condicion_migratoria_apoderado;
+
+            nombre_contrayente.Text=entity.nombre_contrayente;
+            sexo_contrayente.Text=entity.sexo_contrayente;
+
+            lugar_nacimiento_municipio_contrayente.Text=entity.lugar_nacimiento_municipio_contrayente;
+            lugar_nacimiento_provincia_contrayente.Text=entity.lugar_nacimiento_provincia_contrayente;
+
+            fecha_nacimineto_contrayente.Text=entity.fecha_nacimineto_contrayente;
+            estado_civil_contrayente.Text=entity.estado_civil_contrayente;
+
+            ciudadania_contrayente.Text=entity.ciudadania_contrayente;
+            ocupacion_contrayente.Text=entity.ocupacion_contrayente;
+
+            direccion_particular_contrayente.Text=entity.direccion_particular_contrayente;
+            carne_pasaporte_contrayente.Text=entity.carne_pasaporte_contrayente;
+
+            condicion_migratoria_contrayente.Text=entity.condicion_migratoria_contrayente;
+
+            fecha_celebracion.Text=entity.fecha_celebracion;
+
+            tomo.Text=entity.tomo;
+
+            folio.Text=entity.folio;
+
+            registro_civil_municipio.Text=entity.registro_civil_municipio;
+
+            patria_potestad.Text=entity.patria_potestad;
+
+            nombre_apellido_menor.Text=entity.nombre_apellido_menor;
+
+            pension_alimenticia.Text=entity.pension_alimenticia;
+
+            regimen_comunicacion.Text=entity.regimen_comunicacion;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

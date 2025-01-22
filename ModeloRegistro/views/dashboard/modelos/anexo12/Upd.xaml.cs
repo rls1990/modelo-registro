@@ -14,7 +14,37 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo12
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo12_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            ciudad.Text=entity.ciudad;
+            pais.Text=entity.pais;
+            nombre_apellidos.Text=entity.nombre_apellidos;
+            ciudadano.Text=entity.ciudadano;
+            carnet_identidad.Text=entity.carnet_identidad;
+            fecha_nacimiento.Text=entity.fecha_nacimiento;
+            lugar_nacimineto.Text=entity.lugar_nacimineto;
+            registro_civil.Text=entity.registro_civil;
+            vecino_de.Text=entity.vecino_de;
+            nombre_apellido_apoderado.Text=entity.nombre_apellido_apoderado;
+            si.IsChecked=entity.si=="True"; 
+            no.IsChecked=entity.no=="False";
+            numero.Text=entity.numero;
+            fecha_poder_especial.Text=entity.fecha_poder_especial;
+            nombre_apellido_notario.Text=entity.nombre_apellido_notario;
+            competencia.Text=entity.competencia;
+            sede.Text=entity.sede;
+            legalizacion_minrex.Text=entity.legalizacion_minrex;
+            legalizacion_embajada.Text=entity.legalizacion_embajada;
+            fecha_de_solicitud.Text=entity.fecha_de_solicitud;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

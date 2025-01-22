@@ -14,7 +14,41 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo5
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo5_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            ciudad.Text=entity.ciudad;
+            pais.Text=entity.pais;
+
+            nombre_apellido_hombre.Text=entity.nombre_apellido_hombre;
+            nombre_apellido_mujer.Text=entity.nombre_apellido_mujer;
+
+            fecha_matrimonio.Text=entity.fecha_matrimonio;
+            ciudad_matrimonio.Text=entity.ciudad_matrimonio;
+
+            provincia_matrimonio.Text=entity.provincia_matrimonio;
+            pais_matrimonio.Text=entity.pais_matrimonio;
+
+            registro.Text=entity.registro;
+            municipio_registro.Text=entity.municipio_registro;
+
+            provincia_registro.Text=entity.provincia_registro;
+
+            tomo.Text=entity.tomo;
+            folio.Text=entity.folio;
+
+            legalizacion_minred.Text=entity.legalizacion_minred;
+            legalizacion_embajada.Text=entity.legalizacion_embajada;
+
+            fecha_solicitud.Text=entity.fecha_solicitud;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

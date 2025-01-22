@@ -14,7 +14,42 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo9
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo9_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            ciudad.Text=entity.ciudad;
+            pais.Text=entity.pais;
+
+            encargado_registro_civil.Text=entity.encargado_registro_civil;
+            municipio_encargado.Text=entity.municipio_encargado;
+            provincia_encargado.Text=entity.provincia_encargado;
+
+            nombre.Text=entity.nombre;
+            fecha_solicitud.Text=entity.fecha_solicitud;
+
+            tomo_certificado.Text=entity.tomo_certificado;
+            folio_certificado.Text=entity.folio_certificado;
+
+            fecha_nacimiento.Text=entity.fecha_nacimiento;
+
+            municipio_persona.Text=entity.municipio_persona;
+            provincia_persona.Text=entity.provincia_persona;
+
+            padre.Text=entity.padre;
+            madre.Text=entity.madre;
+
+            legalizacion_minrex.Text=entity.legalizacion_minrex;
+            legalizacion_embajada.Text=entity.legalizacion_embajada;
+
+            fecha_de_solicitud.Text=entity.fecha_de_solicitud;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

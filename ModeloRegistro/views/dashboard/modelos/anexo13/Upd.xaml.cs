@@ -14,7 +14,54 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo13
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo13_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            fecha_solicitud.Text=entity.fecha_solicitud;
+            nombre_comparece.Text=entity.nombre_comparece;
+            no_pasaporte_comparece.Text=entity.no_pasaporte_comparece;
+            nombre_inscripcion.Text=entity.nombre_inscripcion;
+            m.IsChecked=entity.m=="True"; // Asegúrate de que esto sea un campo adecuado
+            f.IsChecked=entity.f=="True"; // Igual que el anterior
+            primer_apellido_inscripcion.Text=entity.primer_apellido_inscripcion;
+            segundo_apellido_inscripcion.Text=entity.segundo_apellido_inscripcion;
+            hora_nacimiento.Text=entity.hora_nacimiento;
+            fecha_nacimineto.Text=entity.fecha_nacimineto;
+            referencia_territorio_registro_civil.Text=entity.referencia_territorio_registro_civil;
+            tomo_referencia_registral.Text=entity.tomo_referencia_registral;
+            folio_referencia_registral.Text=entity.folio_referencia_registral;
+            nro_asiento.Text=entity.nro_asiento;
+            lugar_nacimineto.Text=entity.lugar_nacimineto;
+            nombre_padre.Text=entity.nombre_padre;
+            primer_apellido_padre.Text=entity.primer_apellido_padre;
+            segundo_apellido_padre.Text=entity.segundo_apellido_padre;
+            ciudadania_padre.Text=entity.ciudadania_padre;
+            natural_de_padre.Text=entity.natural_de_padre;
+            nro_pasaporte_padre.Text=entity.nro_pasaporte_padre;
+            domicilio_padre.Text=entity.domicilio_padre;
+            nombre_madre.Text=entity.nombre_madre;
+            primer_apellido_madre.Text=entity.primer_apellido_madre;
+            segundo_apellido_madre.Text=entity.segundo_apellido_madre;
+            ciudadania_madre.Text=entity.ciudadania_madre;
+            natural_de_madre.Text=entity.natural_de_madre;
+            nro_pasaporte_madre.Text=entity.nro_pasaporte_madre;
+            domicilio_madre.Text=entity.domicilio_madre;
+            nombre_abuelo_paterno.Text=entity.nombre_abuelo_paterno;
+            nombre_abuela_paterna.Text=entity.nombre_abuela_paterna;
+            nombre_abuelo_materno.Text=entity.nombre_abuelo_materno;
+            nombre_abuela_materna.Text=entity.nombre_abuela_materna;
+            nombre_apellido_soltera_madre.Text=entity.nombre_apellido_soltera_madre;
+            nombre_inscrito_pais_nacimineto.Text=entity.nombre_inscrito_pais_nacimineto;
+            inscripcion_practicada_en_virtud_de.Text=entity.inscripcion_practicada_en_virtud_de;
+            observaciones.Text=entity.observaciones;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

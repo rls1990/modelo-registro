@@ -14,7 +14,57 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo4
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo4_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            ciudad.Text=entity.ciudad;
+            pais.Text=entity.pais;
+            f_name.Text=entity.f_name;
+            s_name.Text=entity.s_name;
+            f_apellido.Text=entity.f_apellido;
+            s_apellido.Text=entity.s_apellido;
+
+            lugar_nacimiento.Text=entity.lugar_nacimiento;
+            ciudadania.Text=entity.ciudadania;
+            nacionalidad.Text=entity.nacionalidad;
+
+            estado_civil.Text=entity.estado_civil;
+            fecha_nacimiento.Text=entity.fecha_nacimiento;
+
+            sexo.Text=entity.sexo;
+            color_piel.Text=entity.color_piel;
+
+            profecion_oficio_ocupacion.Text=entity.profecion_oficio_ocupacion;
+
+            nombre_padre.Text=entity.nombre_padre;
+            nombre_madre.Text=entity.nombre_madre;
+
+            carnet_identidad.Text=entity.carnet_identidad;
+            pasaporte.Text=entity.pasaporte;
+
+            calle.Text=entity.calle;
+            numero.Text=entity.numero;
+
+            entre.Text=entity.entre;
+            y.Text=entity.y; 
+
+            barrio.Text=entity.barrio;
+
+            municipio.Text=entity.municipio;
+            provincia.Text=entity.provincia;
+
+            legalizacion_minred.Text=entity.legalizacion_minred;
+            legalizacion_embajada.Text=entity.legalizacion_embajada;
+
+            fecha_solicitud.Text=entity.fecha_solicitud;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

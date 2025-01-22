@@ -26,7 +26,56 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo15
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo15_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            nombre_fallecido.Text=entity.nombre_fallecido;
+            m.IsChecked=entity.m=="True";
+            f.IsChecked=entity.f=="True";
+            primer_apellido_fallecido.Text=entity.primer_apellido_fallecido;
+            segundo_apellido_fallecido.Text=entity.segundo_apellido_fallecido;
+            hora_fallecido.Text=entity.hora_fallecido;
+            fecha_fallecimineto.Text=entity.fecha_fallecimineto;
+            lugar_nacimineto_fallecido.Text=entity.lugar_nacimineto_fallecido;
+            municipio_provincia_pais_fallecido.Text=entity.municipio_provincia_pais_fallecido;
+            fecha_nacimiento.Text=entity.fecha_nacimiento;
+            pasaporte_fallecido.Text=entity.pasaporte_fallecido;
+            edad_fallecido.Text=entity.edad_fallecido;
+            registro_civil_fallecido.Text=entity.registro_civil_fallecido;
+            tomo_fallecido.Text=entity.tomo_fallecido;
+            folio_fallecido.Text=entity.folio_fallecido;
+            estado_civil_fallecido.Text=entity.estado_civil_fallecido;
+            ocupacion_fallecido.Text=entity.ocupacion_fallecido;
+            padre_fallecido.Text=entity.padre_fallecido;
+            madre_fallecido.Text=entity.madre_fallecido;
+            domicilio_fallecido.Text=entity.domicilio_fallecido;
+            fecha_defuncion.Text=entity.fecha_defuncion;
+            hora_defuncion.Text=entity.hora_defuncion;
+            lugar_fallecimiento.Text=entity.lugar_fallecimiento;
+            causa_muerte_fallecimiento.Text=entity.causa_muerte_fallecimiento;
+            enfermedad_causa_fallecimiento.Text=entity.enfermedad_causa_fallecimiento;
+            nombre_medico_certifica_fallecimiento.Text=entity.nombre_medico_certifica_fallecimiento;
+            lugar_cepultura.Text=entity.lugar_cepultura;
+
+            registro_civil.Text=entity.registro_civil;
+            tomo.Text=entity.tomo;
+            folio.Text=entity.folio;
+
+            fecha_certificado.Text=entity.fecha_certificado;
+            nombre_apellido_solicita.Text=entity.nombre_apellido_solicita;
+            nro_pasaporte_carnet.Text=entity.nro_pasaporte_carnet;
+            parentesco_fallecido.Text=entity.parentesco_fallecido;
+            direccion_solicita.Text=entity.direccion_solicita;
+
+            nombre_apellido_funcionario_consular.Text=entity.nombre_apellido_funcionario_consular;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

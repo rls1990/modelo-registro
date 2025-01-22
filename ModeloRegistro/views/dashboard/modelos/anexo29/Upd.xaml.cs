@@ -14,7 +14,70 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo29
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo29_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            fecha_solicitud.Text=entity.fecha_solicitud;
+            nombre.Text=entity.nombre;
+            sexo.Text=entity.sexo;
+
+            lugar_nacimineto_municipio.Text=entity.lugar_nacimineto_municipio;
+            lugar_nacimineto_provincia.Text=entity.lugar_nacimineto_provincia;
+
+            fecha_nacimineto.Text=entity.fecha_nacimineto;
+            estado_civil.Text=entity.estado_civil;
+
+            ciudadania.Text=entity.ciudadania;
+            ocupacion.Text=entity.ocupacion;
+
+            direccion.Text=entity.direccion;
+            carnet_pasaporte.Text=entity.carnet_pasaporte;
+
+            condicion_migratoria.Text=entity.condicion_migratoria;
+
+            correo.Text=entity.correo;
+            celular.Text=entity.celular;
+
+            nombre_apoderado.Text=entity.nombre_apoderado;
+            sexo_apoderado.Text=entity.sexo_apoderado;
+
+            lugar_nacimineto_municipio_apoderado.Text=entity.lugar_nacimineto_municipio_apoderado;
+            lugar_nacimineto_provincia_apoderado.Text=entity.lugar_nacimineto_provincia_apoderado;
+
+            fecha_nacimineto_apoderado.Text=entity.fecha_nacimineto_apoderado;
+            estado_civil_apoderado.Text=entity.estado_civil_apoderado;
+
+            ciudadania_apoderado.Text=entity.ciudadania_apoderado;
+            ocupacion_apoderado.Text=entity.ocupacion_apoderado;
+
+            direccion_apoderado.Text=entity.direccion_apoderado;
+            carnet_pasaporte_apoderado.Text=entity.carnet_pasaporte_apoderado;
+
+            condicion_migratoria_apoderado.Text=entity.condicion_migratoria_apoderado;
+
+            nombre_menor.Text=entity.nombre_menor;
+
+            natural_de.Text=entity.natural_de;
+
+            fecha_nacimineto_menor.Text=entity.fecha_nacimineto_menor;
+
+            edad.Text=entity.edad;
+
+            tomo.Text=entity.tomo;
+
+            folio.Text=entity.folio;
+
+            registro_estado_civil.Text=entity.registro_estado_civil;
+
+            tipo_tramites.Text=entity.tipo_tramites;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

@@ -14,7 +14,65 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo24_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            fecha_solicitud.Text=entity.fecha_solicitud;
+            nombre.Text=entity.nombre;
+
+            lugar_nacimineto_municipio.Text=entity.lugar_nacimineto_municipio;
+            lugar_nacimineto_provincia.Text=entity.lugar_nacimineto_provincia;
+
+            fecha_nacimineto.Text=entity.fecha_nacimineto;
+            estado_civil.Text=entity.estado_civil;
+
+            ciudadania.Text=entity.ciudadania;
+            ocupacion.Text=entity.ocupacion;
+
+            direccion.Text=entity.direccion;
+            carnet_pasaporte.Text=entity.carnet_pasaporte;
+
+            nombre_apellido_padres.Text=entity.nombre_apellido_padres;
+
+            condicion_migratoria.Text=entity.condicion_migratoria;
+
+            correo.Text=entity.correo;
+            celular.Text=entity.celular;
+
+            nombre_apoderado.Text=entity.nombre_apoderado;
+
+            lugar_nacimineto_municipio_apoderado.Text=entity.lugar_nacimineto_municipio_apoderado;
+            lugar_nacimineto_provincia_apoderado.Text=entity.lugar_nacimineto_provincia_apoderado;
+
+            fecha_nacimineto_apoderado.Text=entity.fecha_nacimineto_apoderado;
+            estado_civil_apoderado.Text=entity.estado_civil_apoderado;
+
+            ciudadania_apoderado.Text=entity.ciudadania_apoderado;
+            ocupacion_apoderado.Text=entity.ocupacion_apoderado;
+
+            direccion_apoderado.Text=entity.direccion_apoderado;
+            carnet_pasaporte_apoderado.Text=entity.carnet_pasaporte_apoderado;
+
+            condicion_migratoria_apoderado.Text=entity.condicion_migratoria_apoderado;
+
+            marca.Text=entity.marca;
+            modelo.Text=entity.modelo;
+
+            anno.Text=entity.anno;
+            color.Text=entity.color;
+
+            nro_motor.Text=entity.nro_motor;
+            nro_chasis.Text=entity.nro_chasis;
+
+            matricula.Text=entity.matricula;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

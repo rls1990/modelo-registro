@@ -14,7 +14,48 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo20
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo20_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            nombre_apellidos.Text=entity.nombre_apellidos;
+            ciudadano.Text=entity.ciudadano;
+
+            nombre_apellidos_menor_edad.Text=entity.nombre_apellidos_menor_edad;
+            ciudadania_menor_edad.Text=entity.ciudadania_menor_edad;
+
+            lugar_nacimiento_menor.Text=entity.lugar_nacimiento_menor;
+            fecha_nacimiento_menor.Text=entity.fecha_nacimiento_menor;
+
+            pasaporte_menor.Text=entity.pasaporte_menor;
+
+            padre.Text=entity.padre;
+            ciudadania_padre.Text=entity.ciudadania_padre;
+
+            madre.Text=entity.madre;
+            ciudadania_madre.Text=entity.ciudadania_madre;
+
+            ultima_direccion_padres.Text=entity.ultima_direccion_padres;
+
+            nombre_persona_representante_legal.Text=entity.nombre_persona_representante_legal;
+
+            recidir_cuba.IsChecked=entity.recidir_cuba=="True";
+            recidir_en_exterior.IsChecked=entity.recidir_en_exterior=="True";
+
+            razones_personales.Text=entity.razones_personales;
+
+            nombre_funcionario_consular.Text=entity.nombre_funcionario_consular;
+
+            telefono.Text=entity.telefono;
+
+            email.Text=entity.email;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

@@ -14,7 +14,57 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo18
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo18_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            nombre_hombre.Text=entity.nombre_hombre;
+            nombre_mujer.Text=entity.nombre_mujer;
+            ciudadania_hombre.Text=entity.ciudadania_hombre;
+            ciudadania_mujer.Text=entity.ciudadania_mujer;
+
+            lugar_nacimiento_hombre.Text=entity.lugar_nacimiento_hombre;
+            lugar_nacimiento_mujer.Text=entity.lugar_nacimiento_mujer;
+
+            fecha_nacimiento_hombre.Text=entity.fecha_nacimiento_hombre;
+            fecha_nacimiento_mujer.Text=entity.fecha_nacimiento_mujer;
+
+            pasaporte_hombre.Text=entity.pasaporte_hombre;
+            pasaporte_mujer.Text=entity.pasaporte_mujer;
+
+            nombre_hijo_menor.Text=entity.nombre_hijo_menor;
+            ciudadania_hijo_menor.Text=entity.ciudadania_hijo_menor;
+
+            lugar_nacimineto_hijo_menor.Text=entity.lugar_nacimineto_hijo_menor;
+            fecha_nacimiento_hijo_menor.Text=entity.fecha_nacimiento_hijo_menor;
+
+            pasaporte_hijo_menor.Text=entity.pasaporte_hijo_menor;
+
+            padre.Text=entity.padre;
+            ciudadania_padre.Text=entity.ciudadania_padre;
+
+            madre.Text=entity.madre;
+            ciudadania_madre.Text=entity.ciudadania_madre;
+
+            ultima_direccion_cuba.Text=entity.ultima_direccion_cuba;
+
+            recidir_cuba.IsChecked=entity.recidir_cuba=="True";
+            recidir_en_exterior.IsChecked=entity.recidir_en_exterior=="True";
+
+            razones_personales.Text=entity.razones_personales;
+
+            nombre_funcionario.Text=entity.nombre_funcionario;
+
+            telefono.Text=entity.telefono;
+
+            email.Text=entity.email;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

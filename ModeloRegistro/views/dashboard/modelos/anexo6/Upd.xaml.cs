@@ -14,7 +14,36 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo6
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo6_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            ciudad.Text=entity.ciudad;
+            pais.Text=entity.pais;
+
+            nombre_apellido_hombre.Text=entity.nombre_apellido_hombre;
+            nombre_apellido_mujer.Text=entity.nombre_apellido_mujer;
+
+            tribunal_dicto_sentencia.Text=entity.tribunal_dicto_sentencia;
+            nombre_secretario_actuante.Text=entity.nombre_secretario_actuante;
+
+            fecha_dicto_sentencia.Text=entity.fecha_dicto_sentencia;
+            fecha_firmeza_sentencia.Text=entity.fecha_firmeza_sentencia;
+
+            no_sentencia.Text=entity.no_sentencia;
+            no_radicacion.Text=entity.no_radicacion;
+
+            legalizacion_minred.Text=entity.legalizacion_minred;
+            legalizacion_embajada.Text=entity.legalizacion_embajada;
+
+            fecha_solicitud.Text=entity.fecha_solicitud;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

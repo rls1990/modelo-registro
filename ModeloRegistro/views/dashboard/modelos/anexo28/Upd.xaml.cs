@@ -14,7 +14,68 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo28
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo28_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            fecha_solicitud.Text=entity.fecha_solicitud;
+            nombre_poderante.Text=entity.nombre_poderante;
+            sexo_poderante.Text=entity.sexo_poderante;
+
+            lugar_nacimiento_municipio_poderante.Text=entity.lugar_nacimiento_municipio_poderante;
+            lugar_nacimiento_provincia_poderante.Text=entity.lugar_nacimiento_provincia_poderante;
+
+            fecha_nacimineto_poderante.Text=entity.fecha_nacimineto_poderante;
+            estado_civil_poderante.Text=entity.estado_civil_poderante;
+
+            ciudadania_poderante.Text=entity.ciudadania_poderante;
+            ocupacion_poderante.Text=entity.ocupacion_poderante;
+
+            direccion_particular_poderante.Text=entity.direccion_particular_poderante;
+            carne_pasaporte_poderante.Text=entity.carne_pasaporte_poderante;
+
+            condicion_migratoria_poderante.Text=entity.condicion_migratoria_poderante;
+
+            correo_poderante.Text=entity.correo_poderante;
+            celular_poderante.Text=entity.celular_poderante;
+
+            nombre_apoderado.Text=entity.nombre_apoderado;
+            sexo_apoderado.Text=entity.sexo_apoderado;
+
+            lugar_nacimiento_municipio_apoderado.Text=entity.lugar_nacimiento_municipio_apoderado;
+            lugar_nacimiento_provincia_apoderado.Text=entity.lugar_nacimiento_provincia_apoderado;
+
+            fecha_nacimineto_apoderado.Text=entity.fecha_nacimineto_apoderado;
+            estado_civil_apoderado.Text=entity.estado_civil_apoderado;
+
+            ciudadania_apoderado.Text=entity.ciudadania_apoderado;
+            ocupacion_apoderado.Text=entity.ocupacion_apoderado;
+
+            direccion_particular_apoderado.Text=entity.direccion_particular_apoderado;
+            carne_pasaporte_apoderado.Text=entity.carne_pasaporte_apoderado;
+
+            condicion_migratoria_apoderado.Text=entity.condicion_migratoria_apoderado;
+
+            especificar_causa_representante.Text=entity.especificar_causa_representante;
+
+            despacho_equipaje.Text=entity.despacho_equipaje;
+
+            numero_contenedor.Text=entity.numero_contenedor;
+
+            bl.Text=entity.bl; // Bill of Lading or similar
+
+            total.Text=entity.total; // Total number of items or other relevant total
+
+            numeracion.Text=entity.numeracion; // Any relevant numbering
+
+            total_kg.Text=entity.total_kg; // Total weight in kilograms
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

@@ -14,7 +14,38 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo7
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo7_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            ciudad.Text=entity.ciudad;
+            pais.Text=entity.pais;
+
+            nombre_apellido.Text=entity.nombre_apellido;
+            fecha_defuncion.Text=entity.fecha_defuncion;
+
+            municipio_fallecimineto.Text=entity.municipio_fallecimineto;
+            provincia_fallecimineto.Text=entity.provincia_fallecimineto;
+
+            donde_fue_velado.Text=entity.donde_fue_velado;
+
+            municipio_funeraria.Text=entity.municipio_funeraria;
+            provincia_funeraria.Text=entity.provincia_funeraria;
+
+            tomo.Text=entity.tomo;
+            folio.Text=entity.folio;
+
+            legalizacion_minrex.Text=entity.legalizacion_minrex;
+            legalizacion_embajada.Text=entity.legalizacion_embajada;
+
+            fecha_de_solicitud.Text=entity.fecha_de_solicitud;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

@@ -14,7 +14,118 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo16_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            tirista.IsChecked=entity.tirista=="True";
+            transeuntes.IsChecked=entity.transeuntes=="True";
+            eventos.IsChecked=entity.eventos=="True";
+            invitados.IsChecked=entity.invitados=="True";
+            estudiantes_programas_becas.IsChecked=entity.estudiantes_programas_becas=="True";
+            artistas.IsChecked=entity.artistas=="True";
+            periodistas.IsChecked=entity.periodistas=="True";
+            religiosos.IsChecked=entity.religiosos=="True";
+            diplomaticas.IsChecked=entity.diplomaticas=="True";
+            tecnicos.IsChecked=entity.tecnicos=="True";
+            deportistas.IsChecked=entity.deportistas=="True";
+            negocios.IsChecked=entity.negocios=="True";
+            otras.IsChecked=entity.otras=="True";
+
+            fecha_solicitud.Text=entity.fecha_solicitud;
+            pasaporte.Text=entity.pasaporte;
+            lugar_expedicion.Text=entity.lugar_expedicion;
+            fecha_expedicion.Text=entity.fecha_expedicion;
+
+            primer_apellido.Text=entity.primer_apellido;
+            segundo_apellido.Text=entity.segundo_apellido;
+            primer_nombre.Text=entity.primer_nombre;
+            segundo_nombre.Text=entity.segundo_nombre;
+
+            padre.Text=entity.padre;
+            madre.Text=entity.madre;
+            lugar_nacimiento_padres.Text=entity.lugar_nacimiento_padres;
+
+            estatura.Text=entity.estatura;
+            estado_civil.Text=entity.estado_civil;
+
+            m.IsChecked=entity.m=="True"; // Asegúrate de que esto sea un campo adecuado
+            f.IsChecked=entity.f=="True"; // Igual que el anterior
+
+            blue_green_claros.IsChecked=entity.blue_green_claros=="True";
+            black_negros.IsChecked=entity.black_negros=="True";
+            pardos.IsChecked=entity.pardos=="True";
+            piel_blanca.IsChecked=entity.piel_blanca=="True";
+            piel_negra.IsChecked=entity.piel_negra=="True";
+            piel_albina.IsChecked=entity.piel_albina=="True";
+            piel_amarilla.IsChecked=entity.piel_amarilla=="True";
+
+            pelo_canoso.IsChecked=entity.pelo_canoso=="True";
+            pelo_negro.IsChecked=entity.pelo_negro=="True";
+            pelo_rubio.IsChecked=entity.pelo_rubio=="True";
+            pelo_castaño.IsChecked=entity.pelo_castaño=="True";
+            pelo_rojo.IsChecked=entity.pelo_rojo=="True";
+            pelo_otro.IsChecked=entity.pelo_otro=="True";
+
+            pais.Text=entity.pais;
+            provincia.Text=entity.provincia;
+            ciudad_municipio.Text=entity.ciudad_municipio;
+
+            fecha_nacimiento.Text=entity.fecha_nacimiento;
+
+            direccion.Text=entity.direccion;
+
+            codigo_postal.Text=entity.codigo_postal;
+
+            provincia_estado_region.Text=entity.provincia_estado_region;
+
+            pais_residencia_actual.Text=entity.pais_residencia_actual;
+
+            telefono.Text=entity.telefono;
+
+            fax.Text=entity.fax;
+
+            email.Text=entity.email;
+
+            nombre_centro_trabajo_estudio.Text=entity.nombre_centro_trabajo_estudio;
+
+            profecion.Text=entity.profecion; // Asegúrate de que este campo sea correcto
+            ocupacion.Text=entity.ocupacion;
+
+            direccion_centro.Text=entity.direccion_centro;
+
+            codigo_postal_centro.Text=entity.codigo_postal_centro;
+
+            provincia_estado_region_centro.Text=entity.provincia_estado_region_centro;
+
+            pais_centro.Text=entity.pais_centro;
+
+            telefono_centro.Text=entity.telefono_centro;
+
+            fax_centro.Text=entity.fax_centro;
+
+            email_centro.Text=entity.email_centro;
+
+            direccion_estancia_cuba.Text=entity.direccion_estancia_cuba;
+
+            nombre_apellido_persona_a_vicitar_cuba.Text=entity.nombre_apellido_persona_a_vicitar_cuba;
+
+            motivo_viaje_cuba.Text=entity.motivo_viaje_cuba;
+
+            tiempo_estancia.Text=entity.tiempo_estancia;
+
+            lugar_fecha_salida_cuba.Text=entity.lugar_fecha_salida_cuba;
+
+            lugar_fecha_llegada_cuba.Text=entity.lugar_fecha_llegada_cuba;
+
+            proposito_viaje_cuba.Text=entity.proposito_viaje_cuba;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {

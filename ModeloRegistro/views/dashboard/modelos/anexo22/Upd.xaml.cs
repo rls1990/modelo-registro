@@ -10,11 +10,33 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo22
     public partial class Upd:Page
     {
         private model.Anexo22_m manager = new model.Anexo22_m(Global.sqlite);
-        private model.Anexo10_e entity;
+        private model.Anexo22_e entity;
         public Upd()
         {
             InitializeComponent();
+            InitCampos();
         }
+
+        private void InitCampos()
+        {
+            // Obtener la entidad seleccionada
+            entity=(model.Anexo22_e)Global.entity;
+
+            // Asignar cada propiedad de la entidad a su respectivo campo visual
+            fecha_solicitud.Text=entity.fecha_solicitud;
+            nombre.Text=entity.nombre;
+            ciudadania.Text=entity.ciudadania;
+            estado_civil.Text=entity.estado_civil;
+            fecha_nacimiento.Text=entity.fecha_nacimiento;
+            profecion.Text=entity.profecion;
+            carnet_pasaporte.Text=entity.carnet_pasaporte;
+            categoria_migratoria.Text=entity.categoria_migratoria;
+            direccion_estados_unidos.Text=entity.direccion_estados_unidos;
+            correo.Text=entity.correo;
+            celular.Text=entity.celular;
+            documento_legalizar.Text=entity.documento_legalizar;
+        }
+
 
         private void Button_Click( object sender,RoutedEventArgs e )
         {
