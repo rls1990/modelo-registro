@@ -1,4 +1,5 @@
 ﻿using ModeloRegistro.services;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace ModeloRegistro.views.dashboard.modelos.anexo24
@@ -21,7 +22,56 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
 
         private void Button_Click_1( object sender,System.Windows.RoutedEventArgs e )
         {
+            var anexo = new model.Anexo24_e()
+            {
+                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd"),
+                nombre=nombre.Text,
+                lugar_nacimineto_municipio=lugar_nacimineto_municipio.Text,
+                lugar_nacimineto_provincia=lugar_nacimineto_provincia.Text,
+                fecha_nacimineto=fecha_nacimineto.SelectedDate?.ToString("yyyy-MM-dd"),
+                estado_civil=estado_civil.Text,
+                ciudadania=ciudadania.Text,
+                ocupacion=ocupacion.Text,
+                direccion=direccion.Text,
+                carnet_pasaporte=carnet_pasaporte.Text,
+                nombre_apellido_padres=nombre_apellido_padres.Text,
+                condicion_migratoria=condicion_migratoria.Text,
+                correo=correo.Text,
+                celular=celular.Text,
+                nombre_apoderado=nombre_apoderado.Text,
+                lugar_nacimineto_municipio_apoderado=lugar_nacimineto_municipio_apoderado.Text,
+                lugar_nacimineto_provincia_apoderado=lugar_nacimineto_provincia_apoderado.Text,
+                fecha_nacimineto_apoderado=fecha_nacimineto_apoderado.SelectedDate?.ToString("yyyy-MM-dd"),
+                estado_civil_apoderado=estado_civil_apoderado.Text,
+                ciudadania_apoderado=ciudadania_apoderado.Text,
+                ocupacion_apoderado=ocupacion_apoderado.Text,
+                direccion_apoderado=direccion_apoderado.Text,
+                carnet_pasaporte_apoderado=carnet_pasaporte_apoderado.Text,
+                condicion_migratoria_apoderado=condicion_migratoria_apoderado.Text,
 
+                marca=marca.Text,
+
+                modelo=modelo.Text,
+
+                anno=anno.Text,
+
+                color=color.Text,
+
+                nro_motor=nro_motor.Text,
+
+                nro_chasis=nro_chasis.Text,
+
+                matricula=matricula.Text
+            };
+
+            if(ValidarAnexo(anexo))
+            {
+                manager.save(anexo);
+                MessageBox.Show("Anexo guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         public bool ValidarAnexo( model.Anexo24_e model )

@@ -22,7 +22,45 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo30
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo30 = new model.Anexo30_e()
+            {
+                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd"),
+                nombre=nombre.Text,
+                sexo=sexo.Text,
+                lugar_nacimineto_municipio=lugar_nacimineto_municipio.Text,
+                lugar_nacimineto_provincia=lugar_nacimineto_provincia.Text,
+                fecha_nacimineto=fecha_nacimineto.SelectedDate?.ToString("yyyy-MM-dd"),
+                estado_civil=estado_civil.Text,
+                ciudadania=ciudadania.Text,
+                ocupacion=ocupacion.Text,
+                direccion=direccion.Text,
+                carnet_pasaporte=carnet_pasaporte.Text,
+                condicion_migratoria=condicion_migratoria.Text,
+                correo=correo.Text,
+                celular=celular.Text,
+                nombre_apoderado=nombre_apoderado.Text,
+                sexo_apoderado=sexo_apoderado.Text,
+                lugar_nacimineto_municipio_apoderado=lugar_nacimineto_municipio_apoderado.Text,
+                lugar_nacimineto_provincia_apoderado=lugar_nacimineto_provincia_apoderado.Text,
+                fecha_nacimineto_apoderado=fecha_nacimineto_apoderado.SelectedDate?.ToString("yyyy-MM-dd"),
+                estado_civil_apoderado=estado_civil_apoderado.Text,
+                ciudadania_apoderado=ciudadania_apoderado.Text,
+                ocupacion_apoderado=ocupacion_apoderado.Text,
+                direccion_apoderado=direccion_apoderado.Text,
+                carnet_pasaporte_apoderado=carnet_pasaporte_apoderado.Text,
+                condicion_migratoria_apoderado=condicion_migratoria_apoderado.Text,
+                direccion_vivienda=direccion_vivienda.Text,
+                clausaula=clausaula.Text
+            };
 
+            if(ValidarAnexo(anexo30))
+            {
+                manager.save(anexo30);
+                MessageBox.Show("Anexo 30 guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         public bool ValidarAnexo( model.Anexo30_e model )

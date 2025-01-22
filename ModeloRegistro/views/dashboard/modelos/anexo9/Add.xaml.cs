@@ -22,7 +22,34 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo9
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo9 = new model.Anexo9_e()
+            {
+                ciudad=ciudad.Text,
+                pais=pais.Text,
+                encargado_registro_civil=encargado_registro_civil.Text,
+                municipio_encargado=municipio_encargado.Text,
+                provincia_encargado=provincia_encargado.Text,
+                nombre=nombre.Text,
+                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd"),
+                tomo_certificado=tomo_certificado.Text,
+                folio_certificado=folio_certificado.Text,
+                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
+                municipio_persona=municipio_persona.Text,
+                provincia_persona=provincia_persona.Text,
+                padre=padre.Text,
+                madre=madre.Text,
+                legalizacion_minrex=legalizacion_minrex.Text,
+                legalizacion_embajada=legalizacion_embajada.Text
+            };
 
+            if(ValidarAnexo(anexo9))
+            {
+                manager.save(anexo9);
+                MessageBox.Show("Anexo 9 guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         public bool ValidarAnexo( model.Anexo9_e model )

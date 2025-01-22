@@ -22,7 +22,35 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo3
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo3 = new model.Anexo3_e()
+            {
+                ciudad=ciudad.Text,
+                pais=pais.Text,
+                nombre_apellido=nombre_apellido.Text,
+                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
+                municipio=municipio.Text,
+                provincia=provincia.Text,
+                registro=registro.Text,
+                municipio_registro=municipio_registro.Text,
+                provincia_registro=provincia_registro.Text,
+                tomo=tomo.Text,
+                folio=folio.Text,
+                fecha_asiento=fecha_asiento.SelectedDate?.ToString("yyyy-MM-dd"),
+                nombre_padre=nombre_padre.Text,
+                nombre_madre=nombre_madre.Text,
+                legalizacion_minred=legalizacion_minred.Text,
+                legalizacion_embajada=legalizacion_embajada.Text,
+                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd")
+            };
 
+            if(ValidarAnexo(anexo3))
+            {
+                manager.save(anexo3);
+                MessageBox.Show("Anexo 3 guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         public bool ValidarAnexo( model.Anexo3_e model )

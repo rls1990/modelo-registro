@@ -22,6 +22,33 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo17
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo = new model.Anexo17_e()
+            {
+                nombre_apellidos=nombre_apellidos.Text,
+                ciudadano=ciudadano.Text,
+                lugar_nacimiento=lugar_nacimiento.Text,
+                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
+                pasaporte=pasaporte.Text,
+                padre=padre.Text,
+                ciudadania_padre=ciudadania_padre.Text,
+                madre=madre.Text,
+                ciudadania_madre=ciudadania_madre.Text,
+                recidir_cuba=recidir_cuba.IsChecked.ToString(),
+                recidir_en_exterior=recidir_en_exterior.IsChecked.ToString(),
+                razones_personales=razones_personales.Text,
+                nombre_funcionario=nombre_funcionario.Text,
+                telefono=telefono.Text,
+                email=email.Text
+            };
+
+            if(ValidarAnexo(anexo))
+            {
+                manager.save(anexo);
+                MessageBox.Show("Anexo guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
 
         }
 

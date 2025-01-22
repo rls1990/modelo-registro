@@ -22,6 +22,30 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo22
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo = new model.Anexo22_e()
+            {
+                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd"),
+                nombre=nombre.Text,
+                ciudadania=ciudadania.Text,
+                estado_civil=estado_civil.Text,
+                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
+                profecion=profecion.Text,
+                carnet_pasaporte=carnet_pasaporte.Text,
+                categoria_migratoria=categoria_migratoria.Text,
+                direccion_estados_unidos=direccion_estados_unidos.Text,
+                correo=correo.Text,
+                celular=celular.Text,
+                documento_legalizar=documento_legalizar.Text
+            };
+
+            if(ValidarAnexo(anexo))
+            {
+                manager.save(anexo);
+                MessageBox.Show("Anexo guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
 
         }
 

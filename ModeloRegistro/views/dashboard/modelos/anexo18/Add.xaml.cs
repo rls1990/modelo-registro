@@ -22,6 +22,44 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo18
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo = new model.Anexo18_e()
+            {
+                nombre_hombre=nombre_hombre.Text,
+                nombre_mujer=nombre_mujer.Text,
+                ciudadania_hombre=ciudadania_hombre.Text,
+                ciudadania_mujer=ciudadania_mujer.Text,
+                lugar_nacimiento_hombre=lugar_nacimiento_hombre.Text,
+                lugar_nacimiento_mujer=lugar_nacimiento_mujer.Text,
+                fecha_nacimiento_hombre=fecha_nacimiento_hombre.SelectedDate?.ToString("yyyy-MM-dd"),
+                fecha_nacimiento_mujer=fecha_nacimiento_mujer.SelectedDate?.ToString("yyyy-MM-dd"),
+                pasaporte_hombre=pasaporte_hombre.Text,
+                pasaporte_mujer=pasaporte_mujer.Text,
+                nombre_hijo_menor=nombre_hijo_menor.Text,
+                ciudadania_hijo_menor=ciudadania_hijo_menor.Text,
+                lugar_nacimineto_hijo_menor=lugar_nacimineto_hijo_menor.Text,
+                fecha_nacimiento_hijo_menor=fecha_nacimiento_hijo_menor.SelectedDate?.ToString("yyyy-MM-dd"),
+                pasaporte_hijo_menor=pasaporte_hijo_menor.Text,
+                padre=padre.Text,
+                ciudadania_padre=ciudadania_padre.Text,
+                madre=madre.Text,
+                ciudadania_madre=ciudadania_madre.Text,
+                ultima_direccion_cuba=ultima_direccion_cuba.Text,
+                recidir_cuba=recidir_cuba.IsChecked.ToString(),
+                recidir_en_exterior=recidir_en_exterior.IsChecked.ToString(),
+                razones_personales=razones_personales.Text,
+                nombre_funcionario=nombre_funcionario.Text,
+                telefono=telefono.Text,
+                email=email.Text
+            };
+
+            if(ValidarAnexo(anexo))
+            {
+                manager.save(anexo);
+                MessageBox.Show("Anexo guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
 
         }
 

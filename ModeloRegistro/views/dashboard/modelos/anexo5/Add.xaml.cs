@@ -22,7 +22,34 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo5
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo5 = new model.Anexo5_e()
+            {
+                ciudad=ciudad.Text,
+                pais=pais.Text,
+                nombre_apellido_hombre=nombre_apellido_hombre.Text,
+                nombre_apellido_mujer=nombre_apellido_mujer.Text,
+                fecha_matrimonio=fecha_matrimonio.SelectedDate?.ToString("yyyy-MM-dd"),
+                ciudad_matrimonio=ciudad_matrimonio.Text,
+                provincia_matrimonio=provincia_matrimonio.Text,
+                pais_matrimonio=pais_matrimonio.Text,
+                registro=registro.Text,
+                municipio_registro=municipio_registro.Text,
+                provincia_registro=provincia_registro.Text,
+                tomo=tomo.Text,
+                folio=folio.Text,
+                legalizacion_minred=legalizacion_minred.Text,
+                legalizacion_embajada=legalizacion_embajada.Text,
+                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd")
+            };
 
+            if(ValidarAnexo(anexo5))
+            {
+                manager.save(anexo5);
+                MessageBox.Show("Anexo 5 guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         public bool ValidarAnexo( model.Anexo5_e model )

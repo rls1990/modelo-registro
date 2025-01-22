@@ -22,7 +22,50 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo31
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo31 = new model.Anexo31_e()
+            {
+                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd"),
+                nombre_poderante=nombre_poderante.Text,
+                lugar_nacimiento_municipio_poderante=lugar_nacimiento_municipio_poderante.Text,
+                lugar_nacimiento_provincia_poderante=lugar_nacimiento_provincia_poderante.Text,
+                fecha_nacimineto_poderante=fecha_nacimineto_poderante.SelectedDate?.ToString("yyyy-MM-dd"),
+                registro_estado_civil_poderante=registro_estado_civil_poderante.Text,
+                tomo_poderante=tomo_poderante.Text,
+                folio_poderante=folio_poderante.Text,
+                estado_civil_poderante=estado_civil_poderante.Text,
+                ciudadania_poderante=ciudadania_poderante.Text,
+                ocupacion_poderante=ocupacion_poderante.Text,
+                direccion_particular_poderante=direccion_particular_poderante.Text,
+                carne_pasaporte_poderante=carne_pasaporte_poderante.Text,
+                nombre_apellido_padres_poderante=nombre_apellido_padres_poderante.Text,
+                condicion_migratoria_poderante=condicion_migratoria_poderante.Text,
+                correo_poderante=correo_poderante.Text,
+                celular_poderante=celular_poderante.Text,
+                nombre_apoderado=nombre_apoderado.Text,
+                lugar_nacimiento_municipio_apoderado=lugar_nacimiento_municipio_apoderado.Text,
+                lugar_nacimiento_provincia_apoderado=lugar_nacimiento_provincia_apoderado.Text,
+                fecha_nacimineto_apoderado=fecha_nacimineto_apoderado.SelectedDate?.ToString("yyyy-MM-dd"),
+                registro_estado_civil_apoderado=registro_estado_civil_apoderado.Text,
+                tomo_apoderado=tomo_apoderado.Text,
+                folio_apoderado=folio_apoderado.Text,
+                estado_civil_apoderado=estado_civil_apoderado.Text,
+                ciudadania_apoderado=ciudadania_apoderado.Text,
+                ocupacion_apoderado=ocupacion_apoderado.Text,
+                direccion_particular_apoderado=direccion_particular_apoderado.Text,
+                carne_pasaporte_apoderado=carne_pasaporte_apoderado.Text,
+                nombre_apellido_padres_apoderado=nombre_apellido_padres_apoderado.Text,
+                condicion_migratoria_apoderado=condicion_migratoria_apoderado.Text,
+                clausula=clausula.Text
+            };
 
+            if(ValidarAnexo(anexo31))
+            {
+                manager.save(anexo31);
+                MessageBox.Show("Anexo 31 guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         public bool ValidarAnexo( model.Anexo31_e model )
