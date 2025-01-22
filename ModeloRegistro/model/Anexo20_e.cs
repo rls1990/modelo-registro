@@ -22,6 +22,5 @@ namespace ModeloRegistro.model
         public string nombre_funcionario_consular { get; set; }
         public string telefono { get; set; }
         public string email { get; set; }
-        
     }
 }

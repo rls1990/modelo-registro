@@ -40,12 +40,26 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo12
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
-            PageService.toPage(new Upd());
+            if(listadg.SelectedIndex==-1)
+            {
+                MessageBox.Show("Debe seleccionar una fila de la tabla.","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+            } else
+            {
+                Global.entity=listadg.SelectedItem;
+                PageService.toPage(new Upd());
+            }
         }
 
         private void Button_Click_2( object sender,RoutedEventArgs e )
         {
+            var res = MessageBox.Show("Está seguro que desea eliminar esta fila?","Confirmación",MessageBoxButton.YesNo,MessageBoxImage.Question);
 
+            if(res==MessageBoxResult.Yes)
+            {
+                model.Anexo12_e entity = (model.Anexo12_e)listadg.SelectedItem;
+                manager.delete(entity.id);
+                InitList();
+            }
         }
 
         private void Button_Click_3( object sender,RoutedEventArgs e )

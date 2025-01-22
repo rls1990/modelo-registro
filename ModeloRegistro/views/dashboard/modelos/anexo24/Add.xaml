@@ -264,7 +264,8 @@
                         VerticalAlignment="Top"
                         Margin="12"
                         Width="246"
-                        Height="46">
+                        Height="46"
+                        Click="Button_Click_1">
                     <WrapPanel>
                         <materialDesign:PackIcon Kind="CheckboxMarkedCirclePlusOutline"
                                                  Width="20"

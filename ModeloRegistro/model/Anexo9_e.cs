@@ -20,6 +20,5 @@ namespace ModeloRegistro.model
         public string legalizacion_minrex { get; set; }
         public string legalizacion_embajada { get; set; }
         public string fecha_de_solicitud { get; set; }
-        
     }
 }

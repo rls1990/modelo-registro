@@ -47,6 +47,5 @@ namespace ModeloRegistro.model
         public string nombre_apellido_menor { get; set; }
         public string pension_alimenticia { get; set; }
         public string regimen_comunicacion { get; set; }
-        
     }
 }

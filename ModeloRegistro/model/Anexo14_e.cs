@@ -42,6 +42,5 @@ namespace ModeloRegistro.model
         public string nombre_funcionario_expidió_certificado { get; set; }
         public string cargo_funcionario_expidió_certificado { get; set; }
         public string fecha_solicitud { get; set; }
-        
     }
 }

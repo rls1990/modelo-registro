@@ -86,6 +86,5 @@ namespace ModeloRegistro.model
         public string fecha_inscripcion_consular { get; set; }
         public string arancel_inscripcion_consular { get; set; }
         public string valoracion_consular { get; set; }
-        
     }
 }

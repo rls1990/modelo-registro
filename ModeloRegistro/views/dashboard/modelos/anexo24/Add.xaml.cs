@@ -8,6 +8,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
     /// </summary>
     public partial class Add:Page
     {
+        private model.Anexo24_m manager = new model.Anexo24_m(Global.sqlite);
         public Add()
         {
             InitializeComponent();
@@ -16,6 +17,11 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
         private void Button_Click( object sender,System.Windows.RoutedEventArgs e )
         {
             PageService.toPage(new Anexo24());
+        }
+
+        private void Button_Click_1( object sender,System.Windows.RoutedEventArgs e )
+        {
+
         }
     }
 }

@@ -40,6 +40,5 @@ namespace ModeloRegistro.model
         public string carne_pasaporte_donatorio { get; set; }
         public string condicion_migratoria_donatorio { get; set; }
         public string direccion_vivienda { get; set; }
-        
     }
 }

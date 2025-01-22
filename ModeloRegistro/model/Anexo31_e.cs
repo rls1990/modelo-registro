@@ -35,6 +35,5 @@ namespace ModeloRegistro.model
         public string nombre_apellido_padres_apoderado { get; set; }
         public string condicion_migratoria_apoderado { get; set; }
         public string clausula { get; set; }
-        
     }
 }

@@ -15,6 +15,5 @@ namespace ModeloRegistro.model
         public string correo { get; set; }
         public string celular { get; set; }
         public string documento_legalizar { get; set; }
-        
     }
 }

@@ -9,6 +9,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo25
     /// </summary>
     public partial class Add:Page
     {
+        private model.Anexo25_m manager = new model.Anexo25_m(Global.sqlite);
         public Add()
         {
             InitializeComponent();

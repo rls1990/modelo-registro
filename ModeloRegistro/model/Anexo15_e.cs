@@ -39,6 +39,5 @@ namespace ModeloRegistro.model
         public string parentesco_fallecido { get; set; }
         public string direccion_solicita { get; set; }
         public string nombre_apellido_funcionario_consular { get; set; }
-
     }
 }

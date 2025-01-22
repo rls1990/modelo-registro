@@ -20,6 +20,5 @@ namespace ModeloRegistro.model
         public string nombre_funcionario { get; set; }
         public string telefono { get; set; }
         public string email { get; set; }
-        
     }
 }

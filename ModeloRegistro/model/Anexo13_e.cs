@@ -40,6 +40,5 @@ namespace ModeloRegistro.model
         public string nombre_inscrito_pais_nacimineto { get; set; }
         public string inscripcion_practicada_en_virtud_de { get; set; }
         public string observaciones { get; set; }
-        
     }
 }

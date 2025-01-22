@@ -35,6 +35,5 @@ namespace ModeloRegistro.model
         public string total { get; set; }
         public string numeracion { get; set; }
         public string total_kg { get; set; }
-        
     }
 }

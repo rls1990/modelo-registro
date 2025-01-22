@@ -25,6 +25,5 @@ namespace ModeloRegistro.model
         public string folio { get; set; }
         public string tarjeta_menor { get; set; }
         public string direccion_menor_cuba { get; set; }
-        
     }
 }

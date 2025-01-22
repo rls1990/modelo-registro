@@ -36,6 +36,5 @@ namespace ModeloRegistro.model
         public string folio { get; set; }
         public string registro_estado_civil { get; set; }
         public string tipo_tramites { get; set; }
-        
     }
 }

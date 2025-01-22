@@ -34,6 +34,5 @@ namespace ModeloRegistro.model
         public string nro_motor { get; set; }
         public string nro_chasis { get; set; }
         public string matricula { get; set; }
-        
     }
 }

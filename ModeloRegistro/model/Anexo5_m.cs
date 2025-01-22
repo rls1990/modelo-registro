@@ -15,8 +15,8 @@ namespace ModeloRegistro.model
 
         public void save(Anexo5_e anexo5_e)
         {
-            string[] columns = new string[] { "pais", "nombre_apellido_hombre", "nombre_apellido_mujer", "fecha_matrimonio", "ciudad_matrimonio", "provincia_matrimonio", "pais_matrimonio", "registro", "municipio_registro", "provincia_registro", "tomo", "folio", "legalizacion_minred", "legalizacion_embajada", "fecha_solicitud", "id" };
-            object[] values = new object[] { anexo5_e.pais, anexo5_e.nombre_apellido_hombre, anexo5_e.nombre_apellido_mujer, anexo5_e.fecha_matrimonio, anexo5_e.ciudad_matrimonio, anexo5_e.provincia_matrimonio, anexo5_e.pais_matrimonio, anexo5_e.registro, anexo5_e.municipio_registro, anexo5_e.provincia_registro, anexo5_e.tomo, anexo5_e.folio, anexo5_e.legalizacion_minred, anexo5_e.legalizacion_embajada, anexo5_e.fecha_solicitud, anexo5_e.id };
+            string[] columns = new string[] { "ciudad", "pais", "nombre_apellido_hombre", "nombre_apellido_mujer", "fecha_matrimonio", "ciudad_matrimonio", "provincia_matrimonio", "pais_matrimonio", "registro", "municipio_registro", "provincia_registro", "tomo", "folio", "legalizacion_minred", "legalizacion_embajada", "fecha_solicitud" };
+            object[] values = new object[] { anexo5_e.ciudad, anexo5_e.pais, anexo5_e.nombre_apellido_hombre, anexo5_e.nombre_apellido_mujer, anexo5_e.fecha_matrimonio, anexo5_e.ciudad_matrimonio, anexo5_e.provincia_matrimonio, anexo5_e.pais_matrimonio, anexo5_e.registro, anexo5_e.municipio_registro, anexo5_e.provincia_registro, anexo5_e.tomo, anexo5_e.folio, anexo5_e.legalizacion_minred, anexo5_e.legalizacion_embajada, anexo5_e.fecha_solicitud };
 
             SQLiteCommand sqlite_cmd = connection.CreateCommand();
 
@@ -69,8 +69,8 @@ namespace ModeloRegistro.model
 
         public void update(Anexo5_e anexo5_e)
         {
-            string[] columns = new string[] { "pais", "nombre_apellido_hombre", "nombre_apellido_mujer", "fecha_matrimonio", "ciudad_matrimonio", "provincia_matrimonio", "pais_matrimonio", "registro", "municipio_registro", "provincia_registro", "tomo", "folio", "legalizacion_minred", "legalizacion_embajada", "fecha_solicitud", "id" };
-            object[] values = new object[] { anexo5_e.pais, anexo5_e.nombre_apellido_hombre, anexo5_e.nombre_apellido_mujer, anexo5_e.fecha_matrimonio, anexo5_e.ciudad_matrimonio, anexo5_e.provincia_matrimonio, anexo5_e.pais_matrimonio, anexo5_e.registro, anexo5_e.municipio_registro, anexo5_e.provincia_registro, anexo5_e.tomo, anexo5_e.folio, anexo5_e.legalizacion_minred, anexo5_e.legalizacion_embajada, anexo5_e.fecha_solicitud, anexo5_e.id };
+            string[] columns = new string[] { "ciudad", "pais", "nombre_apellido_hombre", "nombre_apellido_mujer", "fecha_matrimonio", "ciudad_matrimonio", "provincia_matrimonio", "pais_matrimonio", "registro", "municipio_registro", "provincia_registro", "tomo", "folio", "legalizacion_minred", "legalizacion_embajada", "fecha_solicitud" };
+            object[] values = new object[] { anexo5_e.ciudad, anexo5_e.pais, anexo5_e.nombre_apellido_hombre, anexo5_e.nombre_apellido_mujer, anexo5_e.fecha_matrimonio, anexo5_e.ciudad_matrimonio, anexo5_e.provincia_matrimonio, anexo5_e.pais_matrimonio, anexo5_e.registro, anexo5_e.municipio_registro, anexo5_e.provincia_registro, anexo5_e.tomo, anexo5_e.folio, anexo5_e.legalizacion_minred, anexo5_e.legalizacion_embajada, anexo5_e.fecha_solicitud };
 
             SQLiteCommand sqlite_cmd = connection.CreateCommand();
 
@@ -146,23 +146,23 @@ namespace ModeloRegistro.model
             while (sqlite_datareader.Read())
             {
                 Anexo5_e anexo5_e = new Anexo5_e();
-                anexo5_e.ciudad = sqlite_datareader.GetString(0);
-                anexo5_e.pais = sqlite_datareader.GetString(1);
-                anexo5_e.nombre_apellido_hombre = sqlite_datareader.GetString(2);
-                anexo5_e.nombre_apellido_mujer = sqlite_datareader.GetString(3);
-                anexo5_e.fecha_matrimonio = sqlite_datareader.GetString(4);
-                anexo5_e.ciudad_matrimonio = sqlite_datareader.GetString(5);
-                anexo5_e.provincia_matrimonio = sqlite_datareader.GetString(6);
-                anexo5_e.pais_matrimonio = sqlite_datareader.GetString(7);
-                anexo5_e.registro = sqlite_datareader.GetString(8);
-                anexo5_e.municipio_registro = sqlite_datareader.GetString(9);
-                anexo5_e.provincia_registro = sqlite_datareader.GetString(10);
-                anexo5_e.tomo = sqlite_datareader.GetString(11);
-                anexo5_e.folio = sqlite_datareader.GetString(12);
-                anexo5_e.legalizacion_minred = sqlite_datareader.GetString(13);
-                anexo5_e.legalizacion_embajada = sqlite_datareader.GetString(14);
-                anexo5_e.fecha_solicitud = sqlite_datareader.GetString(15);
-                anexo5_e.id = sqlite_datareader.GetInt32(16);
+                anexo5_e.id = sqlite_datareader.GetInt32(0);
+                anexo5_e.ciudad = sqlite_datareader.GetString(1);
+                anexo5_e.pais = sqlite_datareader.GetString(2);
+                anexo5_e.nombre_apellido_hombre = sqlite_datareader.GetString(3);
+                anexo5_e.nombre_apellido_mujer = sqlite_datareader.GetString(4);
+                anexo5_e.fecha_matrimonio = sqlite_datareader.GetString(5);
+                anexo5_e.ciudad_matrimonio = sqlite_datareader.GetString(6);
+                anexo5_e.provincia_matrimonio = sqlite_datareader.GetString(7);
+                anexo5_e.pais_matrimonio = sqlite_datareader.GetString(8);
+                anexo5_e.registro = sqlite_datareader.GetString(9);
+                anexo5_e.municipio_registro = sqlite_datareader.GetString(10);
+                anexo5_e.provincia_registro = sqlite_datareader.GetString(11);
+                anexo5_e.tomo = sqlite_datareader.GetString(12);
+                anexo5_e.folio = sqlite_datareader.GetString(13);
+                anexo5_e.legalizacion_minred = sqlite_datareader.GetString(14);
+                anexo5_e.legalizacion_embajada = sqlite_datareader.GetString(15);
+                anexo5_e.fecha_solicitud = sqlite_datareader.GetString(16);
                 list.Add(anexo5_e);
             }
             

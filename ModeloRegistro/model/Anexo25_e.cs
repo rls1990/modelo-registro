@@ -41,6 +41,5 @@ namespace ModeloRegistro.model
         public string padres_contrallente { get; set; }
         public string nivel_escolaridad_contrallente { get; set; }
         public string condicion_migratoria_contrallente { get; set; }
-        
     }
 }

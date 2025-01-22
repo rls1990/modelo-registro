@@ -30,6 +30,5 @@ namespace ModeloRegistro.model
         public string condicion_migratoria_apoderado { get; set; }
         public string direccion_vivienda { get; set; }
         public string clausaula { get; set; }
-       
     }
 }

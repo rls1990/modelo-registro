@@ -15,8 +15,8 @@ namespace ModeloRegistro.model
 
         public void save(Anexo3_e anexo3_e)
         {
-            string[] columns = new string[] { "pais", "nombre_apellido", "fecha_nacimiento", "municipio", "provincia", "registro", "municipio_registro", "provincia_registro", "tomo", "folio", "fecha_asiento", "nombre_padre", "nombre_madre", "legalizacion_minred", "legalizacion_embajada", "fecha_solicitud", "id" };
-            object[] values = new object[] { anexo3_e.pais, anexo3_e.nombre_apellido, anexo3_e.fecha_nacimiento, anexo3_e.municipio, anexo3_e.provincia, anexo3_e.registro, anexo3_e.municipio_registro, anexo3_e.provincia_registro, anexo3_e.tomo, anexo3_e.folio, anexo3_e.fecha_asiento, anexo3_e.nombre_padre, anexo3_e.nombre_madre, anexo3_e.legalizacion_minred, anexo3_e.legalizacion_embajada, anexo3_e.fecha_solicitud, anexo3_e.id };
+            string[] columns = new string[] { "ciudad", "pais", "nombre_apellido", "fecha_nacimiento", "municipio", "provincia", "registro", "municipio_registro", "provincia_registro", "tomo", "folio", "fecha_asiento", "nombre_padre", "nombre_madre", "legalizacion_minred", "legalizacion_embajada", "fecha_solicitud" };
+            object[] values = new object[] { anexo3_e.ciudad, anexo3_e.pais, anexo3_e.nombre_apellido, anexo3_e.fecha_nacimiento, anexo3_e.municipio, anexo3_e.provincia, anexo3_e.registro, anexo3_e.municipio_registro, anexo3_e.provincia_registro, anexo3_e.tomo, anexo3_e.folio, anexo3_e.fecha_asiento, anexo3_e.nombre_padre, anexo3_e.nombre_madre, anexo3_e.legalizacion_minred, anexo3_e.legalizacion_embajada, anexo3_e.fecha_solicitud };
 
             SQLiteCommand sqlite_cmd = connection.CreateCommand();
 
@@ -69,8 +69,8 @@ namespace ModeloRegistro.model
 
         public void update(Anexo3_e anexo3_e)
         {
-            string[] columns = new string[] { "pais", "nombre_apellido", "fecha_nacimiento", "municipio", "provincia", "registro", "municipio_registro", "provincia_registro", "tomo", "folio", "fecha_asiento", "nombre_padre", "nombre_madre", "legalizacion_minred", "legalizacion_embajada", "fecha_solicitud", "id" };
-            object[] values = new object[] { anexo3_e.pais, anexo3_e.nombre_apellido, anexo3_e.fecha_nacimiento, anexo3_e.municipio, anexo3_e.provincia, anexo3_e.registro, anexo3_e.municipio_registro, anexo3_e.provincia_registro, anexo3_e.tomo, anexo3_e.folio, anexo3_e.fecha_asiento, anexo3_e.nombre_padre, anexo3_e.nombre_madre, anexo3_e.legalizacion_minred, anexo3_e.legalizacion_embajada, anexo3_e.fecha_solicitud, anexo3_e.id };
+            string[] columns = new string[] { "ciudad", "pais", "nombre_apellido", "fecha_nacimiento", "municipio", "provincia", "registro", "municipio_registro", "provincia_registro", "tomo", "folio", "fecha_asiento", "nombre_padre", "nombre_madre", "legalizacion_minred", "legalizacion_embajada", "fecha_solicitud" };
+            object[] values = new object[] { anexo3_e.ciudad, anexo3_e.pais, anexo3_e.nombre_apellido, anexo3_e.fecha_nacimiento, anexo3_e.municipio, anexo3_e.provincia, anexo3_e.registro, anexo3_e.municipio_registro, anexo3_e.provincia_registro, anexo3_e.tomo, anexo3_e.folio, anexo3_e.fecha_asiento, anexo3_e.nombre_padre, anexo3_e.nombre_madre, anexo3_e.legalizacion_minred, anexo3_e.legalizacion_embajada, anexo3_e.fecha_solicitud };
 
             SQLiteCommand sqlite_cmd = connection.CreateCommand();
 
@@ -146,24 +146,24 @@ namespace ModeloRegistro.model
             while (sqlite_datareader.Read())
             {
                 Anexo3_e anexo3_e = new Anexo3_e();
-                anexo3_e.ciudad = sqlite_datareader.GetString(0);
-                anexo3_e.pais = sqlite_datareader.GetString(1);
-                anexo3_e.nombre_apellido = sqlite_datareader.GetString(2);
-                anexo3_e.fecha_nacimiento = sqlite_datareader.GetString(3);
-                anexo3_e.municipio = sqlite_datareader.GetString(4);
-                anexo3_e.provincia = sqlite_datareader.GetString(5);
-                anexo3_e.registro = sqlite_datareader.GetString(6);
-                anexo3_e.municipio_registro = sqlite_datareader.GetString(7);
-                anexo3_e.provincia_registro = sqlite_datareader.GetString(8);
-                anexo3_e.tomo = sqlite_datareader.GetString(9);
-                anexo3_e.folio = sqlite_datareader.GetString(10);
-                anexo3_e.fecha_asiento = sqlite_datareader.GetString(11);
-                anexo3_e.nombre_padre = sqlite_datareader.GetString(12);
-                anexo3_e.nombre_madre = sqlite_datareader.GetString(13);
-                anexo3_e.legalizacion_minred = sqlite_datareader.GetString(14);
-                anexo3_e.legalizacion_embajada = sqlite_datareader.GetString(15);
-                anexo3_e.fecha_solicitud = sqlite_datareader.GetString(16);
-                anexo3_e.id = sqlite_datareader.GetInt32(17);
+                anexo3_e.id = sqlite_datareader.GetInt32(0);
+                anexo3_e.ciudad = sqlite_datareader.GetString(1);
+                anexo3_e.pais = sqlite_datareader.GetString(2);
+                anexo3_e.nombre_apellido = sqlite_datareader.GetString(3);
+                anexo3_e.fecha_nacimiento = sqlite_datareader.GetString(4);
+                anexo3_e.municipio = sqlite_datareader.GetString(5);
+                anexo3_e.provincia = sqlite_datareader.GetString(6);
+                anexo3_e.registro = sqlite_datareader.GetString(7);
+                anexo3_e.municipio_registro = sqlite_datareader.GetString(8);
+                anexo3_e.provincia_registro = sqlite_datareader.GetString(9);
+                anexo3_e.tomo = sqlite_datareader.GetString(10);
+                anexo3_e.folio = sqlite_datareader.GetString(11);
+                anexo3_e.fecha_asiento = sqlite_datareader.GetString(12);
+                anexo3_e.nombre_padre = sqlite_datareader.GetString(13);
+                anexo3_e.nombre_madre = sqlite_datareader.GetString(14);
+                anexo3_e.legalizacion_minred = sqlite_datareader.GetString(15);
+                anexo3_e.legalizacion_embajada = sqlite_datareader.GetString(16);
+                anexo3_e.fecha_solicitud = sqlite_datareader.GetString(17);
                 list.Add(anexo3_e);
             }
             

@@ -15,8 +15,8 @@ namespace ModeloRegistro.model
 
         public void save(Anexo7_e anexo7_e)
         {
-            string[] columns = new string[] { "pais", "nombre_apellido", "fecha_defuncion", "municipio_fallecimineto", "provincia_fallecimineto", "donde_fue_velado", "municipio_funeraria", "provincia_funeraria", "tomo", "folio", "legalizacion_minrex", "legalizacion_embajada", "fecha_de_solicitud", "id" };
-            object[] values = new object[] { anexo7_e.pais, anexo7_e.nombre_apellido, anexo7_e.fecha_defuncion, anexo7_e.municipio_fallecimineto, anexo7_e.provincia_fallecimineto, anexo7_e.donde_fue_velado, anexo7_e.municipio_funeraria, anexo7_e.provincia_funeraria, anexo7_e.tomo, anexo7_e.folio, anexo7_e.legalizacion_minrex, anexo7_e.legalizacion_embajada, anexo7_e.fecha_de_solicitud, anexo7_e.id };
+            string[] columns = new string[] { "ciudad", "pais", "nombre_apellido", "fecha_defuncion", "municipio_fallecimineto", "provincia_fallecimineto", "donde_fue_velado", "municipio_funeraria", "provincia_funeraria", "tomo", "folio", "legalizacion_minrex", "legalizacion_embajada", "fecha_de_solicitud" };
+            object[] values = new object[] { anexo7_e.ciudad, anexo7_e.pais, anexo7_e.nombre_apellido, anexo7_e.fecha_defuncion, anexo7_e.municipio_fallecimineto, anexo7_e.provincia_fallecimineto, anexo7_e.donde_fue_velado, anexo7_e.municipio_funeraria, anexo7_e.provincia_funeraria, anexo7_e.tomo, anexo7_e.folio, anexo7_e.legalizacion_minrex, anexo7_e.legalizacion_embajada, anexo7_e.fecha_de_solicitud };
 
             SQLiteCommand sqlite_cmd = connection.CreateCommand();
 
@@ -69,8 +69,8 @@ namespace ModeloRegistro.model
 
         public void update(Anexo7_e anexo7_e)
         {
-            string[] columns = new string[] { "pais", "nombre_apellido", "fecha_defuncion", "municipio_fallecimineto", "provincia_fallecimineto", "donde_fue_velado", "municipio_funeraria", "provincia_funeraria", "tomo", "folio", "legalizacion_minrex", "legalizacion_embajada", "fecha_de_solicitud", "id" };
-            object[] values = new object[] { anexo7_e.pais, anexo7_e.nombre_apellido, anexo7_e.fecha_defuncion, anexo7_e.municipio_fallecimineto, anexo7_e.provincia_fallecimineto, anexo7_e.donde_fue_velado, anexo7_e.municipio_funeraria, anexo7_e.provincia_funeraria, anexo7_e.tomo, anexo7_e.folio, anexo7_e.legalizacion_minrex, anexo7_e.legalizacion_embajada, anexo7_e.fecha_de_solicitud, anexo7_e.id };
+            string[] columns = new string[] { "ciudad", "pais", "nombre_apellido", "fecha_defuncion", "municipio_fallecimineto", "provincia_fallecimineto", "donde_fue_velado", "municipio_funeraria", "provincia_funeraria", "tomo", "folio", "legalizacion_minrex", "legalizacion_embajada", "fecha_de_solicitud" };
+            object[] values = new object[] { anexo7_e.ciudad, anexo7_e.pais, anexo7_e.nombre_apellido, anexo7_e.fecha_defuncion, anexo7_e.municipio_fallecimineto, anexo7_e.provincia_fallecimineto, anexo7_e.donde_fue_velado, anexo7_e.municipio_funeraria, anexo7_e.provincia_funeraria, anexo7_e.tomo, anexo7_e.folio, anexo7_e.legalizacion_minrex, anexo7_e.legalizacion_embajada, anexo7_e.fecha_de_solicitud };
 
             SQLiteCommand sqlite_cmd = connection.CreateCommand();
 
@@ -146,21 +146,21 @@ namespace ModeloRegistro.model
             while (sqlite_datareader.Read())
             {
                 Anexo7_e anexo7_e = new Anexo7_e();
-                anexo7_e.ciudad = sqlite_datareader.GetString(0);
-                anexo7_e.pais = sqlite_datareader.GetString(1);
-                anexo7_e.nombre_apellido = sqlite_datareader.GetString(2);
-                anexo7_e.fecha_defuncion = sqlite_datareader.GetString(3);
-                anexo7_e.municipio_fallecimineto = sqlite_datareader.GetString(4);
-                anexo7_e.provincia_fallecimineto = sqlite_datareader.GetString(5);
-                anexo7_e.donde_fue_velado = sqlite_datareader.GetString(6);
-                anexo7_e.municipio_funeraria = sqlite_datareader.GetString(7);
-                anexo7_e.provincia_funeraria = sqlite_datareader.GetString(8);
-                anexo7_e.tomo = sqlite_datareader.GetString(9);
-                anexo7_e.folio = sqlite_datareader.GetString(10);
-                anexo7_e.legalizacion_minrex = sqlite_datareader.GetString(11);
-                anexo7_e.legalizacion_embajada = sqlite_datareader.GetString(12);
-                anexo7_e.fecha_de_solicitud = sqlite_datareader.GetString(13);
-                anexo7_e.id = sqlite_datareader.GetInt32(14);
+                anexo7_e.id = sqlite_datareader.GetInt32(0);
+                anexo7_e.ciudad = sqlite_datareader.GetString(1);
+                anexo7_e.pais = sqlite_datareader.GetString(2);
+                anexo7_e.nombre_apellido = sqlite_datareader.GetString(3);
+                anexo7_e.fecha_defuncion = sqlite_datareader.GetString(4);
+                anexo7_e.municipio_fallecimineto = sqlite_datareader.GetString(5);
+                anexo7_e.provincia_fallecimineto = sqlite_datareader.GetString(6);
+                anexo7_e.donde_fue_velado = sqlite_datareader.GetString(7);
+                anexo7_e.municipio_funeraria = sqlite_datareader.GetString(8);
+                anexo7_e.provincia_funeraria = sqlite_datareader.GetString(9);
+                anexo7_e.tomo = sqlite_datareader.GetString(10);
+                anexo7_e.folio = sqlite_datareader.GetString(11);
+                anexo7_e.legalizacion_minrex = sqlite_datareader.GetString(12);
+                anexo7_e.legalizacion_embajada = sqlite_datareader.GetString(13);
+                anexo7_e.fecha_de_solicitud = sqlite_datareader.GetString(14);
                 list.Add(anexo7_e);
             }
             
