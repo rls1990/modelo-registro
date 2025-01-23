@@ -80,5 +80,15 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo10
         {
 
         }
+
+        private void buscar_KeyUp( object sender,System.Windows.Input.KeyEventArgs e )
+        {
+            string searchText = buscar.Text;
+            if(searchText.Length>0)
+            {
+                var listaF=lista.FindAll(( item ) => item.ContieneTexto(searchText));
+                listadg.ItemsSource=listaF;
+            } else listadg.ItemsSource=lista;
+        }
     }
 }

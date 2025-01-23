@@ -1,3 +1,6 @@
+using System;
+using System.Reflection;
+
 namespace ModeloRegistro.model
 {
     public class Anexo14_e
@@ -42,5 +45,22 @@ namespace ModeloRegistro.model
         public string nombre_funcionario_expidió_certificado { get; set; }
         public string cargo_funcionario_expidió_certificado { get; set; }
         public string fecha_solicitud { get; set; }
+
+        public bool ContieneTexto( string texto )
+        {
+            // Recorremos todas las propiedades del objeto
+            foreach(PropertyInfo propiedad in this.GetType().GetProperties())
+            {
+                // Obtenemos el valor de la propiedad
+                var valor = propiedad.GetValue(this)?.ToString();
+                // Comparamos el valor con el texto
+                if(valor!=null&&valor.Equals(texto,StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

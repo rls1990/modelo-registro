@@ -1,3 +1,6 @@
+using System;
+using System.Reflection;
+
 namespace ModeloRegistro.model
 {
     public class Anexo29_e
@@ -36,5 +39,22 @@ namespace ModeloRegistro.model
         public string folio { get; set; }
         public string registro_estado_civil { get; set; }
         public string tipo_tramites { get; set; }
+
+        public bool ContieneTexto( string texto )
+        {
+            // Recorremos todas las propiedades del objeto
+            foreach(PropertyInfo propiedad in this.GetType().GetProperties())
+            {
+                // Obtenemos el valor de la propiedad
+                var valor = propiedad.GetValue(this)?.ToString();
+                // Comparamos el valor con el texto
+                if(valor!=null&&valor.Equals(texto,StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

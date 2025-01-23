@@ -1,3 +1,6 @@
+using System;
+using System.Reflection;
+
 namespace ModeloRegistro.model
 {
     public class Anexo17_e
@@ -18,5 +21,22 @@ namespace ModeloRegistro.model
         public string nombre_funcionario { get; set; }
         public string telefono { get; set; }
         public string email { get; set; }
+
+        public bool ContieneTexto( string texto )
+        {
+            // Recorremos todas las propiedades del objeto
+            foreach(PropertyInfo propiedad in this.GetType().GetProperties())
+            {
+                // Obtenemos el valor de la propiedad
+                var valor = propiedad.GetValue(this)?.ToString();
+                // Comparamos el valor con el texto
+                if(valor!=null&&valor.Equals(texto,StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

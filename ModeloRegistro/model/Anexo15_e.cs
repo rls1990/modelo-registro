@@ -1,3 +1,6 @@
+using System;
+using System.Reflection;
+
 namespace ModeloRegistro.model
 {
     public class Anexo15_e
@@ -39,5 +42,22 @@ namespace ModeloRegistro.model
         public string parentesco_fallecido { get; set; }
         public string direccion_solicita { get; set; }
         public string nombre_apellido_funcionario_consular { get; set; }
+
+        public bool ContieneTexto( string texto )
+        {
+            // Recorremos todas las propiedades del objeto
+            foreach(PropertyInfo propiedad in this.GetType().GetProperties())
+            {
+                // Obtenemos el valor de la propiedad
+                var valor = propiedad.GetValue(this)?.ToString();
+                // Comparamos el valor con el texto
+                if(valor!=null&&valor.Equals(texto,StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

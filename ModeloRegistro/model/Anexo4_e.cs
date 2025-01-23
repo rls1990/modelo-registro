@@ -1,3 +1,6 @@
+using System;
+using System.Reflection;
+
 namespace ModeloRegistro.model
 {
     public class Anexo4_e
@@ -31,5 +34,22 @@ namespace ModeloRegistro.model
         public string legalizacion_minred { get; set; }
         public string legalizacion_embajada { get; set; }
         public string fecha_solicitud { get; set; }
+
+        public bool ContieneTexto( string texto )
+        {
+            // Recorremos todas las propiedades del objeto
+            foreach(PropertyInfo propiedad in this.GetType().GetProperties())
+            {
+                // Obtenemos el valor de la propiedad
+                var valor = propiedad.GetValue(this)?.ToString();
+                // Comparamos el valor con el texto
+                if(valor!=null&&valor.Equals(texto,StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
