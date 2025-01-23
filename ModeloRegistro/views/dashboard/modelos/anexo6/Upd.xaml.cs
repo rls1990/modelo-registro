@@ -52,7 +52,32 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo6
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo6 = new model.Anexo6_e()
+            {
+                id=entity.id,
+                ciudad=ciudad.Text,
+                pais=pais.Text,
+                nombre_apellido_hombre=nombre_apellido_hombre.Text,
+                nombre_apellido_mujer=nombre_apellido_mujer.Text,
+                tribunal_dicto_sentencia=tribunal_dicto_sentencia.Text,
+                nombre_secretario_actuante=nombre_secretario_actuante.Text,
+                fecha_dicto_sentencia=fecha_dicto_sentencia.SelectedDate?.ToString("yyyy-MM-dd"),
+                fecha_firmeza_sentencia=fecha_firmeza_sentencia.SelectedDate?.ToString("yyyy-MM-dd"),
+                no_sentencia=no_sentencia.Text,
+                no_radicacion=no_radicacion.Text,
+                legalizacion_minred=legalizacion_minred.Text,
+                legalizacion_embajada=legalizacion_embajada.Text,
+                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd")
+            };
 
+            if(ValidarAnexo(anexo6))
+            {
+                manager.update(anexo6);
+                MessageBox.Show("Anexo 6 guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         public bool ValidarAnexo( model.Anexo6_e model )

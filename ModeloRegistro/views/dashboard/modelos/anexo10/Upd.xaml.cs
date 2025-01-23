@@ -1,18 +1,6 @@
 ﻿using ModeloRegistro.services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ModeloRegistro.views.dashboard.modelos.anexo10
 {
@@ -66,7 +54,41 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo10
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo = new model.Anexo10_e()
+            {
+                id=entity.id,
+                ciudad=ciudad.Text,
+                pais=pais.Text,
+                solicito_certificado=solicito_certificado.Text,
+                de_mi=de_mi.Text,
+                nombre_apellidos=nombre_apellidos.Text,
+                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
+                lugar_nacimiento=lugar_nacimiento.Text,
+                nombre_padres=nombre_padres.Text,
+                lugar_vivio_cuba=lugar_vivio_cuba.Text,
+                fecha_fallecimiento=fecha_fallecimiento.SelectedDate?.ToString("yyyy-MM-dd"),
+                otros_datos_interes=otros_datos_interes.Text,
+                nombre_apellidos_solicitante=nombre_apellidos_solicitante.Text,
+                doc_identidad=doc_identidad.Text,
+                pasaporte=pasaporte.Text,
+                direccion=direccion.Text,
+                telefono=telefono.Text,
+                email=email.Text,
+                legalizacion_minrex=legalizacion_minrex.Text,
+                legalizacion_embajada=legalizacion_embajada.Text,
+                fecha_de_solicitud=fecha_de_solicitud.SelectedDate?.ToString("yyyy-MM-dd")
+            };
 
+
+
+            if(ValidarAnexo(anexo))
+            {
+                manager.update(anexo);
+                MessageBox.Show("Anexo guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         private bool ValidarAnexo( model.Anexo10_e anexo )

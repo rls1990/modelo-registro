@@ -54,7 +54,33 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo7
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo7 = new model.Anexo7_e()
+            {
+                id=entity.id,
+                ciudad=ciudad.Text,
+                pais=pais.Text,
+                nombre_apellido=nombre_apellido.Text,
+                fecha_defuncion=fecha_defuncion.SelectedDate?.ToString("yyyy-MM-dd"),
+                municipio_fallecimineto=municipio_fallecimineto.Text,
+                provincia_fallecimineto=provincia_fallecimineto.Text,
+                donde_fue_velado=donde_fue_velado.Text,
+                municipio_funeraria=municipio_funeraria.Text,
+                provincia_funeraria=provincia_funeraria.Text,
+                tomo=tomo.Text,
+                folio=folio.Text,
+                legalizacion_minrex=legalizacion_minrex.Text,
+                legalizacion_embajada=legalizacion_embajada.Text,
+                fecha_de_solicitud=fecha_de_solicitud.SelectedDate?.ToString("yyyy-MM-dd")
+            };
 
+            if(ValidarAnexo(anexo7))
+            {
+                manager.update(anexo7);
+                MessageBox.Show("Anexo 7 guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         public bool ValidarAnexo( model.Anexo7_e model )

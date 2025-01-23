@@ -59,7 +59,36 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo19
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo = new model.Anexo19_e()
+            {
+                id=entity.id,
+                nombre_apellidos=nombre_apellidos.Text,
+                ciudadano=ciudadano.Text,
+                lugar_nacimiento=lugar_nacimiento.Text,
+                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
+                pasaporte=pasaporte.Text,
+                nombre_menor=nombre_menor.Text,
+                ciudadania_menor=ciudadania_menor.Text,
+                lugar_nacimineto_menor=lugar_nacimineto_menor.Text,
+                fecha_nacimiento_menor=fecha_nacimiento_menor.SelectedDate?.ToString("yyyy-MM-dd"),
+                pasaporte_menor=pasaporte_menor.Text,
+                ultima_direccion_pedres=ultima_direccion_pedres.Text,
+                recidir_cuba=recidir_cuba.IsChecked.ToString(),
+                recidir_en_exterior=recidir_en_exterior.IsChecked.ToString(),
+                razones_personales=razones_personales.Text,
+                nombre_funcionario=nombre_funcionario.Text,
+                telefono=telefono.Text,
+                email=email.Text
+            };
 
+            if(ValidarAnexo(anexo))
+            {
+                manager.save(anexo);
+                MessageBox.Show("Anexo guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         public bool ValidarAnexo( model.Anexo19_e model )

@@ -53,7 +53,39 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo12
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo = new model.Anexo12_e()
+            {
+                id=entity.id,
+                ciudad=ciudad.Text,
+                pais=pais.Text,
+                nombre_apellidos=nombre_apellidos.Text,
+                ciudadano=ciudadano.Text,
+                carnet_identidad=carnet_identidad.Text,
+                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
+                lugar_nacimineto=lugar_nacimineto.Text,
+                registro_civil=registro_civil.Text,
+                vecino_de=vecino_de.Text,
+                nombre_apellido_apoderado=nombre_apellido_apoderado.Text,
+                si=si.IsChecked.ToString(),
+                no=no.IsChecked.ToString(),
+                numero=numero.Text,
+                fecha_poder_especial=fecha_poder_especial.SelectedDate?.ToString("yyyy-MM-dd"),
+                nombre_apellido_notario=nombre_apellido_notario.Text,
+                competencia=competencia.Text,
+                sede=sede.Text,
+                legalizacion_minrex=legalizacion_minrex.Text,
+                legalizacion_embajada=legalizacion_embajada.Text,
+                fecha_de_solicitud=fecha_de_solicitud.SelectedDate?.ToString("yyyy-MM-dd")
+            };
 
+            if(ValidarAnexo(anexo))
+            {
+                manager.update(anexo);
+                MessageBox.Show("Anexo guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         private bool ValidarAnexo( model.Anexo12_e anexo )

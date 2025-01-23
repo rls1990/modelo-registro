@@ -73,7 +73,47 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo4
 
         private void Button_Click_1( object sender,RoutedEventArgs e )
         {
+            var anexo4 = new model.Anexo4_e()
+            {
+                id=entity.id,
+                ciudad=ciudad.Text,
+                pais=pais.Text,
+                f_name=f_name.Text,
+                s_name=s_name.Text,
+                f_apellido=f_apellido.Text,
+                s_apellido=s_apellido.Text,
+                lugar_nacimiento=lugar_nacimiento.Text,
+                ciudadania=ciudadania.Text,
+                nacionalidad=nacionalidad.Text,
+                estado_civil=estado_civil.Text,
+                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
+                sexo=sexo.Text,
+                color_piel=color_piel.Text,
+                profecion_oficio_ocupacion=profecion_oficio_ocupacion.Text,
+                nombre_padre=nombre_padre.Text,
+                nombre_madre=nombre_madre.Text,
+                carnet_identidad=carnet_identidad.Text,
+                pasaporte=pasaporte.Text,
+                calle=calle.Text,
+                numero=numero.Text,
+                entre=entre.Text,
+                y=y.Text,
+                barrio=barrio.Text,
+                municipio=municipio.Text,
+                provincia=provincia.Text,
+                legalizacion_minred=legalizacion_minred.Text,
+                legalizacion_embajada=legalizacion_embajada.Text,
+                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd")
+            };
 
+            if(ValidarAnexo(anexo4))
+            {
+                manager.update(anexo4);
+                MessageBox.Show("Anexo 4 guardado exitosamente.");
+            } else
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.","Errores de Validación",MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
         }
 
         public bool ValidarAnexo( model.Anexo4_e model )
