@@ -46,7 +46,8 @@
                          FontSize="14"
                          materialDesign:HintAssist.FloatingScale="0.80"
                          HorizontalAlignment="Left"
-                         Width="223">
+                         Width="223"
+                         TextChanged="buscar_TextChanged">
                 </TextBox>
                 <materialDesign:PackIcon Width="30"
                                          Height="30"

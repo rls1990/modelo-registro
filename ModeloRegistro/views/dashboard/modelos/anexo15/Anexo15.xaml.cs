@@ -73,5 +73,16 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo15
         {
 
         }
+
+        private void buscar_TextChanged( object sender,TextChangedEventArgs e )
+        {
+            string searchText = buscar.Text;
+            if(searchText.Length>0)
+            {
+                var listaF = lista.FindAll(( item ) => item.ContieneTexto(searchText));
+                listadg.ItemsSource=listaF;
+            } else
+                listadg.ItemsSource=lista;
+        }
     }
 }

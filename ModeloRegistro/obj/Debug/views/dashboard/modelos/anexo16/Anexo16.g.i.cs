@@ -52,7 +52,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16 {
         #line hidden
         
         
-        #line 123 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
+        #line 124 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGrid listadg;
         
@@ -91,10 +91,16 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16 {
             {
             case 1:
             this.buscar = ((System.Windows.Controls.TextBox)(target));
+            
+            #line 49 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
+            this.buscar.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.buscar_TextChanged);
+            
+            #line default
+            #line hidden
             return;
             case 2:
             
-            #line 63 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
+            #line 64 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click);
             
             #line default
@@ -102,7 +108,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16 {
             return;
             case 3:
             
-            #line 77 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
+            #line 78 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_1);
             
             #line default
@@ -110,7 +116,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16 {
             return;
             case 4:
             
-            #line 92 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
+            #line 93 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_2);
             
             #line default
@@ -118,7 +124,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16 {
             return;
             case 5:
             
-            #line 107 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
+            #line 108 "..\..\..\..\..\..\views\dashboard\modelos\anexo16\Anexo16.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_3);
             
             #line default
