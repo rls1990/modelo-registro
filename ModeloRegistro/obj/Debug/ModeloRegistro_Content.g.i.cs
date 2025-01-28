@@ -8,6 +8,48 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/logo.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_10._certificacion_de_ciudadania_o_su_negativo.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_11._certificacion_de_registros_de_extranjeros.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_12._certificado_de_capacidad_legal_para_el_matrimonio.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_13._modelo_9-30_modificado._solicitud_de_transcripcion_de_nacimient" +
+    "o.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_14._modelo_11-30_modificado._solicitud_transcripcion_de_matrimonio_" +
+    "0.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_15._modelo_13-30_modificado._solicitud_de_transcripcion_de_defuncio" +
+    "n.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_17._modelo_no_1._solicitud_de_la_adquisicion_de_la_ciudadania_cuban" +
+    "a_por_nacimiento._mayores_de_edad.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_18._modelo_no_2._solicitud_de_la_adquisicion_de_la_ciudadania_cuban" +
+    "a_por_nacimiento._menores_de_edad_o_inc.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_19._modelo_no_3._solicitud_de_la_adquisicion_de_la_ciudadania_cuban" +
+    "a_por_nacimiento._menores_de_edad._cuan.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_20._modelo_no_4._solicitud_de_la_adquisicion_de_la_ciudadania_cuban" +
+    "a_por_nacimiento._cuando_se_realiza_por.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_21._modelo_de_solicitud_autorizo_de_pasaporte_y_salida_del_menor.ht" +
+    "ml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_22._modelo_de_solicitud_legalizaciones.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_23._modelo_de_solicitud_poder_especial_para_compra_de_viviendas.htm" +
+    "l")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_24._modelo_de_solicitud_poder_especial_para_compra_venta_de_autos.h" +
+    "tml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_25._modelo_de_solicitud_poder_especial_para_contraer_matrimonio.htm" +
+    "l")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_26._modelo_de_solicitud_poder_especial_para_divorcio_notarial.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_26._modelo_de_solicitud_poder_especial_para_divorcio_notarial.pdf%2" +
+    "0-%20divorcio_notarial.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_27._modelo_de_solicitud_poder_especial_para_donacion.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_28._modelo_de_solicitud_poder_especial_para_sacar_carga_de_contened" +
+    "or.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_29._modelo_de_solicitud_poder_especial_para_escritura_de_autorizaci" +
+    "on.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_3.certificacion_de_nacimiento_1%20(1).html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_30._modelo_de_solicitud_poder_especial_para_venta_de_viviendas.html" +
+    "")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_31._modelo_de_solicitud_poder_especial.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_4._certificacion_de_antecedentes_penales_0.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_5._certificacion_de_matrimonio_0.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_6.certificacion_de_sentencia_de_divorcio_0.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_7._certificacion_de_defuncion_0.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/anexo_9._certificacion_de_solteria_0.html")]
 
 
