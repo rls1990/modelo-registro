@@ -29,8 +29,10 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo12
             ciudadano.Text=entity.ciudadano;
             carnet_identidad.Text=entity.carnet_identidad;
             fecha_nacimiento.Text=entity.fecha_nacimiento;
-            lugar_nacimineto.Text=entity.lugar_nacimineto;
-            registro_civil.Text=entity.registro_civil;
+            municipio_lugar_nacimineto.Text=entity.municipio_lugar_nacimineto;
+            provincia_lugar_nacimineto.Text=entity.provincia_lugar_nacimineto;
+            municipio_registro_civil.Text=entity.municipio_registro_civil;
+            provincia_registro_civil.Text=entity.provincia_registro_civil;
             vecino_de.Text=entity.vecino_de;
             nombre_apellido_apoderado.Text=entity.nombre_apellido_apoderado;
             si.IsChecked=entity.si=="True"; 
@@ -62,8 +64,10 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo12
                 ciudadano=ciudadano.Text,
                 carnet_identidad=carnet_identidad.Text,
                 fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
-                lugar_nacimineto=lugar_nacimineto.Text,
-                registro_civil=registro_civil.Text,
+                municipio_lugar_nacimineto=municipio_lugar_nacimineto.Text,
+                provincia_lugar_nacimineto=provincia_lugar_nacimineto.Text,
+                municipio_registro_civil=municipio_registro_civil.Text,
+                provincia_registro_civil=provincia_registro_civil.Text,
                 vecino_de=vecino_de.Text,
                 nombre_apellido_apoderado=nombre_apellido_apoderado.Text,
                 si=si.IsChecked.ToString(),
@@ -100,8 +104,10 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo12
                    !string.IsNullOrWhiteSpace(anexo.ciudadano)&&
                    !string.IsNullOrWhiteSpace(anexo.carnet_identidad)&&
                    !string.IsNullOrWhiteSpace(anexo.fecha_nacimiento)&&
-                   !string.IsNullOrWhiteSpace(anexo.lugar_nacimineto)&&
-                   !string.IsNullOrWhiteSpace(anexo.registro_civil)&&
+                   !string.IsNullOrWhiteSpace(anexo.municipio_lugar_nacimineto)&&
+                   !string.IsNullOrWhiteSpace(anexo.provincia_lugar_nacimineto)&&
+                   !string.IsNullOrWhiteSpace(anexo.municipio_registro_civil)&&
+                   !string.IsNullOrWhiteSpace(anexo.provincia_registro_civil)&&
                    !string.IsNullOrWhiteSpace(anexo.vecino_de)&&
                    !string.IsNullOrWhiteSpace(anexo.nombre_apellido_apoderado)&&
                    !string.IsNullOrWhiteSpace(anexo.si)&&

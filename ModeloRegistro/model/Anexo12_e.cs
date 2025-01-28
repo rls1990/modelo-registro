@@ -12,8 +12,10 @@ namespace ModeloRegistro.model
         public string ciudadano { get; set; }
         public string carnet_identidad { get; set; }
         public string fecha_nacimiento { get; set; }
-        public string lugar_nacimineto { get; set; }
-        public string registro_civil { get; set; }
+        public string provincia_lugar_nacimineto { get; set; }
+        public string municipio_lugar_nacimineto { get; set; }
+        public string provincia_registro_civil { get; set; }
+        public string municipio_registro_civil { get; set; }
         public string vecino_de { get; set; }
         public string nombre_apellido_apoderado { get; set; }
         public string si { get; set; }
