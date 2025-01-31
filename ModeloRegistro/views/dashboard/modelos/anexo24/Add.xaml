@@ -201,6 +201,12 @@
                          Style="{StaticResource MaterialDesignOutlinedTextBox}"
                          materialDesign:HintAssist.FloatingScale="1"
                          materialDesign:TextFieldAssist.HasClearButton="True" />
+                <TextBox x:Name="nombre_padres_apoderado"
+                         materialDesign:HintAssist.Hint="Nombres y apellidos de los padres"
+                         Margin="12"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:HintAssist.FloatingScale="1"
+                         materialDesign:TextFieldAssist.HasClearButton="True" />
                 <TextBox x:Name="condicion_migratoria_apoderado"
                          materialDesign:HintAssist.Hint="CONDICIÓN MIGRATORIA (RESIDENTE EN EL TERRITORIO NACIONAL O EMIGRADO)"
                          Margin="12"

@@ -58,7 +58,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
 
             direccion_apoderado.Text=entity.direccion_apoderado;
             carnet_pasaporte_apoderado.Text=entity.carnet_pasaporte_apoderado;
-
+            nombre_padres_apoderado.Text=entity.nombre_padres_apoderado;
             condicion_migratoria_apoderado.Text=entity.condicion_migratoria_apoderado;
 
             marca.Text=entity.marca;
@@ -107,6 +107,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
                 ocupacion_apoderado=ocupacion_apoderado.Text,
                 direccion_apoderado=direccion_apoderado.Text,
                 carnet_pasaporte_apoderado=carnet_pasaporte_apoderado.Text,
+                nombre_padres_apoderado=nombre_padres_apoderado.Text,
                 condicion_migratoria_apoderado=condicion_migratoria_apoderado.Text,
 
                 marca=marca.Text,
@@ -166,6 +167,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
                 string.IsNullOrEmpty(model.ocupacion_apoderado)||
                 string.IsNullOrEmpty(model.direccion_apoderado)||
                 string.IsNullOrEmpty(model.carnet_pasaporte_apoderado)||
+                string.IsNullOrEmpty(model.nombre_padres_apoderado)||
                 string.IsNullOrEmpty(model.condicion_migratoria_apoderado)||
                 string.IsNullOrEmpty(model.marca)||
                 string.IsNullOrEmpty(model.modelo)||

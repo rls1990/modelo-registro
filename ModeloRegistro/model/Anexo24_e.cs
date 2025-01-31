@@ -29,6 +29,7 @@ namespace ModeloRegistro.model
         public string ocupacion_apoderado { get; set; }
         public string direccion_apoderado { get; set; }
         public string carnet_pasaporte_apoderado { get; set; }
+        public string nombre_padres_apoderado { get; set; }
         public string condicion_migratoria_apoderado { get; set; }
         public string marca { get; set; }
         public string modelo { get; set; }

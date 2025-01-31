@@ -15,8 +15,8 @@ namespace ModeloRegistro.model
 
         public void save(Anexo24_e anexo24_e)
         {
-            string[] columns = new string[] { "fecha_solicitud", "nombre", "lugar_nacimineto_municipio", "lugar_nacimineto_provincia", "fecha_nacimineto", "estado_civil", "ciudadania", "ocupacion", "direccion", "carnet_pasaporte", "nombre_apellido_padres", "condicion_migratoria", "correo", "celular", "nombre_apoderado", "lugar_nacimineto_municipio_apoderado", "lugar_nacimineto_provincia_apoderado", "fecha_nacimineto_apoderado", "estado_civil_apoderado", "ciudadania_apoderado", "ocupacion_apoderado", "direccion_apoderado", "carnet_pasaporte_apoderado", "condicion_migratoria_apoderado", "marca", "modelo", "anno", "color", "nro_motor", "nro_chasis", "matricula" };
-            object[] values = new object[] { anexo24_e.fecha_solicitud, anexo24_e.nombre, anexo24_e.lugar_nacimineto_municipio, anexo24_e.lugar_nacimineto_provincia, anexo24_e.fecha_nacimineto, anexo24_e.estado_civil, anexo24_e.ciudadania, anexo24_e.ocupacion, anexo24_e.direccion, anexo24_e.carnet_pasaporte, anexo24_e.nombre_apellido_padres, anexo24_e.condicion_migratoria, anexo24_e.correo, anexo24_e.celular, anexo24_e.nombre_apoderado, anexo24_e.lugar_nacimineto_municipio_apoderado, anexo24_e.lugar_nacimineto_provincia_apoderado, anexo24_e.fecha_nacimineto_apoderado, anexo24_e.estado_civil_apoderado, anexo24_e.ciudadania_apoderado, anexo24_e.ocupacion_apoderado, anexo24_e.direccion_apoderado, anexo24_e.carnet_pasaporte_apoderado, anexo24_e.condicion_migratoria_apoderado, anexo24_e.marca, anexo24_e.modelo, anexo24_e.anno, anexo24_e.color, anexo24_e.nro_motor, anexo24_e.nro_chasis, anexo24_e.matricula };
+            string[] columns = new string[] { "fecha_solicitud", "nombre", "lugar_nacimineto_municipio", "lugar_nacimineto_provincia", "fecha_nacimineto", "estado_civil", "ciudadania", "ocupacion", "direccion", "carnet_pasaporte", "nombre_apellido_padres", "condicion_migratoria", "correo", "celular", "nombre_apoderado", "lugar_nacimineto_municipio_apoderado", "lugar_nacimineto_provincia_apoderado", "fecha_nacimineto_apoderado", "estado_civil_apoderado", "ciudadania_apoderado", "ocupacion_apoderado", "direccion_apoderado", "carnet_pasaporte_apoderado", "nombre_padres_apoderado", "condicion_migratoria_apoderado", "marca", "modelo", "anno", "color", "nro_motor", "nro_chasis", "matricula" };
+            object[] values = new object[] { anexo24_e.fecha_solicitud, anexo24_e.nombre, anexo24_e.lugar_nacimineto_municipio, anexo24_e.lugar_nacimineto_provincia, anexo24_e.fecha_nacimineto, anexo24_e.estado_civil, anexo24_e.ciudadania, anexo24_e.ocupacion, anexo24_e.direccion, anexo24_e.carnet_pasaporte, anexo24_e.nombre_apellido_padres, anexo24_e.condicion_migratoria, anexo24_e.correo, anexo24_e.celular, anexo24_e.nombre_apoderado, anexo24_e.lugar_nacimineto_municipio_apoderado, anexo24_e.lugar_nacimineto_provincia_apoderado, anexo24_e.fecha_nacimineto_apoderado, anexo24_e.estado_civil_apoderado, anexo24_e.ciudadania_apoderado, anexo24_e.ocupacion_apoderado, anexo24_e.direccion_apoderado, anexo24_e.carnet_pasaporte_apoderado, anexo24_e.nombre_padres_apoderado, anexo24_e.condicion_migratoria_apoderado, anexo24_e.marca, anexo24_e.modelo, anexo24_e.anno, anexo24_e.color, anexo24_e.nro_motor, anexo24_e.nro_chasis, anexo24_e.matricula };
 
             SQLiteCommand sqlite_cmd = connection.CreateCommand();
 
@@ -69,8 +69,8 @@ namespace ModeloRegistro.model
 
         public void update(Anexo24_e anexo24_e)
         {
-            string[] columns = new string[] { "fecha_solicitud", "nombre", "lugar_nacimineto_municipio", "lugar_nacimineto_provincia", "fecha_nacimineto", "estado_civil", "ciudadania", "ocupacion", "direccion", "carnet_pasaporte", "nombre_apellido_padres", "condicion_migratoria", "correo", "celular", "nombre_apoderado", "lugar_nacimineto_municipio_apoderado", "lugar_nacimineto_provincia_apoderado", "fecha_nacimineto_apoderado", "estado_civil_apoderado", "ciudadania_apoderado", "ocupacion_apoderado", "direccion_apoderado", "carnet_pasaporte_apoderado", "condicion_migratoria_apoderado", "marca", "modelo", "anno", "color", "nro_motor", "nro_chasis", "matricula" };
-            object[] values = new object[] { anexo24_e.fecha_solicitud, anexo24_e.nombre, anexo24_e.lugar_nacimineto_municipio, anexo24_e.lugar_nacimineto_provincia, anexo24_e.fecha_nacimineto, anexo24_e.estado_civil, anexo24_e.ciudadania, anexo24_e.ocupacion, anexo24_e.direccion, anexo24_e.carnet_pasaporte, anexo24_e.nombre_apellido_padres, anexo24_e.condicion_migratoria, anexo24_e.correo, anexo24_e.celular, anexo24_e.nombre_apoderado, anexo24_e.lugar_nacimineto_municipio_apoderado, anexo24_e.lugar_nacimineto_provincia_apoderado, anexo24_e.fecha_nacimineto_apoderado, anexo24_e.estado_civil_apoderado, anexo24_e.ciudadania_apoderado, anexo24_e.ocupacion_apoderado, anexo24_e.direccion_apoderado, anexo24_e.carnet_pasaporte_apoderado, anexo24_e.condicion_migratoria_apoderado, anexo24_e.marca, anexo24_e.modelo, anexo24_e.anno, anexo24_e.color, anexo24_e.nro_motor, anexo24_e.nro_chasis, anexo24_e.matricula };
+            string[] columns = new string[] { "fecha_solicitud", "nombre", "lugar_nacimineto_municipio", "lugar_nacimineto_provincia", "fecha_nacimineto", "estado_civil", "ciudadania", "ocupacion", "direccion", "carnet_pasaporte", "nombre_apellido_padres", "condicion_migratoria", "correo", "celular", "nombre_apoderado", "lugar_nacimineto_municipio_apoderado", "lugar_nacimineto_provincia_apoderado", "fecha_nacimineto_apoderado", "estado_civil_apoderado", "ciudadania_apoderado", "ocupacion_apoderado", "direccion_apoderado", "carnet_pasaporte_apoderado", "nombre_padres_apoderado", "condicion_migratoria_apoderado", "marca", "modelo", "anno", "color", "nro_motor", "nro_chasis", "matricula" };
+            object[] values = new object[] { anexo24_e.fecha_solicitud, anexo24_e.nombre, anexo24_e.lugar_nacimineto_municipio, anexo24_e.lugar_nacimineto_provincia, anexo24_e.fecha_nacimineto, anexo24_e.estado_civil, anexo24_e.ciudadania, anexo24_e.ocupacion, anexo24_e.direccion, anexo24_e.carnet_pasaporte, anexo24_e.nombre_apellido_padres, anexo24_e.condicion_migratoria, anexo24_e.correo, anexo24_e.celular, anexo24_e.nombre_apoderado, anexo24_e.lugar_nacimineto_municipio_apoderado, anexo24_e.lugar_nacimineto_provincia_apoderado, anexo24_e.fecha_nacimineto_apoderado, anexo24_e.estado_civil_apoderado, anexo24_e.ciudadania_apoderado, anexo24_e.ocupacion_apoderado, anexo24_e.direccion_apoderado, anexo24_e.carnet_pasaporte_apoderado, anexo24_e.nombre_padres_apoderado, anexo24_e.condicion_migratoria_apoderado, anexo24_e.marca, anexo24_e.modelo, anexo24_e.anno, anexo24_e.color, anexo24_e.nro_motor, anexo24_e.nro_chasis, anexo24_e.matricula };
 
             SQLiteCommand sqlite_cmd = connection.CreateCommand();
 
@@ -170,14 +170,15 @@ namespace ModeloRegistro.model
                 anexo24_e.ocupacion_apoderado = sqlite_datareader.GetString(21);
                 anexo24_e.direccion_apoderado = sqlite_datareader.GetString(22);
                 anexo24_e.carnet_pasaporte_apoderado = sqlite_datareader.GetString(23);
-                anexo24_e.condicion_migratoria_apoderado = sqlite_datareader.GetString(24);
-                anexo24_e.marca = sqlite_datareader.GetString(25);
-                anexo24_e.modelo = sqlite_datareader.GetString(26);
-                anexo24_e.anno = sqlite_datareader.GetString(27);
-                anexo24_e.color = sqlite_datareader.GetString(28);
-                anexo24_e.nro_motor = sqlite_datareader.GetString(29);
-                anexo24_e.nro_chasis = sqlite_datareader.GetString(30);
-                anexo24_e.matricula = sqlite_datareader.GetString(31);
+                anexo24_e.nombre_padres_apoderado = sqlite_datareader.GetString(24);
+                anexo24_e.condicion_migratoria_apoderado = sqlite_datareader.GetString(25);
+                anexo24_e.marca = sqlite_datareader.GetString(26);
+                anexo24_e.modelo = sqlite_datareader.GetString(27);
+                anexo24_e.anno = sqlite_datareader.GetString(28);
+                anexo24_e.color = sqlite_datareader.GetString(29);
+                anexo24_e.nro_motor = sqlite_datareader.GetString(30);
+                anexo24_e.nro_chasis = sqlite_datareader.GetString(31);
+                anexo24_e.matricula = sqlite_datareader.GetString(32);
                 list.Add(anexo24_e);
             }
             
