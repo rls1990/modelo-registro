@@ -209,13 +209,13 @@
                          materialDesign:TextFieldAssist.HasClearButton="True"
                          materialDesign:HintAssist.FloatingScale="1"
                          materialDesign:HintAssist.Hint="Si es cubano: CONDICIÓN MIGRATORIA (RESIDENTE EN EL TERRITORIO NACIONAL O EMIGRADO)" />
-                <TextBox x:Name="especificar_causa_representante"
+                <!--<TextBox x:Name="especificar_causa_representante"
                          Margin="12"
                          Style="{StaticResource MaterialDesignOutlinedTextBox}"
                          materialDesign:TextFieldAssist.HasClearButton="True"
                          materialDesign:HintAssist.FloatingScale="1"
                          materialDesign:HintAssist.Hint="Especifique DETALLADAMENTE los motivos por los que usted desea ser representado por su apoderado"
-                         TextWrapping="Wrap"/>
+                         TextWrapping="Wrap"/>-->
                 <TextBox x:Name="despacho_equipaje"
                          Margin="12"
                          Style="{StaticResource MaterialDesignOutlinedTextBox}"

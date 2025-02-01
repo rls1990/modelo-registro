@@ -61,7 +61,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo28
 
             condicion_migratoria_apoderado.Text=entity.condicion_migratoria_apoderado;
 
-            especificar_causa_representante.Text=entity.especificar_causa_representante;
+            //especificar_causa_representante.Text=entity.especificar_causa_representante;
 
             despacho_equipaje.Text=entity.despacho_equipaje;
 
@@ -114,7 +114,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo28
                 carne_pasaporte_apoderado=carne_pasaporte_apoderado.Text,
                 condicion_migratoria_apoderado=condicion_migratoria_apoderado.Text,
 
-                especificar_causa_representante=especificar_causa_representante.Text,
+                //especificar_causa_representante=especificar_causa_representante.Text,
                 despacho_equipaje=despacho_equipaje.Text,
                 numero_contenedor=numero_contenedor.Text,
                 bl=bl.Text,
@@ -167,7 +167,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo28
                 string.IsNullOrEmpty(model.direccion_particular_apoderado)||
                 string.IsNullOrEmpty(model.carne_pasaporte_apoderado)||
                 string.IsNullOrEmpty(model.condicion_migratoria_apoderado)||
-                string.IsNullOrEmpty(model.especificar_causa_representante)||
+                //string.IsNullOrEmpty(model.especificar_causa_representante)||
                 string.IsNullOrEmpty(model.despacho_equipaje)||
                 string.IsNullOrEmpty(model.numero_contenedor)||
                 string.IsNullOrEmpty(model.bl)||
