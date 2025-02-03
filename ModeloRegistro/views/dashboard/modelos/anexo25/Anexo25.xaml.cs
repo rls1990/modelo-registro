@@ -72,7 +72,18 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo25
 
         private void Button_Click_3( object sender,RoutedEventArgs e )
         {
+            if(listadg.SelectedIndex!=-1)
+            {
+                var res = MessageBox.Show("Está seguro que desea exportar esta fila?","Confirmación",MessageBoxButton.YesNo,MessageBoxImage.Question);
 
+                if(res==MessageBoxResult.Yes)
+                {
+                    System.Console.WriteLine("ok");
+                }
+            } else
+            {
+                MessageBox.Show("Debe seleccionar una fila de la tabla.","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
         }
 
         private void buscar_TextChanged( object sender,TextChangedEventArgs e )

@@ -52,13 +52,6 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo10
 
         private void Button_Click_2( object sender,RoutedEventArgs e )
         {
-            //if(listadg.SelectedIndex!=-1)
-            //{
-
-            //} else
-            //{
-            //    MessageBox.Show("Debe seleccionar una fila de la tabla.","Error",MessageBoxButton.OK,MessageBoxImage.Error);
-            //}
             if(listadg.SelectedIndex!=-1)
             {
                 var res = MessageBox.Show("Está seguro que desea eliminar esta fila?","Confirmación",MessageBoxButton.YesNo,MessageBoxImage.Question);
@@ -78,7 +71,18 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo10
 
         private void Button_Click_3( object sender,RoutedEventArgs e )
         {
+            if(listadg.SelectedIndex!=-1)
+            {
+                var res = MessageBox.Show("Está seguro que desea exportar esta fila?","Confirmación",MessageBoxButton.YesNo,MessageBoxImage.Question);
 
+                if(res==MessageBoxResult.Yes)
+                {
+                    System.Console.WriteLine("ok");
+                }
+            } else
+            {
+                MessageBox.Show("Debe seleccionar una fila de la tabla.","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
         }
 
         private void buscar_KeyUp( object sender,System.Windows.Input.KeyEventArgs e )

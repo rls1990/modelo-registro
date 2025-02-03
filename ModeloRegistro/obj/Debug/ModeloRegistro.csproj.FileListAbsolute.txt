@@ -211,3 +211,6 @@ D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\views\dashboard\usersdashboard\Upd.baml
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\System.Data.SQLite.dll
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro_Content.g.cs
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\HtmlAgilityPack.dll
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\HtmlAgilityPack.pdb
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\HtmlAgilityPack.xml

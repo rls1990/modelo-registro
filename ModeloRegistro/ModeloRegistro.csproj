@@ -42,6 +42,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.11.72.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.72\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=5.2.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.5.2.0\lib\net462\MaterialDesignColors.dll</HintPath>
       <Private>True</Private>
@@ -551,6 +555,7 @@
     <Compile Include="reports\entidades\Anexo9.cs" />
     <Compile Include="services\Global.cs" />
     <Compile Include="services\PageService.cs" />
+    <Compile Include="services\Util.cs" />
     <Compile Include="views\dashboard\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
