@@ -101,6 +101,43 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo28
                         // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
                         reports.entidades.Anexo28 anexo = new reports.entidades.Anexo28()
                         {
+                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
+                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
+                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            nombre_poderante=entity.nombre_poderante,
+                            sexo_poderante=entity.sexo_poderante,
+                            lugar_nacimiento_municipio_poderante=entity.lugar_nacimiento_municipio_poderante,
+                            lugar_nacimiento_provincia_poderante=entity.lugar_nacimiento_provincia_poderante,
+                            dia_fecha_nacimineto_poderante=entity.fecha_nacimineto_poderante.Split('-')[2],
+                            mes_fecha_nacimineto_poderante=entity.fecha_nacimineto_poderante.Split('-')[1],
+                            anno_fecha_nacimineto_poderante=entity.fecha_nacimineto_poderante.Split('-')[0],
+                            estado_civil_poderante=entity.estado_civil_poderante,
+                            ciudadania_poderante=entity.ciudadania_poderante,
+                            ocupacion_poderante=entity.ocupacion_poderante,
+                            direccion_particular_poderante=entity.direccion_particular_poderante,
+                            carne_pasaporte_poderante=entity.carne_pasaporte_poderante,
+                            condicion_migratoria_poderante=entity.condicion_migratoria_poderante,
+                            correo_poderante=entity.correo_poderante,
+                            celular_poderante=entity.celular_poderante,
+                            nombre_apoderado=entity.nombre_apoderado,
+                            sexo_apoderado=entity.sexo_apoderado,
+                            lugar_nacimineto_municipio_apoderado=entity.lugar_nacimiento_municipio_apoderado,
+                            lugar_nacimineto_provincia_apoderado=entity.lugar_nacimiento_provincia_apoderado,
+                            dia_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[2],
+                            mes_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[1],
+                            anno_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[0],
+                            estado_civil_apoderado=entity.estado_civil_apoderado,
+                            ciudadania_apoderado=entity.ciudadania_apoderado,
+                            ocupacion_apoderado=entity.ocupacion_apoderado,
+                            direccion_particular_apoderado=entity.direccion_particular_apoderado,
+                            carne_pasaporte_apoderado=entity.carne_pasaporte_apoderado,
+                            condicion_migratoria_apoderado=entity.condicion_migratoria_apoderado,
+                            despacho_equipaje=entity.despacho_equipaje,
+                            numero_contenedor=entity.numero_contenedor,
+                            bl=entity.bl,
+                            total=entity.total,
+                            numeracion=entity.numeracion,
+                            total_kg=entity.total_kg
                         };
 
                         Util.LlenarSpans(html,anexo);

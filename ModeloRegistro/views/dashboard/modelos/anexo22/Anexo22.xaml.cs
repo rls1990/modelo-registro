@@ -111,7 +111,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo22
                             mes_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[1],
                             anno_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[0],
                             profecion=entity.profecion,
-                            carnet_pasaporte=entity.carne_pasaporte,
+                            carnet_pasaporte=entity.carnet_pasaporte,
                             categoria_migratoria=entity.categoria_migratoria,
                             direccion_estados_unidos=entity.direccion_estados_unidos,
                             correo=entity.correo,

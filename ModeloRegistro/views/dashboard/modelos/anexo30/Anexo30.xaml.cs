@@ -101,6 +101,39 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo30
                         // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
                         reports.entidades.Anexo30 anexo = new reports.entidades.Anexo30()
                         {
+                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
+                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
+                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            nombre=entity.nombre,
+                            sexo=entity.sexo,
+                            lugar_nacimineto_municipio=entity.lugar_nacimineto_municipio,
+                            lugar_nacimineto_provincia=entity.lugar_nacimineto_provincia,
+                            dia_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[2],
+                            mes_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[1],
+                            anno_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[0],
+                            estado_civil=entity.estado_civil,
+                            ciudadania=entity.ciudadania,
+                            ocupacion=entity.ocupacion,
+                            direccion=entity.direccion,
+                            carnet_pasaporte=entity.carnet_pasaporte,
+                            condicion_migratoria=entity.condicion_migratoria,
+                            correo=entity.correo,
+                            celular=entity.celular,
+                            nombre_apoderado=entity.nombre_apoderado,
+                            sexo_apoderado=entity.sexo_apoderado,
+                            lugar_nacimineto_municipio_apoderado=entity.lugar_nacimineto_municipio_apoderado,
+                            lugar_nacimineto_provincia_apoderado=entity.lugar_nacimineto_provincia_apoderado,
+                            dia_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[2],
+                            mes_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[1],
+                            anno_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[0],
+                            estado_civil_apoderado=entity.estado_civil_apoderado,
+                            ciudadania_apoderado=entity.ciudadania_apoderado,
+                            ocupacion_apoderado=entity.ocupacion_apoderado,
+                            direccion_apoderado=entity.direccion_apoderado,
+                            carnet_pasaporte_apoderado=entity.carnet_pasaporte_apoderado,
+                            condicion_migratoria_apoderado=entity.condicion_migratoria_apoderado,
+                            direccion_vivienda=entity.direccion_vivienda,
+                            clausaula=entity.clausaula
                         };
 
                         Util.LlenarSpans(html,anexo);
