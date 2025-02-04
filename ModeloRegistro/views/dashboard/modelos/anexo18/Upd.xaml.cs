@@ -130,7 +130,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo18
                    !string.IsNullOrWhiteSpace(anexo.pasaporte_hombre)&&
                    !string.IsNullOrWhiteSpace(anexo.pasaporte_mujer)&&
                    !string.IsNullOrWhiteSpace(anexo.nombre_hijo_menor)&&
-                   !string.IsNullOrWhiteSpace(anexo.ciudadania_hijo_menor)&&
+                   //!string.IsNullOrWhiteSpace(anexo.ciudadania_hijo_menor)&&
                    !string.IsNullOrWhiteSpace(anexo.lugar_nacimineto_hijo_menor)&&
                    !string.IsNullOrWhiteSpace(anexo.fecha_nacimiento_hijo_menor)&&
                    !string.IsNullOrWhiteSpace(anexo.pasaporte_hijo_menor)&&

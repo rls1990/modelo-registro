@@ -51,7 +51,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo28
                 carne_pasaporte_apoderado=carne_pasaporte_apoderado.Text,
                 condicion_migratoria_apoderado=condicion_migratoria_apoderado.Text,
 
-                //especificar_causa_representante=especificar_causa_representante.Text,
+                especificar_causa_representante="",
                 despacho_equipaje=despacho_equipaje.Text,
                 numero_contenedor=numero_contenedor.Text,
                 bl=bl.Text,

@@ -101,8 +101,8 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo15
                         reports.entidades.Anexo15 anexo = new reports.entidades.Anexo15()
                         {
                             nombre_fallecido=entity.nombre_fallecido,
-                            m=entity.m,
-                            f=entity.f,
+                            m=entity.m=="True" ? "✔" : "",
+                            f=entity.f=="True" ? "✔" : "",
                             primer_apellido_fallecido=entity.primer_apellido_fallecido,
                             segundo_apellido_fallecido=entity.segundo_apellido_fallecido,
                             hora_fallecido=entity.hora_fallecido,

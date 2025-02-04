@@ -117,7 +117,8 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo5
                             tomo=entity.tomo,
                             folio=entity.folio,
                             legalizacion_minred=entity.legalizacion_minred,
-                            legalizacion_embajada=entity.legalizacion_embajada
+                            legalizacion_embajada=entity.legalizacion_embajada,
+                            fecha_solicitud=entity.fecha_solicitud
                         };
 
                         Util.LlenarSpans(html,anexo);

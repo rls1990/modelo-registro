@@ -112,7 +112,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo18
                             pasaporte_mujer=entity.pasaporte_mujer,
                             nombre_hijo_menor=entity.nombre_hijo_menor,
                             ciudadania_hijo_menor=entity.ciudadania_hijo_menor,
-                            ciudadania_hijo_menor_no=entity.ciudadania_hijo_menor, // Asumiendo que es el mismo valor
+                            ciudadania_hijo_menor_no=entity.ciudadania_hijo_menor.Length==0? "✔" : "", // Asumiendo que es el mismo valor
                             lugar_nacimineto_hijo_menor=entity.lugar_nacimineto_hijo_menor,
                             fecha_nacimiento_hijo_menor=entity.fecha_nacimiento_hijo_menor,
                             pasaporte_hijo_menor=entity.pasaporte_hijo_menor,
@@ -122,8 +122,8 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo18
                             ciudadania_madre=entity.ciudadania_madre,
                             ultima_direccion_cuba=entity.ultima_direccion_cuba,
                             nombre_hijo_menor_1=entity.nombre_hijo_menor, // Asumiendo que es el mismo valor
-                            recidir_cuba=entity.recidir_cuba,
-                            recidir_en_exterior=entity.recidir_en_exterior,
+                            recidir_cuba=entity.recidir_cuba=="True" ? "✔" : "",
+                            recidir_en_exterior=entity.recidir_en_exterior=="True" ? "✔" : "",
                             razones_personales=entity.razones_personales,
                             nombre_hombre_1=entity.nombre_hombre, // Asumiendo que es el mismo valor
                             nombre_mujer_1=entity.nombre_mujer, // Asumiendo que es el mismo valor

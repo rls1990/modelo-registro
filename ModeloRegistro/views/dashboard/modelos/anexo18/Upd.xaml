@@ -136,7 +136,7 @@
                              Style="{StaticResource MaterialDesignOutlinedTextBox}"
                              materialDesign:TextFieldAssist.HasClearButton="True"
                              materialDesign:HintAssist.FloatingScale="1"
-                             materialDesign:HintAssist.Hint="Nombre hijo menor"
+                             materialDesign:HintAssist.Hint="Ciudadania hijo menor"
                              Width="230" />
                     <TextBox x:Name="lugar_nacimineto_hijo_menor"
                              Margin="12"

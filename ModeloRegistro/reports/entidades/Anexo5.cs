@@ -25,5 +25,6 @@ namespace ModeloRegistro.reports.entidades
         public string folio { get; set; }
         public string legalizacion_minred { get; set; }
         public string legalizacion_embajada { get; set; }
+        public string fecha_solicitud { get; set; }
     }
 }

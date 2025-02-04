@@ -105,7 +105,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo20
                             ciudadano=entity.ciudadano,
                             nombre_apellidos_menor_edad=entity.nombre_apellidos_menor_edad,
                             ciudadania_menor_edad=entity.ciudadania_menor_edad,
-                            ciudadania_menor_edad_no=entity.ciudadania_menor_edad=="True" ? "✔" : "", // Asumiendo que "No" es falso
+                            ciudadania_menor_edad_no=entity.ciudadania_menor_edad.Length==0 ? "✔" : "", // Asumiendo que "No" es falso
                             lugar_nacimiento_menor=entity.lugar_nacimiento_menor,
                             fecha_nacimiento_menor=entity.fecha_nacimiento_menor,
                             pasaporte_menor=entity.pasaporte_menor,

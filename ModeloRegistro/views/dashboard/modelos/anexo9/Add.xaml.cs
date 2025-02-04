@@ -39,7 +39,8 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo9
                 padre=padre.Text,
                 madre=madre.Text,
                 legalizacion_minrex=legalizacion_minrex.Text,
-                legalizacion_embajada=legalizacion_embajada.Text
+                legalizacion_embajada=legalizacion_embajada.Text,
+                fecha_de_solicitud=fecha_de_solicitud.SelectedDate?.ToString("yyyy-MM-dd"),
             };
 
             if(ValidarAnexo(anexo9))

@@ -108,7 +108,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo19
                             pasaporte=entity.pasaporte,
                             nombre_menor=entity.nombre_menor,
                             ciudadania_menor=entity.ciudadania_menor,
-                            ciudadania_menor_no=entity.ciudadania_menor=="True" ? "✔" : "", // Asumiendo que "No" es falso
+                            ciudadania_menor_no=entity.ciudadania_menor.Length==0 ? "✔" : "", // Asumiendo que "No" es falso
                             lugar_nacimineto_menor=entity.lugar_nacimineto_menor,
                             fecha_nacimiento_menor=entity.fecha_nacimiento_menor,
                             pasaporte_menor=entity.pasaporte_menor,
