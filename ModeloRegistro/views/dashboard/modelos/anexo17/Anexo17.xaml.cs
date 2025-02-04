@@ -1,4 +1,5 @@
-﻿using ModeloRegistro.services;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ModeloRegistro.services;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -77,7 +78,54 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo17
 
                 if(res==MessageBoxResult.Yes)
                 {
-                    System.Console.WriteLine("ok");
+                    CommonOpenFileDialog dialog = new CommonOpenFileDialog
+                    {
+                        // Configura el diálogo para seleccionar carpetas
+                        IsFolderPicker=false
+                    };
+
+                    // Muestra el diálogo y verifica si el usuario seleccionó una carpeta
+                    if(dialog.ShowDialog()==CommonFileDialogResult.Ok)
+                    {
+                        string fileName = "anexo_17._modelo_no_1._solicitud_de_la_adquisicion_de_la_ciudadania_cubana_por_nacimiento._mayores_de_edad.html";
+                        string outputFileName = dialog.FileName;
+
+                        System.Console.WriteLine(outputFileName);
+
+                        var html = Util.LoadHtmlReport(fileName);
+
+                        // Supongamos que ya tienes una instancia de Anexo3_e seleccionada
+                        model.Anexo17_e entity = (model.Anexo17_e)listadg.SelectedItem;
+
+                        // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
+                        reports.entidades.Anexo17 anexo = new reports.entidades.Anexo17()
+                        {
+                            nombre_apellidos=entity.nombre_apellidos,
+                            ciudadano=entity.ciudadano,
+                            lugar_nacimiento=entity.lugar_nacimiento,
+                            fecha_nacimiento=entity.fecha_nacimiento,
+                            pasaporte=entity.pasaporte,
+                            padre=entity.padre,
+                            ciudadania_padre=entity.ciudadania_padre,
+                            madre=entity.madre,
+                            ciudadania_madre=entity.ciudadania_madre,
+                            recidir_cuba=entity.recidir_cuba=="True"? "✔":"", // Asumiendo que "Sí" es verdadero
+                            recidir_en_exterior=entity.recidir_en_exterior=="True" ? "✔" : "", // Asumiendo que "Sí" es verdadero
+                            razones_personales=entity.razones_personales,
+                            nombre_interesado=entity.nombre_apellidos, // Asumiendo que el nombre del interesado es el mismo que nombre_apellidos
+                            nombre_funcionario=entity.nombre_funcionario,
+                            telefono=entity.telefono,
+                            email=entity.email
+                        };
+
+                        Util.LlenarSpans(html,anexo);
+
+                        Util.SaveHtmlReport(html,outputFileName);
+
+                    } else
+                    {
+                        MessageBox.Show("No se seleccionó ninguna carpeta.");
+                    }
                 }
             } else
             {

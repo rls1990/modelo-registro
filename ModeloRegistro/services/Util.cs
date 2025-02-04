@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Windows;
 
 namespace ModeloRegistro.services
 {
@@ -62,7 +63,9 @@ namespace ModeloRegistro.services
             string outputFilePath = Path.Combine(reportDirectory,outputFileName);
 
             htmlDocument.Save(outputFilePath);
-            Console.WriteLine($"Archivo HTML guardado en: {outputFilePath}");
+            //Console.WriteLine($"Archivo HTML guardado en: {outputFilePath}");
+
+            MessageBox.Show($"Archivo HTML guardado en: {outputFilePath}");
         }
     }
 }

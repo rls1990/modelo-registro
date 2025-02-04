@@ -1,4 +1,5 @@
-﻿using ModeloRegistro.services;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ModeloRegistro.services;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -78,7 +79,54 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo7
 
                 if(res==MessageBoxResult.Yes)
                 {
-                    System.Console.WriteLine("ok");
+                    CommonOpenFileDialog dialog = new CommonOpenFileDialog
+                    {
+                        // Configura el diálogo para seleccionar carpetas
+                        IsFolderPicker=false
+                    };
+
+                    // Muestra el diálogo y verifica si el usuario seleccionó una carpeta
+                    if(dialog.ShowDialog()==CommonFileDialogResult.Ok)
+                    {
+                        string fileName = "anexo_7._certificacion_de_defuncion_0.html";
+                        string outputFileName = dialog.FileName;
+
+                        System.Console.WriteLine(outputFileName);
+
+                        var html = Util.LoadHtmlReport(fileName);
+
+                        // Supongamos que ya tienes una instancia de Anexo3_e seleccionada
+                        model.Anexo7_e entity = (model.Anexo7_e)listadg.SelectedItem;
+
+                        // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
+                        reports.entidades.Anexo7 anexo = new reports.entidades.Anexo7()
+                        {
+                            ciudad=entity.ciudad,
+                            pais=entity.pais,
+                            nombre_apellido=entity.nombre_apellido,
+                            dia_fecha_defuncion=entity.fecha_defuncion.Split('-')[2],
+                            mes_fecha_defuncion=entity.fecha_defuncion.Split('-')[1],
+                            anno_fecha_defuncion=entity.fecha_defuncion.Split('-')[0],
+                            municipio_fallecimineto=entity.municipio_fallecimineto,
+                            provincia_fallecimineto=entity.provincia_fallecimineto,
+                            donde_fue_velado=entity.donde_fue_velado,
+                            municipio_funeraria=entity.municipio_funeraria,
+                            provincia_funeraria=entity.provincia_funeraria,
+                            tomo=entity.tomo,
+                            folio=entity.folio,
+                            legalizacion_minred=entity.legalizacion_minrex, 
+                            legalizacion_embajada=entity.legalizacion_embajada,
+                            fecha_solicitud=entity.fecha_de_solicitud 
+                        };
+
+                        Util.LlenarSpans(html,anexo);
+
+                        Util.SaveHtmlReport(html,outputFileName);
+
+                    } else
+                    {
+                        MessageBox.Show("No se seleccionó ninguna carpeta.");
+                    }
                 }
             } else
             {

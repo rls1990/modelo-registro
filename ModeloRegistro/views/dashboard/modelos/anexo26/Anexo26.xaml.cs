@@ -1,4 +1,5 @@
-﻿using ModeloRegistro.services;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ModeloRegistro.services;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -78,7 +79,90 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo26
 
                 if(res==MessageBoxResult.Yes)
                 {
-                    System.Console.WriteLine("ok");
+                    CommonOpenFileDialog dialog = new CommonOpenFileDialog
+                    {
+                        // Configura el diálogo para seleccionar carpetas
+                        IsFolderPicker=false
+                    };
+
+                    // Muestra el diálogo y verifica si el usuario seleccionó una carpeta
+                    if(dialog.ShowDialog()==CommonFileDialogResult.Ok)
+                    {
+                        string fileName = "anexo_26._modelo_de_solicitud_poder_especial_para_divorcio_notarial.html";
+                        string outputFileName = dialog.FileName;
+
+                        System.Console.WriteLine(outputFileName);
+
+                        var html = Util.LoadHtmlReport(fileName);
+
+                        // Supongamos que ya tienes una instancia de Anexo3_e seleccionada
+                        model.Anexo26_e entity = (model.Anexo26_e)listadg.SelectedItem;
+
+                        // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
+                        reports.entidades.Anexo26 anexo = new reports.entidades.Anexo26()
+                        {
+                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
+                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
+                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            nombre_poderante=entity.nombre_poderante,
+                            sexo_poderante=entity.sexo_poderante,
+                            lugar_nacimiento_municipio_poderante=entity.lugar_nacimiento_municipio_poderante,
+                            lugar_nacimiento_provincia_poderante=entity.lugar_nacimiento_provincia_poderante,
+                            dia_fecha_nacimineto_poderante=entity.fecha_nacimineto_poderante.Split('-')[2],
+                            mes_fecha_nacimineto_poderante=entity.fecha_nacimineto_poderante.Split('-')[1],
+                            anno_fecha_nacimineto_poderante=entity.fecha_nacimineto_poderante.Split('-')[0],
+                            estado_civil_poderante=entity.estado_civil_poderante,
+                            ciudadania_poderante=entity.ciudadania_poderante,
+                            ocupacion_poderante=entity.ocupacion_poderante,
+                            direccion_particular_poderante=entity.direccion_particular_poderante,
+                            carne_pasaporte_poderante=entity.carne_pasaporte_poderante,
+                            condicion_migratoria_poderante=entity.condicion_migratoria_poderante,
+                            correo_poderante=entity.correo_poderante,
+                            celular_poderante=entity.celular_poderante,
+                            nombre_apoderado=entity.nombre_apoderado,
+                            sexo_apoderado=entity.sexo_apoderado,
+                            lugar_nacimineto_municipio_apoderado=entity.lugar_nacimiento_municipio_apoderado,
+                            lugar_nacimineto_provincia_apoderado=entity.lugar_nacimiento_provincia_apoderado,
+                            dia_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[2],
+                            mes_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[1],
+                            anno_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[0],
+                            estado_civil_apoderado=entity.estado_civil_apoderado,
+                            ciudadania_apoderado=entity.ciudadania_apoderado,
+                            ocupacion_apoderado=entity.ocupacion_apoderado,
+                            direccion_particular_apoderado=entity.direccion_particular_apoderado,
+                            carne_pasaporte_apoderado=entity.carne_pasaporte_apoderado,
+                            condicion_migratoria_apoderado=entity.condicion_migratoria_apoderado,
+                            nombre_contrayente=entity.nombre_contrayente,
+                            sexo_contrayente=entity.sexo_contrayente,
+                            lugar_nacimiento_municipio_contrayente=entity.lugar_nacimiento_municipio_contrayente,
+                            lugar_nacimiento_provincia_contrayente=entity.lugar_nacimiento_provincia_contrayente,
+                            dia_fecha_nacimineto_contrayente=entity.fecha_nacimineto_contrayente.Split('-')[2],
+                            mes_fecha_nacimineto_contrayente=entity.fecha_nacimineto_contrayente.Split('-')[1],
+                            anno_fecha_nacimineto_contrayente=entity.fecha_nacimineto_contrayente.Split('-')[0],
+                            estado_civil_contrayente=entity.estado_civil_contrayente,
+                            ciudadania_contrayente=entity.ciudadania_contrayente,
+                            ocupacion_contrayente=entity.ocupacion_contrayente,
+                            direccion_particular_contrayente=entity.direccion_particular_contrayente,
+                            carne_pasaporte_contrayente=entity.carne_pasaporte_contrayente,
+                            condicion_migratoria_contrayente=entity.condicion_migratoria_contrayente,
+                            fecha_celebracion=entity.fecha_celebracion,
+                            tomo=entity.tomo,
+                            folio=entity.folio,
+                            registro_civil_municipio=entity.registro_civil_municipio,
+                            patria_potestad=entity.patria_potestad,
+                            nombre_apellido_menor=entity.nombre_apellido_menor,
+                            pension_alimenticia=entity.pension_alimenticia,
+                            regimen_comunicacion=entity.regimen_comunicacion
+                        };
+
+                        Util.LlenarSpans(html,anexo);
+
+                        Util.SaveHtmlReport(html,outputFileName);
+
+                    } else
+                    {
+                        MessageBox.Show("No se seleccionó ninguna carpeta.");
+                    }
                 }
             } else
             {

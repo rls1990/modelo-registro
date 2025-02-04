@@ -17,8 +17,8 @@ namespace ModeloRegistro.reports.entidades
         public string ciudadania_padre { get; set; }
         public string madre { get; set; }
         public string ciudadania_madre { get; set; }
-        public bool recidir_cuba { get; set; }
-        public bool recidir_en_exterior { get; set; }
+        public string recidir_cuba { get; set; }
+        public string recidir_en_exterior { get; set; }
         public string razones_personales { get; set; }
         public string nombre_interesado { get; set; }
         public string nombre_funcionario { get; set; }

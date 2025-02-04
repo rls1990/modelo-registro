@@ -1,4 +1,5 @@
-﻿using ModeloRegistro.services;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ModeloRegistro.services;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -78,7 +79,66 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo4
 
                 if(res==MessageBoxResult.Yes)
                 {
-                    System.Console.WriteLine("ok");
+                    CommonOpenFileDialog dialog = new CommonOpenFileDialog
+                    {
+                        // Configura el diálogo para seleccionar carpetas
+                        IsFolderPicker=false
+                    };
+
+                    // Muestra el diálogo y verifica si el usuario seleccionó una carpeta
+                    if(dialog.ShowDialog()==CommonFileDialogResult.Ok)
+                    {
+                        string fileName = "anexo_4._certificacion_de_antecedentes_penales_0.html";
+                        string outputFileName = dialog.FileName;
+
+                        System.Console.WriteLine(outputFileName);
+
+                        var html = Util.LoadHtmlReport(fileName);
+
+                        // Supongamos que ya tienes una instancia de Anexo3_e seleccionada
+                        model.Anexo4_e entity = (model.Anexo4_e)listadg.SelectedItem;
+
+                        // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
+                        reports.entidades.Anexo4 anexo = new reports.entidades.Anexo4()
+                        {
+                            ciudad=entity.ciudad,
+                            pais=entity.pais,
+                            f_name=entity.f_name,
+                            s_name=entity.s_name,
+                            f_apellido=entity.f_apellido,
+                            s_apellido=entity.s_apellido,
+                            lugar_nacimiento=entity.lugar_nacimiento,
+                            ciudadania=entity.ciudadania,
+                            fecha_nacimiento=entity.fecha_nacimiento,
+                            nacionalidad=entity.nacionalidad,
+                            sexo=entity.sexo,
+                            estado_civil=entity.estado_civil,
+                            color_piel=entity.color_piel,
+                            profecion_oficio_ocupacion=entity.profecion_oficio_ocupacion,
+                            nombre_padre=entity.nombre_padre,
+                            nombre_madre=entity.nombre_madre,
+                            carnet_identidad=entity.carnet_identidad,
+                            pasaporte=entity.pasaporte,
+                            calle=entity.calle,
+                            numero=entity.numero,
+                            entre=entity.entre,
+                            y=entity.y,
+                            barrio=entity.barrio,
+                            municipio=entity.municipio,
+                            provincia=entity.provincia,
+                            legalizacion_minred=entity.legalizacion_minred,
+                            legalizacion_embajada=entity.legalizacion_embajada,
+                            fecha_solicitud=entity.fecha_solicitud
+                        };
+
+                        Util.LlenarSpans(html,anexo);
+
+                        Util.SaveHtmlReport(html,outputFileName);
+
+                    } else
+                    {
+                        MessageBox.Show("No se seleccionó ninguna carpeta.");
+                    }
                 }
             } else
             {

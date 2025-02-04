@@ -1,4 +1,5 @@
-﻿using ModeloRegistro.services;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ModeloRegistro.services;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -78,7 +79,71 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo23
 
                 if(res==MessageBoxResult.Yes)
                 {
-                    System.Console.WriteLine("ok");
+                    CommonOpenFileDialog dialog = new CommonOpenFileDialog
+                    {
+                        // Configura el diálogo para seleccionar carpetas
+                        IsFolderPicker=false
+                    };
+
+                    // Muestra el diálogo y verifica si el usuario seleccionó una carpeta
+                    if(dialog.ShowDialog()==CommonFileDialogResult.Ok)
+                    {
+                        string fileName = "anexo_23._modelo_de_solicitud_poder_especial_para_compra_de_viviendas.html";
+                        string outputFileName = dialog.FileName;
+
+                        System.Console.WriteLine(outputFileName);
+
+                        var html = Util.LoadHtmlReport(fileName);
+
+                        // Supongamos que ya tienes una instancia de Anexo3_e seleccionada
+                        model.Anexo23_e entity = (model.Anexo23_e)listadg.SelectedItem;
+
+                        // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
+                        reports.entidades.Anexo23 anexo = new reports.entidades.Anexo23()
+                        {
+                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
+                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
+                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            nombre=entity.nombre,
+                            sexo=entity.sexo,
+                            lugar_nacimineto_municipio=entity.lugar_nacimineto_municipio,
+                            lugar_nacimineto_provincia=entity.lugar_nacimineto_provincia,
+                            dia_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[2],
+                            mes_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[1],
+                            anno_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[0],
+                            estado_civil=entity.estado_civil,
+                            ciudadania=entity.ciudadania,
+                            ocupacion=entity.ocupacion,
+                            direccion=entity.direccion,
+                            carnet_pasaporte=entity.carnet_pasaporte,
+                            condicion_migratoria=entity.condicion_migratoria,
+                            correo=entity.correo,
+                            celular=entity.celular,
+                            nombre_apoderado=entity.nombre_apoderado,
+                            sexo_apoderado=entity.sexo_apoderado,
+                            lugar_nacimineto_municipio_apoderado=entity.lugar_nacimineto_municipio_apoderado,
+                            lugar_nacimineto_provincia_apoderado=entity.lugar_nacimineto_provincia_apoderado,
+                            dia_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[2],
+                            mes_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[1],
+                            anno_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[0],
+                            estado_civil_apoderado=entity.estado_civil_apoderado,
+                            ciudadania_apoderado=entity.ciudadania_apoderado,
+                            ocupacion_apoderado=entity.ocupacion_apoderado,
+                            direccion_apoderado=entity.direccion_apoderado,
+                            carnet_pasaporte_apoderado=entity.carnet_pasaporte_apoderado,
+                            condicion_migratoria_apoderado=entity.condicion_migratoria_apoderado,
+                            direccion_vivienda=entity.direccion_vivienda,
+                            clausula=entity.clausula
+                        };
+
+                        Util.LlenarSpans(html,anexo);
+
+                        Util.SaveHtmlReport(html,outputFileName);
+
+                    } else
+                    {
+                        MessageBox.Show("No se seleccionó ninguna carpeta.");
+                    }
                 }
             } else
             {

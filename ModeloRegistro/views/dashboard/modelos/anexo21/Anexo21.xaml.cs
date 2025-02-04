@@ -1,4 +1,5 @@
-﻿using ModeloRegistro.services;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ModeloRegistro.services;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -78,7 +79,66 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo21
 
                 if(res==MessageBoxResult.Yes)
                 {
-                    System.Console.WriteLine("ok");
+                    CommonOpenFileDialog dialog = new CommonOpenFileDialog
+                    {
+                        // Configura el diálogo para seleccionar carpetas
+                        IsFolderPicker=false
+                    };
+
+                    // Muestra el diálogo y verifica si el usuario seleccionó una carpeta
+                    if(dialog.ShowDialog()==CommonFileDialogResult.Ok)
+                    {
+                        string fileName = "anexo_21._modelo_de_solicitud_autorizo_de_pasaporte_y_salida_del_menor.html";
+                        string outputFileName = dialog.FileName;
+
+                        System.Console.WriteLine(outputFileName);
+
+                        var html = Util.LoadHtmlReport(fileName);
+
+                        // Supongamos que ya tienes una instancia de Anexo3_e seleccionada
+                        model.Anexo21_e entity = (model.Anexo21_e)listadg.SelectedItem;
+
+                        // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
+                        reports.entidades.Anexo21 anexo = new reports.entidades.Anexo21()
+                        {
+                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
+                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
+                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            nombre_padre=entity.nombre_padre,
+                            ciudadania_padre=entity.ciudadania_padre,
+                            estado_civil_padre=entity.estado_civil_padre,
+                            minicipio_nacimineto_padre=entity.minicipio_nacimineto_padre,
+                            provincia_nacimineto_padre=entity.provincia_nacimineto_padre,
+                            dia_fecha_nacimiento_padre=entity.fecha_nacimiento_padre.Split('-')[2],
+                            mes_fecha_nacimiento_padre=entity.fecha_nacimiento_padre.Split('-')[1],
+                            anno_fecha_nacimiento_padre=entity.fecha_nacimiento_padre.Split('-')[0],
+                            profecion_padre=entity.profecion_padre,
+                            carnet_pasaporte_padre=entity.carnet_pasaporte_padre,
+                            categoria_migratoria_padre=entity.categoria_migratoria_padre,
+                            direccion_eu_padre=entity.direccion_eu_padre,
+                            correo=entity.correo,
+                            celular=entity.celular,
+                            nombre_menor=entity.nombre_menor,
+                            municipio_nacimiento_menor=entity.municipio_nacimiento_menor,
+                            provincia_nacimiento_menor=entity.provincia_nacimiento_menor,
+                            dia_fecha_nacimiento_menor=entity.fecha_nacimiento_menor.Split('-')[2],
+                            mes_fecha_nacimiento_menor=entity.fecha_nacimiento_menor.Split('-')[1],
+                            anno_fecha_nacimiento_menor=entity.fecha_nacimiento_menor.Split('-')[0],
+                            registro_estado_nacimiento_menor=entity.registro_estado_nacimiento_menor,
+                            tomo=entity.tomo,
+                            folio=entity.folio,
+                            tarjeta_menor=entity.tarjeta_menor,
+                            direccion_menor_cuba=entity.direccion_menor_cuba
+                        };
+
+                        Util.LlenarSpans(html,anexo);
+
+                        Util.SaveHtmlReport(html,outputFileName);
+
+                    } else
+                    {
+                        MessageBox.Show("No se seleccionó ninguna carpeta.");
+                    }
                 }
             } else
             {

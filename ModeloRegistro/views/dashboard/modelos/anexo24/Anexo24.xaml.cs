@@ -1,4 +1,5 @@
-﻿using ModeloRegistro.services;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ModeloRegistro.services;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -78,7 +79,75 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
 
                 if(res==MessageBoxResult.Yes)
                 {
-                    System.Console.WriteLine("ok");
+                    CommonOpenFileDialog dialog = new CommonOpenFileDialog
+                    {
+                        // Configura el diálogo para seleccionar carpetas
+                        IsFolderPicker=false
+                    };
+
+                    // Muestra el diálogo y verifica si el usuario seleccionó una carpeta
+                    if(dialog.ShowDialog()==CommonFileDialogResult.Ok)
+                    {
+                        string fileName = "anexo_24._modelo_de_solicitud_poder_especial_para_compra_venta_de_autos.html";
+                        string outputFileName = dialog.FileName;
+
+                        System.Console.WriteLine(outputFileName);
+
+                        var html = Util.LoadHtmlReport(fileName);
+
+                        // Supongamos que ya tienes una instancia de Anexo3_e seleccionada
+                        model.Anexo24_e entity = (model.Anexo24_e)listadg.SelectedItem;
+
+                        // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
+                        reports.entidades.Anexo24 anexo = new reports.entidades.Anexo24()
+                        {
+                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
+                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
+                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            nombre=entity.nombre,
+                            lugar_nacimineto_municipio=entity.lugar_nacimineto_municipio,
+                            lugar_nacimineto_provincia=entity.lugar_nacimineto_provincia,
+                            dia_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[2],
+                            mes_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[1],
+                            anno_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[0],
+                            estado_civil=entity.estado_civil,
+                            ciudadania=entity.ciudadania,
+                            ocupacion=entity.ocupacion,
+                            direccion=entity.direccion,
+                            carnet_pasaporte=entity.carnet_pasaporte,
+                            condicion_migratoria=entity.condicion_migratoria,
+                            correo=entity.correo,
+                            celular=entity.celular,
+                            nombre_apoderado=entity.nombre_apoderado,
+                            lugar_nacimineto_municipio_apoderado=entity.lugar_nacimineto_municipio_apoderado,
+                            lugar_nacimineto_provincia_apoderado=entity.lugar_nacimineto_provincia_apoderado,
+                            dia_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[2],
+                            mes_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[1],
+                            anno_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[0],
+                            estado_civil_apoderado=entity.estado_civil_apoderado,
+                            ciudadania_apoderado=entity.ciudadania_apoderado,
+                            ocupacion_apoderado=entity.ocupacion_apoderado,
+                            direccion_apoderado=entity.direccion_apoderado,
+                            carnet_pasaporte_apoderado=entity.carnet_pasaporte_apoderado,
+                            nombre_padres_apoderado=entity.nombre_padres_apoderado,
+                            condicion_migratoria_apoderado=entity.condicion_migratoria_apoderado,
+                            marca=entity.marca,
+                            modelo=entity.modelo,
+                            anno=entity.anno,
+                            color=entity.color,
+                            nro_motor=entity.nro_motor,
+                            nro_chasis=entity.nro_chasis,
+                            matricula=entity.matricula
+                        };
+
+                        Util.LlenarSpans(html,anexo);
+
+                        Util.SaveHtmlReport(html,outputFileName);
+
+                    } else
+                    {
+                        MessageBox.Show("No se seleccionó ninguna carpeta.");
+                    }
                 }
             } else
             {

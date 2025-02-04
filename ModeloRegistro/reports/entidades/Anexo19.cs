@@ -15,13 +15,13 @@ namespace ModeloRegistro.reports.entidades
         public string pasaporte { get; set; }
         public string nombre_menor { get; set; }
         public string ciudadania_menor { get; set; }
-        public bool ciudadania_menor_no { get; set; }
+        public string ciudadania_menor_no { get; set; }
         public string lugar_nacimineto_menor { get; set; }
         public string fecha_nacimiento_menor { get; set; }
         public string pasaporte_menor { get; set; }
         public string ultima_direccion_pedres { get; set; }
-        public bool recidir_cuba { get; set; }
-        public bool recidir_en_exterior { get; set; }
+        public string recidir_cuba { get; set; }
+        public string recidir_en_exterior { get; set; }
         public string razones_personales { get; set; }
         public string nombre_apellidos_1 { get; set; }
         public string nombre_funcionario { get; set; }

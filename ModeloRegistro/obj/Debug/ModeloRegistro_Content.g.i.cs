@@ -43,7 +43,7 @@
     "e_contenedor.html")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/templates/anexo_29._modelo_de_solicitud_poder_especial_para_escritura_de_" +
     "autorizacion.html")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/templates/anexo_3.certificacion_de_nacimiento_1%20(1).html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/templates/anexo_3.certificacion_de_nacimiento_1.html")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/templates/anexo_30._modelo_de_solicitud_poder_especial_para_venta_de_vivi" +
     "endas.html")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/templates/anexo_31._modelo_de_solicitud_poder_especial.html")]

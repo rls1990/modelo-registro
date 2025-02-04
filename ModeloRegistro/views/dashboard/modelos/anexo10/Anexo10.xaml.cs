@@ -1,4 +1,6 @@
-﻿using ModeloRegistro.services;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ModeloRegistro.services;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -77,7 +79,57 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo10
 
                 if(res==MessageBoxResult.Yes)
                 {
-                    System.Console.WriteLine("ok");
+                    CommonOpenFileDialog dialog = new CommonOpenFileDialog
+                    {
+                        // Configura el diálogo para seleccionar carpetas
+                        IsFolderPicker=false
+                    };
+
+                    // Muestra el diálogo y verifica si el usuario seleccionó una carpeta
+                    if(dialog.ShowDialog()==CommonFileDialogResult.Ok)
+                    {
+                        string fileName = "anexo_10._certificacion_de_ciudadania_o_su_negativo.html";
+                        string outputFileName = dialog.FileName;
+
+                        System.Console.WriteLine(outputFileName);
+
+                        var html = Util.LoadHtmlReport(fileName);
+
+                        // Supongamos que ya tienes una instancia de Anexo3_e seleccionada
+                        model.Anexo10_e entity = (model.Anexo10_e)listadg.SelectedItem;
+
+                        // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
+                        reports.entidades.Anexo10 anexo = new reports.entidades.Anexo10()
+                        {
+                            ciudad=entity.ciudad,
+                            pais=entity.pais,
+                            solicito_certificado=entity.solicito_certificado,
+                            de_mi=entity.de_mi,
+                            nombre_apellidos=entity.nombre_apellidos,
+                            fecha_nacimiento=entity.fecha_nacimiento,
+                            lugar_nacimiento=entity.lugar_nacimiento,
+                            nombre_padres=entity.nombre_padres,
+                            lugar_vivio_cuba=entity.lugar_vivio_cuba,
+                            fecha_fallecimiento=entity.fecha_fallecimiento,
+                            otros_datos_interes=entity.otros_datos_interes,
+                            nombre_apellidos_solicitante=entity.nombre_apellidos_solicitante,
+                            doc_identidad=entity.doc_identidad,
+                            pasaporte=entity.pasaporte,
+                            direccion=entity.direccion,
+                            telefono=entity.telefono,
+                            email=entity.email,
+                            legalizacion_minred=entity.legalizacion_minrex, // Nota: Ajuste de nombre de propiedad
+                            legalizacion_embajada=entity.legalizacion_embajada
+                        };
+
+                        Util.LlenarSpans(html,anexo);
+
+                        Util.SaveHtmlReport(html,outputFileName);
+
+                    } else
+                    {
+                        MessageBox.Show("No se seleccionó ninguna carpeta.");
+                    }
                 }
             } else
             {

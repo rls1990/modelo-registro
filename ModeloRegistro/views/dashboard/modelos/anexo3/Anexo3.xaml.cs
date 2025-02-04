@@ -1,4 +1,5 @@
-﻿using ModeloRegistro.services;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using ModeloRegistro.services;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -78,7 +79,58 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo3
 
                 if(res==MessageBoxResult.Yes)
                 {
-                    System.Console.WriteLine("ok");
+                    CommonOpenFileDialog dialog = new CommonOpenFileDialog
+                    {
+                        // Configura el diálogo para seleccionar carpetas
+                        IsFolderPicker=false
+                    };
+
+                    // Muestra el diálogo y verifica si el usuario seleccionó una carpeta
+                    if(dialog.ShowDialog()==CommonFileDialogResult.Ok)
+                    {
+                        string fileName = "anexo_3.certificacion_de_nacimiento_1.html";
+                        string outputFileName = dialog.FileName;
+
+                        System.Console.WriteLine(outputFileName);
+
+                        var html = Util.LoadHtmlReport(fileName);
+
+                        // Supongamos que ya tienes una instancia de Anexo3_e seleccionada
+                        model.Anexo3_e entity = (model.Anexo3_e)listadg.SelectedItem;
+
+                        // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
+                        reports.entidades.Anexo3 anexo = new reports.entidades.Anexo3()
+                        {
+                            ciudad=entity.ciudad,
+                            pais=entity.pais,
+                            nombre_apellido=entity.nombre_apellido,
+                            dia=entity.fecha_nacimiento.Split('-')[2],
+                            mes=entity.fecha_nacimiento.Split('-')[1],
+                            anno=entity.fecha_nacimiento.Split('-')[0],
+                            municipio=entity.municipio,
+                            provincia=entity.provincia,
+                            registro=entity.registro,
+                            municipio_registro=entity.municipio_registro,
+                            provincia_registro=entity.provincia_registro,
+                            tomo=entity.tomo,
+                            folio=entity.folio,
+                            dia_asiento=entity.fecha_asiento.Split('-')[2],
+                            mes_asiento=entity.fecha_asiento.Split('-')[1],
+                            anno_asiento=entity.fecha_asiento.Split('-')[0],
+                            nombre_padre=entity.nombre_padre,
+                            nombre_madre=entity.nombre_madre,
+                            legalizacion_minred=entity.legalizacion_minred,
+                            legalizacion_embajada=entity.legalizacion_embajada,
+                            fecha_solicitud=entity.fecha_solicitud
+                        };
+
+                        Util.LlenarSpans(html,anexo);
+
+                        Util.SaveHtmlReport(html,outputFileName);
+                    } else
+                    {
+                        MessageBox.Show("No se seleccionó ninguna carpeta.");
+                    }
                 }
             } else
             {

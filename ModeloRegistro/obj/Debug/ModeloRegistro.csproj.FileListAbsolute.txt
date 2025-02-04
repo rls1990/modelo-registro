@@ -214,3 +214,7 @@ D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\obj\Debug\ModeloRegistro_
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\HtmlAgilityPack.dll
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\HtmlAgilityPack.pdb
 D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\HtmlAgilityPack.xml
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\Microsoft.WindowsAPICodePack.dll
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\Microsoft.WindowsAPICodePack.xml
+D:\PROGRAMACION\Enmanuel\ModeloRegistro\ModeloRegistro\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
