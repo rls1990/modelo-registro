@@ -52,5 +52,9 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/templates/anexo_6.certificacion_de_sentencia_de_divorcio_0.html")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/templates/anexo_7._certificacion_de_defuncion_0.html")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/templates/anexo_9._certificacion_de_solteria_0.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/templates/rep%c3%bablica%20de%20cuba%20-%20anexo_16._modelo_de_solicitud_" +
+    "de_visas.html")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/templates/rep%c3%bablica%20de%20cuba%20-%20anexo_2._planilla_para_tramite" +
+    "s_consulares_0.html")]
 
 
