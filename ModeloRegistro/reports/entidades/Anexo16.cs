@@ -48,7 +48,7 @@ namespace ModeloRegistro.reports.entidades
         public string pelo_canoso { get; set; }
         public string pelo_negro { get; set; }
         public string pelo_rubio { get; set; }
-        public string pelo_castaño { get; set; }
+        public string pelo_castano { get; set; }
         public string pelo_rojo { get; set; }
         public string pelo_otro { get; set; }
         public string pais { get; set; }

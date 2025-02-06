@@ -45,7 +45,7 @@ namespace ModeloRegistro.reports.entidades
         public string color_cabello_canoso { get; set; }
         public string color_cabello_negro { get; set; }
         public string color_cabello_rubio { get; set; }
-        public string color_cabello_castaño { get; set; }
+        public string color_cabello_castano { get; set; }
         public string color_cabello_rojo { get; set; }
         public string color_cabello_otros { get; set; }
         public string permiso_emigracion { get; set; }

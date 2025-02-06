@@ -87,7 +87,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16
                     // Muestra el diálogo y verifica si el usuario seleccionó una carpeta
                     if(dialog.ShowDialog()==CommonFileDialogResult.Ok)
                     {
-                        string fileName = "anexo_11._certificacion_de_registros_de_extranjeros.html";
+                        string fileName = "República de Cuba - anexo_16._modelo_de_solicitud_de_visas.html";
                         string outputFileName = dialog.FileName;
 
                         System.Console.WriteLine(outputFileName);
@@ -95,11 +95,84 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16
                         var html = Util.LoadHtmlReport(fileName);
 
                         // Supongamos que ya tienes una instancia de Anexo3_e seleccionada
-                        model.Anexo11_e entity = (model.Anexo11_e)listadg.SelectedItem;
+                        model.Anexo16_e entity = (model.Anexo16_e)listadg.SelectedItem;
 
                         // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
-                        reports.entidades.Anexo11 anexo = new reports.entidades.Anexo11()
+                        reports.entidades.Anexo16 anexo = new reports.entidades.Anexo16()
                         {
+                            tirista=entity.tirista=="True" ? "✔" : "",
+                            transeuntes=entity.transeuntes=="True" ? "✔" : "",
+                            eventos=entity.eventos=="True" ? "✔" : "",
+                            invitados=entity.invitados=="True" ? "✔" : "",
+                            estudiantes_programas_becas=entity.estudiantes_programas_becas=="True" ? "✔" : "",
+                            artistas=entity.artistas=="True" ? "✔" : "",
+                            periodistas=entity.periodistas=="True" ? "✔" : "",
+                            religiosos=entity.religiosos=="True" ? "✔" : "",
+                            diplomaticas=entity.diplomaticas=="True" ? "✔" : "",
+                            tecnicos=entity.tecnicos=="True" ? "✔" : "",
+                            deportistas=entity.deportistas=="True" ? "✔" : "",
+                            negocios=entity.negocios=="True" ? "✔" : "",
+                            otras=entity.otras=="True" ? "✔" : "",
+                            dia_fecha_solicitud=entity.fecha_solicitud?.Split('-')[2], // Asumiendo que fecha_solicitud es un string en formato "dd/MM/yyyy"
+                            mes_fecha_solicitud=entity.fecha_solicitud?.Split('-')[1],
+                            anno_fecha_solicitud=entity.fecha_solicitud?.Split('-')[0],
+                            pasaporte=entity.pasaporte,
+                            lugar_expedicion=entity.lugar_expedicion,
+                            fecha_expedicion=entity.fecha_expedicion,
+                            primer_apellido=entity.primer_apellido,
+                            segundo_apellido=entity.segundo_apellido,
+                            primer_nombre=entity.primer_nombre,
+                            segundo_nombre=entity.segundo_nombre,
+                            padre=entity.padre,
+                            madre=entity.madre,
+                            lugar_nacimiento_padres=entity.lugar_nacimiento_padres,
+                            estatura=entity.estatura,
+                            estado_civil=entity.estado_civil,
+                            m=entity.m=="True" ? "✔" : "",
+                            f=entity.f=="True" ? "✔" : "",
+                            blue_green_claros=entity.blue_green_claros=="True" ? "✔" : "",
+                            black_negros=entity.black_negros=="True" ? "✔" : "",
+                            pardos=entity.pardos=="True" ? "✔" : "",
+                            piel_blanca=entity.piel_blanca=="True" ? "✔" : "",
+                            piel_negra=entity.piel_negra=="True" ? "✔" : "",
+                            piel_albina=entity.piel_albina=="True" ? "✔" : "",
+                            piel_amarilla=entity.piel_amarilla=="True" ? "✔" : "",
+                            pelo_canoso=entity.pelo_canoso=="True" ? "✔" : "",
+                            pelo_negro=entity.pelo_negro=="True" ? "✔" : "",
+                            pelo_rubio=entity.pelo_rubio=="True" ? "✔" : "",
+                            pelo_castano=entity.pelo_castaño=="True" ? "✔" : "",
+                            pelo_rojo=entity.pelo_rojo=="True" ? "✔" : "",
+                            pelo_otro=entity.pelo_otro=="True" ? "✔" : "",
+                            pais=entity.pais,
+                            provincia=entity.provincia,
+                            ciudad_municipio=entity.ciudad_municipio,
+                            dia_fecha_nacimiento=entity.fecha_nacimiento?.Split('-')[2], // Asumiendo que fecha_nacimiento es un string en formato "dd/MM/yyyy"
+                            mes_fecha_nacimiento=entity.fecha_nacimiento?.Split('-')[1],
+                            anno_fecha_nacimiento=entity.fecha_nacimiento?.Split('-')[0],
+                            direccion=entity.direccion,
+                            codigo_postal=entity.codigo_postal,
+                            provincia_estado_region=entity.provincia_estado_region,
+                            pais_residencia_actual=entity.pais_residencia_actual,
+                            telefono=entity.telefono,
+                            fax=entity.fax,
+                            email=entity.email,
+                            nombre_centro_trabajo_estudio=entity.nombre_centro_trabajo_estudio,
+                            profecion=entity.profecion,
+                            ocupacion=entity.ocupacion,
+                            direccion_centro=entity.direccion_centro,
+                            codigo_postal_centro=entity.codigo_postal_centro,
+                            provincia_estado_region_centro=entity.provincia_estado_region_centro,
+                            pais_centro=entity.pais_centro,
+                            telefono_centro=entity.telefono_centro,
+                            fax_centro=entity.fax_centro,
+                            email_centro=entity.email_centro,
+                            direccion_estancia_cuba=entity.direccion_estancia_cuba,
+                            nombre_apellido_persona_a_vicitar_cuba=entity.nombre_apellido_persona_a_vicitar_cuba,
+                            motivo_viaje_cuba=entity.motivo_viaje_cuba,
+                            tiempo_estancia=entity.tiempo_estancia,
+                            lugar_fecha_salida_cuba=entity.lugar_fecha_salida_cuba,
+                            lugar_fecha_llegada_cuba=entity.lugar_fecha_llegada_cuba,
+                            proposito_viaje_cuba=entity.proposito_viaje_cuba
                         };
 
                         Util.LlenarSpans(html,anexo);
