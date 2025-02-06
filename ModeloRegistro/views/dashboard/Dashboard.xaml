@@ -500,7 +500,7 @@
                             </Grid>
                         </Button>-->
 
-                        <Button Style="{StaticResource MaterialDesignFlatLightButton}"
+                        <!--<Button Style="{StaticResource MaterialDesignFlatLightButton}"
                                 Height="38"
                                 Grid.Row="2"
                                 Click="Button_Click_3">
@@ -515,7 +515,7 @@
                                            VerticalAlignment="Center"
                                            Margin="35,2,13,2">Users Dashboard</TextBlock>
                             </Grid>
-                        </Button>
+                        </Button>-->
 
                         <Button Style="{StaticResource MaterialDesignFlatLightButton}"
                                 Height="38"
