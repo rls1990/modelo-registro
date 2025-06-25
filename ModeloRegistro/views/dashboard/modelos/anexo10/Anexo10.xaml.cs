@@ -118,7 +118,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo10
                             direccion=entity.direccion,
                             telefono=entity.telefono,
                             email=entity.email,
-                            legalizacion_minred=entity.legalizacion_minrex, // Nota: Ajuste de nombre de propiedad
+                            legalizacion_minred=entity.legalizacion_minrex,
                             legalizacion_embajada=entity.legalizacion_embajada
                         };
 
