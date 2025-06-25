@@ -24,18 +24,18 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo22
         {
             var anexo = new model.Anexo22_e()
             {
-                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd"),
-                nombre=nombre.Text,
-                ciudadania=ciudadania.Text,
-                estado_civil=estado_civil.Text,
-                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
-                profecion=profecion.Text,
-                carnet_pasaporte=carnet_pasaporte.Text,
-                categoria_migratoria=categoria_migratoria.Text,
-                direccion_estados_unidos=direccion_estados_unidos.Text,
-                correo=correo.Text,
-                celular=celular.Text,
-                documento_legalizar=documento_legalizar.Text
+                fecha_solicitud=ValidarCampo(fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd")),
+                nombre=ValidarCampo(nombre.Text),
+                ciudadania=ValidarCampo(ciudadania.Text),
+                estado_civil=ValidarCampo(estado_civil.Text),
+                fecha_nacimiento=ValidarCampo(fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd")),
+                profecion=ValidarCampo(profecion.Text),
+                carnet_pasaporte=ValidarCampo(carnet_pasaporte.Text),
+                categoria_migratoria=ValidarCampo(categoria_migratoria.Text),
+                direccion_estados_unidos=ValidarCampo(direccion_estados_unidos.Text),
+                correo=ValidarCampo(correo.Text),
+                celular=ValidarCampo(celular.Text),
+                documento_legalizar=ValidarCampo(documento_legalizar.Text)
             };
 
             if(ValidarAnexo(anexo))
@@ -58,24 +58,32 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo22
             }
 
             // Verificar si cada campo es nulo o vacío
-            if(string.IsNullOrEmpty(model.fecha_solicitud)||
-                string.IsNullOrEmpty(model.nombre)||
-                string.IsNullOrEmpty(model.ciudadania)||
-                string.IsNullOrEmpty(model.estado_civil)||
-                string.IsNullOrEmpty(model.fecha_nacimiento)||
-                string.IsNullOrEmpty(model.profecion)||
-                string.IsNullOrEmpty(model.carnet_pasaporte)||
-                string.IsNullOrEmpty(model.categoria_migratoria)||
-                string.IsNullOrEmpty(model.direccion_estados_unidos)||
-                string.IsNullOrEmpty(model.correo)||
-                string.IsNullOrEmpty(model.celular)||
-                string.IsNullOrEmpty(model.documento_legalizar))
-            {
-                return false; // Algún campo es nulo o vacío
-            }
+            //if(string.IsNullOrEmpty(model.fecha_solicitud)||
+            //    string.IsNullOrEmpty(model.nombre)||
+            //    string.IsNullOrEmpty(model.ciudadania)||
+            //    string.IsNullOrEmpty(model.estado_civil)||
+            //    string.IsNullOrEmpty(model.fecha_nacimiento)||
+            //    string.IsNullOrEmpty(model.profecion)||
+            //    string.IsNullOrEmpty(model.carnet_pasaporte)||
+            //    string.IsNullOrEmpty(model.categoria_migratoria)||
+            //    string.IsNullOrEmpty(model.direccion_estados_unidos)||
+            //    string.IsNullOrEmpty(model.correo)||
+            //    string.IsNullOrEmpty(model.celular)||
+            //    string.IsNullOrEmpty(model.documento_legalizar))
+            //{
+            //    return false; // Algún campo es nulo o vacío
+            //}
 
             // Si todas las validaciones pasan
             return true; // La entidad Anexo22_e es válida
+        }
+
+        private string ValidarCampo( string val )
+        {
+            string res = "";
+            if(!string.IsNullOrWhiteSpace(val))
+                res=val;
+            return res;
         }
 
     }
