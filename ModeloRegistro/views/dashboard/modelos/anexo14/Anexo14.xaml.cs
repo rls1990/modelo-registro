@@ -124,9 +124,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo14
                             tomo_la_contrayente=entity.tomo_la_contrayente,
                             folio_la_contrayente=entity.folio_la_contrayente,
                             lugar_nacimiento_la_contrayente=entity.lugar_nacimiento_la_contrayente,
-                            dia_fecha_nacimiento_la_contrayente=entity.fecha_nacimiento_la_contrayente.Split('-')[2],
-                            mes_fecha_nacimiento_la_contrayente=entity.fecha_nacimiento_la_contrayente.Split('-')[1],
-                            anno_fecha_nacimiento_la_contrayente=entity.fecha_nacimiento_la_contrayente.Split('-')[0],
+                            dia_fecha_nacimiento_la_contrayente=ValidarCampo(entity.fecha_nacimiento_la_contrayente)?entity.fecha_nacimiento_la_contrayente.Split('-')[2]:"",
+                            mes_fecha_nacimiento_la_contrayente=ValidarCampo(entity.fecha_nacimiento_la_contrayente) ? entity.fecha_nacimiento_la_contrayente.Split('-')[1]:"",
+                            anno_fecha_nacimiento_la_contrayente=ValidarCampo(entity.fecha_nacimiento_la_contrayente) ? entity.fecha_nacimiento_la_contrayente.Split('-')[0]:"",
                             nro_pasaporte_identidad_la_contrayente=entity.nro_pasaporte_identidad_la_contrayente,
                             estado_civil_antes_matrimonio_la_contrayente=entity.estado_civil_antes_matrimonio_la_contrayente,
                             ocupacion_la_contrayente=entity.ocupacion_la_contrayente,
@@ -137,14 +137,14 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo14
                             lugar_certificado=entity.lugar_certificado,
                             tomo_certificado=entity.tomo_certificado,
                             folio_certificado=entity.folio_certificado,
-                            dia_fecha_formalizacion=entity.fecha_formalizacion.Split('-')[2],
-                            mes_fecha_formalizacion=entity.fecha_formalizacion.Split('-')[1],
-                            anno_fecha_formalizacion=entity.fecha_formalizacion.Split('-')[0],
+                            dia_fecha_formalizacion=ValidarCampo(entity.fecha_formalizacion) ? entity.fecha_formalizacion.Split('-')[2]:"",
+                            mes_fecha_formalizacion=ValidarCampo(entity.fecha_formalizacion) ? entity.fecha_formalizacion.Split('-')[1]:"",
+                            anno_fecha_formalizacion=ValidarCampo(entity.fecha_formalizacion) ? entity.fecha_formalizacion.Split('-')[0]:"",
                             nombre_funcionario_expidió_certificado=entity.nombre_funcionario_expidió_certificado,
                             cargo_funcionario_expidió_certificado=entity.cargo_funcionario_expidió_certificado,
-                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
-                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
-                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0]
+                            dia_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[2]:"",
+                            mes_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[1]:"",
+                            anno_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[0]:""
                         };
 
                         Util.LlenarSpans(html,anexo);
@@ -171,6 +171,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo14
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
