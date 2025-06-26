@@ -106,9 +106,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo12
                             nombre_apellidos=entity.nombre_apellidos,
                             ciudadano=entity.ciudadano,
                             carnet_identidad=entity.carnet_identidad,
-                            dia_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[2],
-                            mes_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[1],
-                            anno_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[0],
+                            dia_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento)?entity.fecha_nacimiento.Split('-')[2]:"",
+                            mes_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[1]:"",
+                            anno_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[0]:"",
                             provincia_lugar_nacimineto=entity.provincia_lugar_nacimineto,
                             municipio_lugar_nacimineto=entity.municipio_lugar_nacimineto,
                             provincia_registro_civil=entity.provincia_registro_civil,
@@ -150,6 +150,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo12
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
