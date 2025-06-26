@@ -113,9 +113,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16
                             deportistas=entity.deportistas=="True" ? "✔" : "",
                             negocios=entity.negocios=="True" ? "✔" : "",
                             otras=entity.otras=="True" ? "✔" : "",
-                            dia_fecha_solicitud=entity.fecha_solicitud?.Split('-')[2], // Asumiendo que fecha_solicitud es un string en formato "dd/MM/yyyy"
-                            mes_fecha_solicitud=entity.fecha_solicitud?.Split('-')[1],
-                            anno_fecha_solicitud=entity.fecha_solicitud?.Split('-')[0],
+                            dia_fecha_solicitud=ValidarCampo(entity.fecha_solicitud)?entity.fecha_solicitud?.Split('-')[2]:"", // Asumiendo que fecha_solicitud es un string en formato "dd/MM/yyyy"
+                            mes_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud?.Split('-')[1]:"",
+                            anno_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud?.Split('-')[0]:"",
                             pasaporte=entity.pasaporte,
                             lugar_expedicion=entity.lugar_expedicion,
                             fecha_expedicion=entity.fecha_expedicion,
@@ -146,9 +146,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16
                             pais=entity.pais,
                             provincia=entity.provincia,
                             ciudad_municipio=entity.ciudad_municipio,
-                            dia_fecha_nacimiento=entity.fecha_nacimiento?.Split('-')[2], // Asumiendo que fecha_nacimiento es un string en formato "dd/MM/yyyy"
-                            mes_fecha_nacimiento=entity.fecha_nacimiento?.Split('-')[1],
-                            anno_fecha_nacimiento=entity.fecha_nacimiento?.Split('-')[0],
+                            dia_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento?.Split('-')[2]:"", // Asumiendo que fecha_nacimiento es un string en formato "dd/MM/yyyy"
+                            mes_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento?.Split('-')[1]:"",
+                            anno_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento?.Split('-')[0]:"",
                             direccion=entity.direccion,
                             codigo_postal=entity.codigo_postal,
                             provincia_estado_region=entity.provincia_estado_region,
@@ -199,6 +199,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo16
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
