@@ -100,9 +100,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo13
                         // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
                         reports.entidades.Anexo13 anexo = new reports.entidades.Anexo13()
                         {
-                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
-                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
-                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            dia_fecha_solicitud=ValidarCampo(entity.fecha_solicitud)?entity.fecha_solicitud.Split('-')[2]:"",
+                            mes_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[1]:"",
+                            anno_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[0]:"",
                             nombre_comparece=entity.nombre_comparece,
                             no_pasaporte_comparece=entity.no_pasaporte_comparece,
                             nombre_inscripcion=entity.nombre_inscripcion,
@@ -111,9 +111,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo13
                             primer_apellido_inscripcion=entity.primer_apellido_inscripcion,
                             segundo_apellido_inscripcion=entity.segundo_apellido_inscripcion,
                             hora_nacimiento=entity.hora_nacimiento,
-                            dia_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[2],
-                            mes_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[1],
-                            anno_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[0],
+                            dia_fecha_nacimineto=ValidarCampo(entity.fecha_nacimineto) ? entity.fecha_nacimineto.Split('-')[2]:"",
+                            mes_fecha_nacimineto=ValidarCampo(entity.fecha_nacimineto) ? entity.fecha_nacimineto.Split('-')[1]:"",
+                            anno_fecha_nacimineto=ValidarCampo(entity.fecha_nacimineto) ? entity.fecha_nacimineto.Split('-')[0]:"",
                             referencia_territorio_registro_civil=entity.referencia_territorio_registro_civil,
                             tomo_referencia_registral=entity.tomo_referencia_registral,
                             folio_referencia_registral=entity.folio_referencia_registral,
@@ -167,6 +167,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo13
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
