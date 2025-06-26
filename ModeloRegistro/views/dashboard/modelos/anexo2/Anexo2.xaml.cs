@@ -111,9 +111,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo2
                             he_3=entity.he_3=="True" ? "✔" : "",
                             he_11=entity.he_11=="True" ? "✔" : "",
                             ccv=entity.ccv=="True" ? "✔" : "",
-                            dia_fecha_de_solicitud=entity.fecha_de_solicitud?.Split('-')[2], // Asumiendo que fecha_de_solicitud es un string en formato "dd/MM/yyyy"
-                            mes_fecha_de_solicitud=entity.fecha_de_solicitud?.Split('-')[1],
-                            anno_fecha_de_solicitud=entity.fecha_de_solicitud?.Split('-')[0],
+                            dia_fecha_de_solicitud=ValidarCampo(entity.fecha_de_solicitud)?entity.fecha_de_solicitud?.Split('-')[2]:"", // Asumiendo que fecha_de_solicitud es un string en formato "dd/MM/yyyy"
+                            mes_fecha_de_solicitud=ValidarCampo(entity.fecha_de_solicitud) ? entity.fecha_de_solicitud?.Split('-')[1]:"",
+                            anno_fecha_de_solicitud=ValidarCampo(entity.fecha_de_solicitud) ? entity.fecha_de_solicitud?.Split('-')[0]:"",
                             no_pasaporte=entity.no_pasaporte,
                             carnet=entity.carnet,
                             primer_apellido=entity.primer_apellido,
@@ -151,15 +151,15 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo2
                             pvt=entity.pvt=="True" ? "✔" : "",
                             pre_e=entity.pre_e=="True" ? "✔" : "",
                             salida_ilegal=entity.salida_ilegal=="True" ? "✔" : "",
-                            dia_fecha_de_salida=entity.fecha_de_salida?.Split('-')[0], // Asumiendo que fecha_de_salida es un string en formato "dd/MM/yyyy"
-                            mes_fecha_de_salida=entity.fecha_de_salida?.Split('-')[1],
-                            anno_fecha_de_salida=entity.fecha_de_salida?.Split('-')[2],
+                            dia_fecha_de_salida=ValidarCampo(entity.fecha_de_salida) ? entity.fecha_de_salida?.Split('-')[0]:"", // Asumiendo que fecha_de_salida es un string en formato "dd/MM/yyyy"
+                            mes_fecha_de_salida=ValidarCampo(entity.fecha_de_salida) ? entity.fecha_de_salida?.Split('-')[1]:"",
+                            anno_fecha_de_salida=ValidarCampo(entity.fecha_de_salida) ? entity.fecha_de_salida?.Split('-')[2]:"",
                             pais=entity.pais,
                             provincia=entity.provincia,
                             municipio_ciudad=entity.municipio_ciudad,
-                            dia_fecha_de_nacimiento=entity.fecha_de_nacimiento?.Split('-')[0], // Asumiendo que fecha_de_nacimiento es un string en formato "dd/MM/yyyy"
-                            mes_fecha_de_nacimiento=entity.fecha_de_nacimiento?.Split('-')[1],
-                            anno_fecha_de_nacimiento=entity.fecha_de_nacimiento?.Split('-')[2],
+                            dia_fecha_de_nacimiento=ValidarCampo(entity.fecha_de_nacimiento) ? entity.fecha_de_nacimiento?.Split('-')[0]:"", // Asumiendo que fecha_de_nacimiento es un string en formato "dd/MM/yyyy"
+                            mes_fecha_de_nacimiento=ValidarCampo(entity.fecha_de_nacimiento) ? entity.fecha_de_nacimiento?.Split('-')[1]:"",
+                            anno_fecha_de_nacimiento=ValidarCampo(entity.fecha_de_nacimiento) ? entity.fecha_de_nacimiento?.Split('-')[2]:"",
                             direccion=entity.direccion,
                             codigo_postal=entity.codigo_postal,
                             provincia_estado_region=entity.provincia_estado_region,
@@ -228,6 +228,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo2
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
