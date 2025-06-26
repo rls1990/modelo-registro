@@ -61,23 +61,23 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo9
             var anexo9 = new model.Anexo9_e()
             {
                 id=entity.id,
-                ciudad=ciudad.Text,
-                pais=pais.Text,
-                encargado_registro_civil=encargado_registro_civil.Text,
-                municipio_encargado=municipio_encargado.Text,
-                provincia_encargado=provincia_encargado.Text,
-                nombre=nombre.Text,
-                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd"),
-                tomo_certificado=tomo_certificado.Text,
-                folio_certificado=folio_certificado.Text,
-                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
-                municipio_persona=municipio_persona.Text,
-                provincia_persona=provincia_persona.Text,
-                padre=padre.Text,
-                madre=madre.Text,
-                legalizacion_minrex=legalizacion_minrex.Text,
-                legalizacion_embajada=legalizacion_embajada.Text,
-                fecha_de_solicitud=fecha_de_solicitud.SelectedDate?.ToString("yyyy-MM-dd"),
+                ciudad=ValidarCampo(ciudad.Text),
+                pais=ValidarCampo(pais.Text),
+                encargado_registro_civil=ValidarCampo(encargado_registro_civil.Text),
+                municipio_encargado=ValidarCampo(municipio_encargado.Text),
+                provincia_encargado=ValidarCampo(provincia_encargado.Text),
+                nombre=ValidarCampo(nombre.Text),
+                fecha_solicitud=ValidarCampo(fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd")),
+                tomo_certificado=ValidarCampo(tomo_certificado.Text),
+                folio_certificado=ValidarCampo(folio_certificado.Text),
+                fecha_nacimiento=ValidarCampo(fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd")),
+                municipio_persona=ValidarCampo(municipio_persona.Text),
+                provincia_persona=ValidarCampo(provincia_persona.Text),
+                padre=ValidarCampo(padre.Text),
+                madre=ValidarCampo(madre.Text),
+                legalizacion_minrex=ValidarCampo(legalizacion_minrex.Text),
+                legalizacion_embajada=ValidarCampo(legalizacion_embajada.Text),
+                fecha_de_solicitud=ValidarCampo(fecha_de_solicitud.SelectedDate?.ToString("yyyy-MM-dd"))
             };
 
             if(ValidarAnexo(anexo9))
@@ -99,29 +99,37 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo9
             }
 
             // Verificar si cada campo es nulo o vacío
-            if(string.IsNullOrEmpty(model.ciudad)||
-                string.IsNullOrEmpty(model.pais)||
-                string.IsNullOrEmpty(model.encargado_registro_civil)||
-                string.IsNullOrEmpty(model.municipio_encargado)||
-                string.IsNullOrEmpty(model.provincia_encargado)||
-                string.IsNullOrEmpty(model.nombre)||
-                string.IsNullOrEmpty(model.fecha_solicitud)||
-                string.IsNullOrEmpty(model.tomo_certificado)||
-                string.IsNullOrEmpty(model.folio_certificado)||
-                string.IsNullOrEmpty(model.fecha_nacimiento)||
-                string.IsNullOrEmpty(model.municipio_persona)||
-                string.IsNullOrEmpty(model.provincia_persona)||
-                string.IsNullOrEmpty(model.padre)||
-                string.IsNullOrEmpty(model.madre)||
-                string.IsNullOrEmpty(model.legalizacion_minrex)||
-                string.IsNullOrEmpty(model.legalizacion_embajada)||
-                string.IsNullOrEmpty(model.fecha_de_solicitud))
-            {
-                return false; // Algún campo es nulo o vacío
-            }
+            //if(string.IsNullOrEmpty(model.ciudad)||
+            //    string.IsNullOrEmpty(model.pais)||
+            //    string.IsNullOrEmpty(model.encargado_registro_civil)||
+            //    string.IsNullOrEmpty(model.municipio_encargado)||
+            //    string.IsNullOrEmpty(model.provincia_encargado)||
+            //    string.IsNullOrEmpty(model.nombre)||
+            //    string.IsNullOrEmpty(model.fecha_solicitud)||
+            //    string.IsNullOrEmpty(model.tomo_certificado)||
+            //    string.IsNullOrEmpty(model.folio_certificado)||
+            //    string.IsNullOrEmpty(model.fecha_nacimiento)||
+            //    string.IsNullOrEmpty(model.municipio_persona)||
+            //    string.IsNullOrEmpty(model.provincia_persona)||
+            //    string.IsNullOrEmpty(model.padre)||
+            //    string.IsNullOrEmpty(model.madre)||
+            //    string.IsNullOrEmpty(model.legalizacion_minrex)||
+            //    string.IsNullOrEmpty(model.legalizacion_embajada)||
+            //    string.IsNullOrEmpty(model.fecha_de_solicitud))
+            //{
+            //    return false; // Algún campo es nulo o vacío
+            //}
 
             // Si todas las validaciones pasan
             return true; // La entidad Anexo9_e es válida
+        }
+
+        private string ValidarCampo( string val )
+        {
+            string res = "";
+            if(!string.IsNullOrWhiteSpace(val))
+                res=val;
+            return res;
         }
     }
 }
