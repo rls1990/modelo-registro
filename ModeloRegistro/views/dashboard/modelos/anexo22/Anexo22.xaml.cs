@@ -101,15 +101,15 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo22
                         // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
                         reports.entidades.Anexo22 anexo = new reports.entidades.Anexo22()
                         {
-                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
-                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
-                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            dia_fecha_solicitud=ValidarCampo(entity.fecha_solicitud)?entity.fecha_solicitud.Split('-')[2]:"",
+                            mes_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[1]:"",
+                            anno_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[0]:"",
                             nombre=entity.nombre,
                             ciudadania=entity.ciudadania,
                             estado_civil=entity.estado_civil,
-                            dia_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[2],
-                            mes_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[1],
-                            anno_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[0],
+                            dia_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[2]:"",
+                            mes_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[1]:"",
+                            anno_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[0]:"",
                             profecion=entity.profecion,
                             carnet_pasaporte=entity.carnet_pasaporte,
                             categoria_migratoria=entity.categoria_migratoria,
@@ -143,6 +143,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo22
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
