@@ -105,9 +105,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo5
                             pais=entity.pais,
                             nombre_apellido_hombre=entity.nombre_apellido_hombre,
                             nombre_apellido_mujer=entity.nombre_apellido_mujer,
-                            dia_matrimonio=entity.fecha_matrimonio.Split('-')[2],
-                            mes_matrimonio=entity.fecha_matrimonio.Split('-')[1],
-                            anno_matrimonio=entity.fecha_matrimonio.Split('-')[0],
+                            dia_matrimonio=ValidarCampo(entity.fecha_matrimonio)?entity.fecha_matrimonio.Split('-')[2]:"",
+                            mes_matrimonio=ValidarCampo(entity.fecha_matrimonio) ? entity.fecha_matrimonio.Split('-')[1]:"",
+                            anno_matrimonio=ValidarCampo(entity.fecha_matrimonio) ? entity.fecha_matrimonio.Split('-')[0]:"",
                             ciudad_matrimonio=entity.ciudad_matrimonio,
                             provincia_matrimonio=entity.provincia_matrimonio,
                             pais_matrimonio=entity.pais_matrimonio,
@@ -145,6 +145,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo5
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }

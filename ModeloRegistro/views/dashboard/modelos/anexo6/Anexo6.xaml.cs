@@ -107,12 +107,12 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo6
                             nombre_apellido_mujer=entity.nombre_apellido_mujer,
                             tribunal_dicto_sentencia=entity.tribunal_dicto_sentencia,
                             nombre_secretario_actuante=entity.nombre_secretario_actuante,
-                            dia_fecha_dicto_sentencia=entity.fecha_dicto_sentencia.Split('-')[2],
-                            mes_fecha_dicto_sentencia=entity.fecha_dicto_sentencia.Split('-')[1],
-                            anno_fecha_dicto_sentencia=entity.fecha_dicto_sentencia.Split('-')[0],
-                            dia_fecha_firmeza_sentencia=entity.fecha_firmeza_sentencia.Split('-')[2],
-                            mes_fecha_firmeza_sentencia=entity.fecha_firmeza_sentencia.Split('-')[1],
-                            anno_fecha_firmeza_sentencia=entity.fecha_firmeza_sentencia.Split('-')[0],
+                            dia_fecha_dicto_sentencia=ValidarCampo(entity.fecha_dicto_sentencia)?entity.fecha_dicto_sentencia.Split('-')[2]:"",
+                            mes_fecha_dicto_sentencia=ValidarCampo(entity.fecha_dicto_sentencia) ? entity.fecha_dicto_sentencia.Split('-')[1]:"",
+                            anno_fecha_dicto_sentencia=ValidarCampo(entity.fecha_dicto_sentencia) ? entity.fecha_dicto_sentencia.Split('-')[0]:"",
+                            dia_fecha_firmeza_sentencia=ValidarCampo(entity.fecha_firmeza_sentencia) ? entity.fecha_firmeza_sentencia.Split('-')[2]:"",
+                            mes_fecha_firmeza_sentencia=ValidarCampo(entity.fecha_firmeza_sentencia) ? entity.fecha_firmeza_sentencia.Split('-')[1]:"",
+                            anno_fecha_firmeza_sentencia=ValidarCampo(entity.fecha_firmeza_sentencia) ? entity.fecha_firmeza_sentencia.Split('-')[0]:"",
                             no_sentencia=entity.no_sentencia,
                             no_radicacion=entity.no_radicacion,
                             legalizacion_minred=entity.legalizacion_minred,
@@ -144,6 +144,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo6
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
