@@ -101,17 +101,17 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo21
                         // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
                         reports.entidades.Anexo21 anexo = new reports.entidades.Anexo21()
                         {
-                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
-                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
-                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            dia_fecha_solicitud=ValidarCampo(entity.fecha_solicitud)?entity.fecha_solicitud.Split('-')[2]:"",
+                            mes_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[1]:"",
+                            anno_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[0]:"",
                             nombre_padre=entity.nombre_padre,
                             ciudadania_padre=entity.ciudadania_padre,
                             estado_civil_padre=entity.estado_civil_padre,
                             minicipio_nacimineto_padre=entity.minicipio_nacimineto_padre,
                             provincia_nacimineto_padre=entity.provincia_nacimineto_padre,
-                            dia_fecha_nacimiento_padre=entity.fecha_nacimiento_padre.Split('-')[2],
-                            mes_fecha_nacimiento_padre=entity.fecha_nacimiento_padre.Split('-')[1],
-                            anno_fecha_nacimiento_padre=entity.fecha_nacimiento_padre.Split('-')[0],
+                            dia_fecha_nacimiento_padre=ValidarCampo(entity.fecha_nacimiento_padre) ? entity.fecha_nacimiento_padre.Split('-')[2]:"",
+                            mes_fecha_nacimiento_padre=ValidarCampo(entity.fecha_nacimiento_padre) ? entity.fecha_nacimiento_padre.Split('-')[1]:"",
+                            anno_fecha_nacimiento_padre=ValidarCampo(entity.fecha_nacimiento_padre) ? entity.fecha_nacimiento_padre.Split('-')[0]:"",
                             profecion_padre=entity.profecion_padre,
                             carnet_pasaporte_padre=entity.carnet_pasaporte_padre,
                             categoria_migratoria_padre=entity.categoria_migratoria_padre,
@@ -121,9 +121,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo21
                             nombre_menor=entity.nombre_menor,
                             municipio_nacimiento_menor=entity.municipio_nacimiento_menor,
                             provincia_nacimiento_menor=entity.provincia_nacimiento_menor,
-                            dia_fecha_nacimiento_menor=entity.fecha_nacimiento_menor.Split('-')[2],
-                            mes_fecha_nacimiento_menor=entity.fecha_nacimiento_menor.Split('-')[1],
-                            anno_fecha_nacimiento_menor=entity.fecha_nacimiento_menor.Split('-')[0],
+                            dia_fecha_nacimiento_menor=ValidarCampo(entity.fecha_nacimiento_menor) ? entity.fecha_nacimiento_menor.Split('-')[2]:"",
+                            mes_fecha_nacimiento_menor=ValidarCampo(entity.fecha_nacimiento_menor) ? entity.fecha_nacimiento_menor.Split('-')[1]:"",
+                            anno_fecha_nacimiento_menor=ValidarCampo(entity.fecha_nacimiento_menor) ? entity.fecha_nacimiento_menor.Split('-')[0]:"",
                             registro_estado_nacimiento_menor=entity.registro_estado_nacimiento_menor,
                             tomo=entity.tomo,
                             folio=entity.folio,
@@ -155,6 +155,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo21
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
