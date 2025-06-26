@@ -24,23 +24,23 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo3
         {
             var anexo3 = new model.Anexo3_e()
             {
-                ciudad=ciudad.Text,
-                pais=pais.Text,
-                nombre_apellido=nombre_apellido.Text,
-                fecha_nacimiento=fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd"),
-                municipio=municipio.Text,
-                provincia=provincia.Text,
-                registro=registro.Text,
-                municipio_registro=municipio_registro.Text,
-                provincia_registro=provincia_registro.Text,
-                tomo=tomo.Text,
-                folio=folio.Text,
-                fecha_asiento=fecha_asiento.SelectedDate?.ToString("yyyy-MM-dd"),
-                nombre_padre=nombre_padre.Text,
-                nombre_madre=nombre_madre.Text,
-                legalizacion_minred=legalizacion_minred.Text,
-                legalizacion_embajada=legalizacion_embajada.Text,
-                fecha_solicitud=fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd")
+                ciudad=ValidarCampo(ciudad.Text),
+                pais=ValidarCampo(pais.Text),
+                nombre_apellido=ValidarCampo(nombre_apellido.Text),
+                fecha_nacimiento=ValidarCampo(fecha_nacimiento.SelectedDate?.ToString("yyyy-MM-dd")),
+                municipio=ValidarCampo(municipio.Text),
+                provincia=ValidarCampo(provincia.Text),
+                registro=ValidarCampo(registro.Text),
+                municipio_registro=ValidarCampo(municipio_registro.Text),
+                provincia_registro=ValidarCampo(provincia_registro.Text),
+                tomo=ValidarCampo(tomo.Text),
+                folio=ValidarCampo(folio.Text),
+                fecha_asiento=ValidarCampo(fecha_asiento.SelectedDate?.ToString("yyyy-MM-dd")),
+                nombre_padre=ValidarCampo(nombre_padre.Text),
+                nombre_madre=ValidarCampo(nombre_madre.Text),
+                legalizacion_minred=ValidarCampo(legalizacion_minred.Text),
+                legalizacion_embajada=ValidarCampo(legalizacion_embajada.Text),
+                fecha_solicitud=ValidarCampo(fecha_solicitud.SelectedDate?.ToString("yyyy-MM-dd"))
             };
 
             if(ValidarAnexo(anexo3))
@@ -62,30 +62,37 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo3
             }
 
             // Verificar si cada campo es nulo o vacío
-            if(string.IsNullOrEmpty(model.ciudad)||
-                string.IsNullOrEmpty(model.pais)||
-                string.IsNullOrEmpty(model.nombre_apellido)||
-                string.IsNullOrEmpty(model.fecha_nacimiento)||
-                string.IsNullOrEmpty(model.municipio)||
-                string.IsNullOrEmpty(model.provincia)||
-                string.IsNullOrEmpty(model.registro)||
-                string.IsNullOrEmpty(model.municipio_registro)||
-                string.IsNullOrEmpty(model.provincia_registro)||
-                string.IsNullOrEmpty(model.tomo)||
-                string.IsNullOrEmpty(model.folio)||
-                string.IsNullOrEmpty(model.fecha_asiento)||
-                string.IsNullOrEmpty(model.nombre_padre)||
-                string.IsNullOrEmpty(model.nombre_madre)||
-                string.IsNullOrEmpty(model.legalizacion_minred)||
-                string.IsNullOrEmpty(model.legalizacion_embajada)||
-                string.IsNullOrEmpty(model.fecha_solicitud))
-            {
-                return false; // Algún campo es nulo o vacío
-            }
+            //if(string.IsNullOrEmpty(model.ciudad)||
+            //    string.IsNullOrEmpty(model.pais)||
+            //    string.IsNullOrEmpty(model.nombre_apellido)||
+            //    string.IsNullOrEmpty(model.fecha_nacimiento)||
+            //    string.IsNullOrEmpty(model.municipio)||
+            //    string.IsNullOrEmpty(model.provincia)||
+            //    string.IsNullOrEmpty(model.registro)||
+            //    string.IsNullOrEmpty(model.municipio_registro)||
+            //    string.IsNullOrEmpty(model.provincia_registro)||
+            //    string.IsNullOrEmpty(model.tomo)||
+            //    string.IsNullOrEmpty(model.folio)||
+            //    string.IsNullOrEmpty(model.fecha_asiento)||
+            //    string.IsNullOrEmpty(model.nombre_padre)||
+            //    string.IsNullOrEmpty(model.nombre_madre)||
+            //    string.IsNullOrEmpty(model.legalizacion_minred)||
+            //    string.IsNullOrEmpty(model.legalizacion_embajada)||
+            //    string.IsNullOrEmpty(model.fecha_solicitud))
+            //{
+            //    return false; // Algún campo es nulo o vacío
+            //}
 
             // Si todas las validaciones pasan
             return true; // La entidad Anexo3_e es válida
         }
 
+        private string ValidarCampo( string val )
+        {
+            string res = "";
+            if(!string.IsNullOrWhiteSpace(val))
+                res=val;
+            return res;
+        }
     }
 }
