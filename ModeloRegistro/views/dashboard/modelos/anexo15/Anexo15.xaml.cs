@@ -106,14 +106,14 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo15
                             primer_apellido_fallecido=entity.primer_apellido_fallecido,
                             segundo_apellido_fallecido=entity.segundo_apellido_fallecido,
                             hora_fallecido=entity.hora_fallecido,
-                            dia_fecha_fallecimineto=entity.fecha_fallecimineto.Split('-')[2],
-                            mes_fecha_fallecimineto=entity.fecha_fallecimineto.Split('-')[1],
-                            anno_fecha_fallecimineto=entity.fecha_fallecimineto.Split('-')[0],
+                            dia_fecha_fallecimineto=ValidarCampo(entity.fecha_fallecimineto)?entity.fecha_fallecimineto.Split('-')[2]:"",
+                            mes_fecha_fallecimineto=ValidarCampo(entity.fecha_fallecimineto) ? entity.fecha_fallecimineto.Split('-')[1]:"",
+                            anno_fecha_fallecimineto=ValidarCampo(entity.fecha_fallecimineto) ? entity.fecha_fallecimineto.Split('-')[0]:"",
                             lugar_nacimineto_fallecido=entity.lugar_nacimineto_fallecido,
                             municipio_provincia_pais_fallecido=entity.municipio_provincia_pais_fallecido,
-                            dia_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[2],
-                            mes_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[1],
-                            anno_fecha_nacimiento=entity.fecha_nacimiento.Split('-')[0],
+                            dia_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[2]:"",
+                            mes_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[1]:"",
+                            anno_fecha_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[0]:"",
                             pasaporte_fallecido=entity.pasaporte_fallecido,
                             edad_fallecido=entity.edad_fallecido,
                             registro_civil_fallecido=entity.registro_civil_fallecido,
@@ -124,9 +124,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo15
                             padre_fallecido=entity.padre_fallecido,
                             madre_fallecido=entity.madre_fallecido,
                             domicilio_fallecido=entity.domicilio_fallecido,
-                            dia_fecha_defuncion=entity.fecha_defuncion.Split('-')[2],
-                            mes_fecha_defuncion=entity.fecha_defuncion.Split('-')[1],
-                            anno_fecha_defuncion=entity.fecha_defuncion.Split('-')[0],
+                            dia_fecha_defuncion=ValidarCampo(entity.fecha_defuncion) ? entity.fecha_defuncion.Split('-')[2]:"",
+                            mes_fecha_defuncion=ValidarCampo(entity.fecha_defuncion) ? entity.fecha_defuncion.Split('-')[1]:"",
+                            anno_fecha_defuncion=ValidarCampo(entity.fecha_defuncion) ? entity.fecha_defuncion.Split('-')[0]:"",
                             hora_defuncion=entity.hora_defuncion,
                             lugar_fallecimiento=entity.lugar_fallecimiento,
                             causa_muerte_fallecimiento=entity.causa_muerte_fallecimiento,
@@ -136,9 +136,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo15
                             registro_civil=entity.registro_civil,
                             tomo=entity.tomo,
                             folio=entity.folio,
-                            dia_fecha_certificado=entity.fecha_certificado.Split('-')[2],
-                            mes_fecha_certificado=entity.fecha_certificado.Split('-')[1],
-                            anno_fecha_certificado=entity.fecha_certificado.Split('-')[0],
+                            dia_fecha_certificado=ValidarCampo(entity.fecha_certificado) ? entity.fecha_certificado.Split('-')[2]:"",
+                            mes_fecha_certificado=ValidarCampo(entity.fecha_certificado) ? entity.fecha_certificado.Split('-')[1]:"",
+                            anno_fecha_certificado=ValidarCampo(entity.fecha_certificado) ? entity.fecha_certificado.Split('-')[0]:"",
                             nombre_apellido_solicita=entity.nombre_apellido_solicita,
                             nro_pasaporte_carnet=entity.nro_pasaporte_carnet,
                             parentesco_fallecido=entity.parentesco_fallecido,
@@ -170,6 +170,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo15
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
