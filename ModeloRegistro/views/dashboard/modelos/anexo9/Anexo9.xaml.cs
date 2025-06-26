@@ -107,14 +107,14 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo9
                             municipio_encargado=entity.municipio_encargado,
                             provincia_encargado=entity.provincia_encargado,
                             nombre=entity.nombre,
-                            dia_solicitud=entity.fecha_solicitud.Split('-')[2],
-                            mes_solicitud=entity.fecha_solicitud.Split('-')[1],
-                            anno_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            dia_solicitud=ValidarCampo(entity.fecha_solicitud)?entity.fecha_solicitud.Split('-')[2]:"",
+                            mes_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[1]:"",
+                            anno_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[0]:"",
                             tomo_certificado=entity.tomo_certificado,
                             folio_certificado=entity.folio_certificado,
-                            dia_nacimiento=entity.fecha_nacimiento.Split('-')[2],
-                            mes_nacimiento=entity.fecha_nacimiento.Split('-')[1],
-                            anno_nacimiento=entity.fecha_nacimiento.Split('-')[0],
+                            dia_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[2]:"",
+                            mes_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[1]:"",
+                            anno_nacimiento=ValidarCampo(entity.fecha_nacimiento) ? entity.fecha_nacimiento.Split('-')[0]:"",
                             municipio_persona=entity.municipio_persona,
                             provincia_persona=entity.provincia_persona,
                             padre=entity.padre,
@@ -148,6 +148,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo9
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
