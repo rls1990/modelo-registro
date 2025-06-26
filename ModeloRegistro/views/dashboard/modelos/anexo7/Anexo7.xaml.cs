@@ -104,9 +104,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo7
                             ciudad=entity.ciudad,
                             pais=entity.pais,
                             nombre_apellido=entity.nombre_apellido,
-                            dia_fecha_defuncion=entity.fecha_defuncion.Split('-')[2],
-                            mes_fecha_defuncion=entity.fecha_defuncion.Split('-')[1],
-                            anno_fecha_defuncion=entity.fecha_defuncion.Split('-')[0],
+                            dia_fecha_defuncion=ValidarCampo(entity.fecha_defuncion)?entity.fecha_defuncion.Split('-')[2]:"",
+                            mes_fecha_defuncion=ValidarCampo(entity.fecha_defuncion) ? entity.fecha_defuncion.Split('-')[1]:"",
+                            anno_fecha_defuncion=ValidarCampo(entity.fecha_defuncion) ? entity.fecha_defuncion.Split('-')[0]:"",
                             municipio_fallecimineto=entity.municipio_fallecimineto,
                             provincia_fallecimineto=entity.provincia_fallecimineto,
                             donde_fue_velado=entity.donde_fue_velado,
@@ -143,6 +143,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo7
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
