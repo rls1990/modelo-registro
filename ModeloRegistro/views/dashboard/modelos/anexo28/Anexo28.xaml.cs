@@ -101,16 +101,16 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo28
                         // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
                         reports.entidades.Anexo28 anexo = new reports.entidades.Anexo28()
                         {
-                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
-                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
-                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            dia_fecha_solicitud=ValidarCampo(entity.fecha_solicitud)?entity.fecha_solicitud.Split('-')[2]:"",
+                            mes_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[1]:"",
+                            anno_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[0]:"",
                             nombre_poderante=entity.nombre_poderante,
                             sexo_poderante=entity.sexo_poderante,
                             lugar_nacimiento_municipio_poderante=entity.lugar_nacimiento_municipio_poderante,
                             lugar_nacimiento_provincia_poderante=entity.lugar_nacimiento_provincia_poderante,
-                            dia_fecha_nacimineto_poderante=entity.fecha_nacimineto_poderante.Split('-')[2],
-                            mes_fecha_nacimineto_poderante=entity.fecha_nacimineto_poderante.Split('-')[1],
-                            anno_fecha_nacimineto_poderante=entity.fecha_nacimineto_poderante.Split('-')[0],
+                            dia_fecha_nacimineto_poderante=ValidarCampo(entity.fecha_nacimineto_poderante) ? entity.fecha_nacimineto_poderante.Split('-')[2]:"",
+                            mes_fecha_nacimineto_poderante=ValidarCampo(entity.fecha_nacimineto_poderante) ? entity.fecha_nacimineto_poderante.Split('-')[1]:"",
+                            anno_fecha_nacimineto_poderante=ValidarCampo(entity.fecha_nacimineto_poderante) ? entity.fecha_nacimineto_poderante.Split('-')[0]:"",
                             estado_civil_poderante=entity.estado_civil_poderante,
                             ciudadania_poderante=entity.ciudadania_poderante,
                             ocupacion_poderante=entity.ocupacion_poderante,
@@ -123,9 +123,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo28
                             sexo_apoderado=entity.sexo_apoderado,
                             lugar_nacimineto_municipio_apoderado=entity.lugar_nacimiento_municipio_apoderado,
                             lugar_nacimineto_provincia_apoderado=entity.lugar_nacimiento_provincia_apoderado,
-                            dia_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[2],
-                            mes_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[1],
-                            anno_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[0],
+                            dia_fecha_nacimineto_apoderado=ValidarCampo(entity.fecha_nacimineto_apoderado) ? entity.fecha_nacimineto_apoderado.Split('-')[2]:"",
+                            mes_fecha_nacimineto_apoderado=ValidarCampo(entity.fecha_nacimineto_apoderado) ? entity.fecha_nacimineto_apoderado.Split('-')[1]:"",
+                            anno_fecha_nacimineto_apoderado=ValidarCampo(entity.fecha_nacimineto_apoderado) ? entity.fecha_nacimineto_apoderado.Split('-')[0]:"",
                             estado_civil_apoderado=entity.estado_civil_apoderado,
                             ciudadania_apoderado=entity.ciudadania_apoderado,
                             ocupacion_apoderado=entity.ocupacion_apoderado,
@@ -164,6 +164,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo28
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
