@@ -50,8 +50,8 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo28
                 direccion_particular_apoderado=ValidarCampo(direccion_particular_apoderado.Text),
                 carne_pasaporte_apoderado=ValidarCampo(carne_pasaporte_apoderado.Text),
                 condicion_migratoria_apoderado=ValidarCampo(condicion_migratoria_apoderado.Text),
-
-                //especificar_causa_representante=ValidarCampo("",
+                
+                especificar_causa_representante="",
                 despacho_equipaje=ValidarCampo(despacho_equipaje.Text),
                 numero_contenedor=ValidarCampo(numero_contenedor.Text),
                 bl=ValidarCampo(bl.Text),

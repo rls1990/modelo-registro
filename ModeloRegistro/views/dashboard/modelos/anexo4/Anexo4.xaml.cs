@@ -156,5 +156,7 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo4
             } else
                 listadg.ItemsSource=lista;
         }
+
+        
     }
 }
