@@ -101,15 +101,15 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
                         // Inicializa una nueva instancia de Anexo3 con los valores de Anexo3_e
                         reports.entidades.Anexo24 anexo = new reports.entidades.Anexo24()
                         {
-                            dia_fecha_solicitud=entity.fecha_solicitud.Split('-')[2],
-                            mes_fecha_solicitud=entity.fecha_solicitud.Split('-')[1],
-                            anno_fecha_solicitud=entity.fecha_solicitud.Split('-')[0],
+                            dia_fecha_solicitud=ValidarCampo(entity.fecha_solicitud)?entity.fecha_solicitud.Split('-')[2]:"",
+                            mes_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[1]:"",
+                            anno_fecha_solicitud=ValidarCampo(entity.fecha_solicitud) ? entity.fecha_solicitud.Split('-')[0]:"",
                             nombre=entity.nombre,
                             lugar_nacimineto_municipio=entity.lugar_nacimineto_municipio,
                             lugar_nacimineto_provincia=entity.lugar_nacimineto_provincia,
-                            dia_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[2],
-                            mes_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[1],
-                            anno_fecha_nacimineto=entity.fecha_nacimineto.Split('-')[0],
+                            dia_fecha_nacimineto=ValidarCampo(entity.fecha_nacimineto) ? entity.fecha_nacimineto.Split('-')[2]:"",
+                            mes_fecha_nacimineto=ValidarCampo(entity.fecha_nacimineto) ? entity.fecha_nacimineto.Split('-')[1]:"",
+                            anno_fecha_nacimineto=ValidarCampo(entity.fecha_nacimineto) ? entity.fecha_nacimineto.Split('-')[0]:"",
                             estado_civil=entity.estado_civil,
                             ciudadania=entity.ciudadania,
                             ocupacion=entity.ocupacion,
@@ -121,9 +121,9 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
                             nombre_apoderado=entity.nombre_apoderado,
                             lugar_nacimineto_municipio_apoderado=entity.lugar_nacimineto_municipio_apoderado,
                             lugar_nacimineto_provincia_apoderado=entity.lugar_nacimineto_provincia_apoderado,
-                            dia_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[2],
-                            mes_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[1],
-                            anno_fecha_nacimineto_apoderado=entity.fecha_nacimineto_apoderado.Split('-')[0],
+                            dia_fecha_nacimineto_apoderado=ValidarCampo(entity.fecha_nacimineto_apoderado) ? entity.fecha_nacimineto_apoderado.Split('-')[2]:"",
+                            mes_fecha_nacimineto_apoderado=ValidarCampo(entity.fecha_nacimineto_apoderado) ? entity.fecha_nacimineto_apoderado.Split('-')[1]:"",
+                            anno_fecha_nacimineto_apoderado=ValidarCampo(entity.fecha_nacimineto_apoderado) ? entity.fecha_nacimineto_apoderado.Split('-')[0]:"",
                             estado_civil_apoderado=entity.estado_civil_apoderado,
                             ciudadania_apoderado=entity.ciudadania_apoderado,
                             ocupacion_apoderado=entity.ocupacion_apoderado,
@@ -164,6 +164,13 @@ namespace ModeloRegistro.views.dashboard.modelos.anexo24
                 listadg.ItemsSource=listaF;
             } else
                 listadg.ItemsSource=lista;
+        }
+
+        private bool ValidarCampo( string val )
+        {
+            if(!string.IsNullOrWhiteSpace(val))
+                return true;
+            return false;
         }
     }
 }
